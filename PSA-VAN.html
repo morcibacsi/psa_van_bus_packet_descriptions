@@ -1,0 +1,3677 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PSA VAN</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>        
+        <style type="text/css">
+.message {
+    padding-bottom: 20px;
+    margin-bottom: 80px;
+}
+.message .id {
+    float: left;
+    margin: 0 10px;
+    font-family: monospace;
+    font-size: 150%;
+}
+.message .bits {
+    float: left;
+    position: relative;
+    font-family: monospace;
+}
+.message .bits .info {
+    position: absolute;
+    left: 4px;
+    border-left: 1px dotted #000;
+    border-bottom: 1px dotted #000;
+    padding-left: 3px;
+    white-space: nowrap;
+}
+.message .bits:hover {
+    font-weight: bold;
+}
+.message .bits:hover .info {
+    border-left-style: solid;
+    border-bottom-style: solid;
+}
+.offset-1 { padding-top: 20px; }
+.offset-2 { padding-top: 40px; }
+.offset-3 { padding-top: 60px; }
+.offset-4 { padding-top: 80px; }
+.offset-5 { padding-top: 100px; }
+.offset-6 { padding-top: 120px; }
+.offset-7 { padding-top: 140px; }
+.offset-8 { padding-top: 160px; }
+.offset-9 { padding-top: 180px; }
+.offset-10 { padding-top: 200px; }
+.offset-11 { padding-top: 220px; }
+.offset-12 { padding-top: 240px; }
+.offset-13 { padding-top: 260px; }
+.offset-14 { padding-top: 280px; }
+.offset-15 { padding-top: 300px; }
+.offset-16 { padding-top: 320px; }
+.offset-17 { padding-top: 340px; }
+.offset-18 { padding-top: 360px; }
+.offset-19 { padding-top: 380px; }
+.offset-20 { padding-top: 400px; }
+.offset-21 { padding-top: 420px; }
+.offset-22 { padding-top: 440px; }
+.offset-23 { padding-top: 460px; }
+.offset-24 { padding-top: 480px; }
+.margin-1 { padding-bottom: 40px; }
+.margin-2 { padding-bottom: 60px; }
+.margin-3 { padding-bottom: 80px; }
+.margin-4 { padding-bottom: 100px; }
+.margin-5 { padding-bottom: 120px; }
+.margin-6 { padding-bottom: 140px; }
+.margin-7 { padding-bottom: 160px; }
+.margin-8 { padding-bottom: 180px; }
+.margin-9 { padding-bottom: 200px; }
+.margin-10 { padding-bottom: 220px; }
+.margin-11 { padding-bottom: 240px; }
+.margin-12 { padding-bottom: 260px; }
+.margin-13 { padding-bottom: 280px; }
+.margin-14 { padding-bottom: 300px; }
+.margin-15 { padding-bottom: 320px; }
+.margin-16 { padding-bottom: 340px; }
+.margin-17 { padding-bottom: 360px; }
+.margin-18 { padding-bottom: 380px; }
+.margin-19 { padding-bottom: 400px; }
+.margin-20 { padding-bottom: 420px; }
+.margin-21 { padding-bottom: 440px; }
+.margin-22 { padding-bottom: 460px; }
+.margin-23 { padding-bottom: 480px; }
+.margin-24 { padding-bottom: 500px; }
+.color-rt6 { background: green; color: white }
+.color-bsi { background: yellow }
+.color-steering-wheel { background: blue; color: white }
+.color-display { background: red }
+.color-parktronic { background: BlueViolet; color: white }
+.color-yatour { background: Chocolate }
+.color-climate { background: DarkCyan }
+.color-fmux { background: GreenYellow }
+.color-radio { background: HotPink }
+.color-dashboard { background: LightCoral }
+        </style>
+    </head>
+    <body onload="loadData()">
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <h1>PSA VAN bus</h1>
+                <p>All data related to Peugeot 206 307 406 S2 Citroen C3 2004</p>
+                <a href="https://github.com/autowp/autowp.github.io" class="btn btn-primary">View on github, contribute</a>
+            </div>
+            <script>
+            var data =
+
+{
+    "messages": [
+        {
+            "id": "464",
+            "displayedId": "464",
+            "network": "CAN-INFO",
+            "source": "AirCon",
+            "destination": "",
+            "notes": [
+                "Engine not running"
+            ],
+            "examples": [
+                "464 WA0 00 00 00 00 00 8CDA A"
+            ],
+            "msgDescription": [
+                "BSI Ignition, Dashboard lightning"
+            ],
+            "shortDescription": "BSI Ignition, Dashboard lightning",
+            "margin": "8",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-8",
+                            "value": "WA0",
+                            "description": ["Write & Req ACK"]
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""]
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""]
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""]
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""]
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "8CDA",
+                            "description": ["Checksum"]
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "A",
+                            "description": ["ACK"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4D4",
+            "displayedId": "4D4",
+            "network": "CAN-INFO",
+            "source": "Radio",
+            "destination": "Display",
+            "notes": [
+                "Audio Settings", "Not seen in my car - no HU installed"
+            ],
+            "examples": [
+                "4D4 RA- 86 14 81 01 31 02 3F 3F 44 43 86 ???? A"
+            ],
+            "msgDescription": [
+                "I can't begin to decode this until I put the headunit back in the car."
+            ],
+            "shortDescription": "Audio settings",
+            "margin": "14",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-14",
+                            "value": "RA-",
+                            "description": "Read & Req ACK"
+                        },
+                        {
+                            "offset": "offset-13",
+                            "value": "86",
+                            "description": ["Sequence Header"]
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "14",
+                            "description": ["Audio properties bitfield  0001 0000 -> Loudness on"]
+                        },
+                        {
+                            "offset": "",
+                            "value": "81",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "01",
+                            "description": [""]
+                        },
+                        {
+                            "offset": "offset-9",
+                            "value": "31",
+                            "description": ["Source  0x51 = Radio 0x52 = Built in cd"]
+                        },
+                        {
+                            "offset": "offset-8",
+                            "value": "02",
+                            "description": ["Volume (bit7 = 1 during update)"]
+                        },
+                        {
+                            "offset": "offset-7",
+                            "value": "3F",
+                            "description": ["Bass (bit7 = 1 during update)"]
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "3F",
+                            "description": ["Treble (bit7 = 1 during update)"]
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "44",
+                            "description": ["Fader (bit7 = 1 during update)"]
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "3F",
+                            "description": ["Balance (bit7 = 1 during update)"]
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "86",
+                            "description": ["Sequence Footer"]
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "????",
+                            "description": ["Checksum"]
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "A",
+                            "description": ["ACK"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4DC",
+            "displayedId": "4DC",
+            "network": "CAN-INFO",
+            "source": "AirCon",
+            "destination": "",
+            "notes": [
+                "Engine not running",
+            ],
+            "examples": [
+                "4DC WA0 80 00 16 12 3E FF FF C8E4 A"
+            ],
+            "msgDescription": [
+                "Lots of guessing here"
+            ],
+            "shortDescription": "AirCon?",
+            "margin": "24",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-24",
+                            "value": "WA0",
+                            "description": "Write & Req ACK",
+                        },
+                        {
+                            "offset": "offset-19",
+                            "value": "80",
+                            "description": ["00 = Off", "80 = Auto (AC off)", "C0 = Auto AC on but not running?", "C1 = Auto AC on and running?", "E1 = Rear window heater on"]
+                        },
+                        {
+                            "offset": "offset-18",
+                            "value": "7",
+                            "description": ["Auto"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-17",
+                            "value": "6",
+                            "description": ["AC Enabled"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-16",
+                            "value": "5",
+                            "description": ["Rear window heater"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-15",
+                            "value": "4",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-14",
+                            "value": "3",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-13",
+                            "value": "2",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "1",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-11",
+                            "value": "0",
+                            "description": ["AC compressor running"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-7",
+                            "value": "00010110",
+                            "description": ["internal temperature /2?", "00010110 = 0x16", "0x16 = 22", "22/2 = 11 degrees"],
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "12",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "3E",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "FF",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "FF",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "????",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "A",
+                            "description": ["ACK"],
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4EC",
+            "displayedId": "4EC",
+            "network": "CAN-INFO",
+            "source": "CD Changer info",
+            "destination": "",
+            "notes": [
+                "Engine not running", "Not seen in my car - no HU installed"
+            ],
+            "examples": [
+                "4EC"
+            ],
+            "msgDescription": [
+                "I can't begin to decode this until I put the headunit back in the car."
+            ],
+            "shortDescription": "CD Changer",
+            "margin": "7",
+            "structures":
+            [
+                {
+                    "bytes": [
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4FC",
+            "displayedId": "4FC",
+            "network": "CAN-INFO",
+            "source": "BSI",
+            "destination": "Dashboard",
+            "notes": [
+                "Lights status", "Engine not running",
+            ],
+            "examples": [
+                "4FC WA0 80 00 03 71 F0 00 FF FF 5C 48 FF 5A96 A"
+            ],
+            "msgDescription": [
+                "The bit wise info for the lights byte is correct in my car"
+            ],
+            "margin": "20",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-20",
+                            "value": "WA0",
+                            "description": "Write & Req ACK",
+                        },
+                        {
+                            "offset": "offset-19",
+                            "value": "80",
+                            "description": [""]
+                        },
+                        {
+                            "offset": "offset-19",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-19",
+                            "value": "03",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-18",
+                            "value": "71",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-17",
+                            "value": "F0",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-16",
+                            "value": "7",
+                            "description": ["Dipped beam"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-15",
+                            "value": "6",
+                            "description": ["High beam"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-14",
+                            "value": "5",
+                            "description": ["Front fog"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-13",
+                            "value": "4",
+                            "description": ["Rear fog"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "3",
+                            "description": ["Right indicator"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-11",
+                            "value": "2",
+                            "description": ["Left indicator"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-10",
+                            "value": "1",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-9",
+                            "value": "0",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-7",
+                            "value": "FF",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "FF",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "5C",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "48",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "FF",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "5A96",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "A",
+                            "description": ["ACK"],
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "524",
+            "displayedId": "524",
+            "network": "CAN-INFO",
+            "source": "COM2000",
+            "destination": "Dashboard",
+            "notes": [
+                "Car Status 2", "Engine not running",
+            ],
+            "examples": [
+                "524 W00 00 00 01 00 20 01 00 01 00 FF 00 00 00 00 E28A N"
+            ],
+            "msgDescription": [
+                "I suspected this was mostly for the benefit of the multifunctional display - but it doesn't get acknowledged or ask for one! (well not with the engine off anyway)"
+            ],
+            "shortDescription": "Car status 2",
+            "margin": "20",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-20",
+                            "value": "W00",
+                            "description": "Write",
+                        },
+                        {
+                            "offset": "offset-17",
+                            "value": "00",
+                            "description": [""]
+                        },
+                        {
+                            "offset": "offset-17",
+                            "value": "00",
+                            "description": ["Related to engine startup, maybe 0x02 for engine on?"],
+                        },
+                        {
+                            "offset": "offset-16",
+                            "value": "01",
+                            "description": ["Toggled when starting engine?"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "7",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "6",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-14",
+                            "value": "5",
+                            "description": ["key in?", "key in ref 5E4 byte 1 which goes from 20 to 00 in similar time period?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "4",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "3",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "2",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "1",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "0",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "7",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "6",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "5",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "4",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "3",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "2",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "1",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-13",
+                            "value": "0",
+                            "description": ["Handbrake on"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "7",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "6",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "5",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "4",
+                            "description": ["Left stick button pushed"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "3",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "2",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-11",
+                            "value": "1",
+                            "description": ["Seatbelt warning on"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "0",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "7",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "6",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "5",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "4",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "3",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "2",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-10",
+                            "value": "1",
+                            "description": ["ESP/ASR deactivated"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "0",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "FF",
+                            "description": ["01 = door open", "41 = ESP/ASR deactivated", "44 = auto lighting active", "45 = auto wipers active"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "5A96",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "A",
+                            "description": ["ACK"],
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "54E",
+            "displayedId": "54E",
+            "network": "CAN-INFO",
+            "source": "SatNav Stuff",
+            "destination": "",
+            "notes": [
+                "Engine not running", "Satnav accessed"
+            ],
+            "examples": [
+                "54E RA0 81 00 80 00 00 81 28FA A",
+                "54E RA0 82 04 00 00 00 82 58B6 A",
+                "54E RA0 83 08 00 00 00 83 8282 A",
+                "54E RA0 84 90 00 00 00 84 8356 A",
+                "54E RA0 85 03 01 00 00 85 CDE6 A",
+                "54E RA0 86 40 00 00 00 86 A67E A"
+            ],
+            "msgDescription": [
+                "The example packets appeared in that order multiple times through me setting a destination"
+            ],
+            "shortDescription": "SatNav",
+            "margin": "4",
+            "structure":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-4",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "81",
+                            "description": "Header?",
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": "",
+                        },
+                        {
+                            "offset": "",
+                            "value": "80",
+                            "description": "",
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": "",
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": "",
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "81",
+                            "description": "Footer?",
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "28FA",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "554_1",
+            "displayedId": "554",
+            "network": "CAN-INFO",
+            "source": "Radio",
+            "destination": "Display",
+            "notes": [
+                "Radio Info (sort of mostly)", "Not seen in my car - no HU installed"
+            ],
+            "examples": [
+                "554 RA- 87 D1 09 80 F0 02 00 65 F2 14 A1 00 53 4B 59 52 4F 43 4B 20 00 87 A",
+            ],
+            "msgDescription": [
+                "Probably requested by multifunctional display?"
+            ],
+            "shortDescription": "Radio info",
+            "margin": "15",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-15",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-13",
+                            "value": "87",
+                            "description": ["Part of header footer pair for message (starts and ends in 87) - this is another *data updated* header and footer", "These headers and footers are common to many messages that carry updated information"],
+                        },
+                        {
+                            "offset": "offset-10",
+                            "value": "D1",
+                            "description": ["D1 = Radio frequency data (probably for radio display)"],
+                        },
+                        {
+                            "offset": "offset-8",
+                            "value": "0980",
+                            "description": ["Frequency", "(0980*.05)+50 = 99.00MHz"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "F0",
+                            "description": "",
+                        },
+                        {
+                            "offset": "",
+                            "value": "7",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "6",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "5",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "4",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "3",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "2",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "1",
+                            "description": ["RDS"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "0",
+                            "description": ["TA"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": "",
+                        },
+                        {
+                            "offset": "",
+                            "value": "65",
+                            "description": "",
+                        },
+                        {
+                            "offset": "",
+                            "value": "F2",
+                            "description": "",
+                        },
+                        {
+                            "offset": "",
+                            "value": "14",
+                            "description": "",
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "A1",
+                            "description": ["RDS available (non zero)"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "53",
+                            "description": ["S"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "4B",
+                            "description": ["K"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "59",
+                            "description": ["Y"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "52",
+                            "description": ["R"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "4F",
+                            "description": ["O"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "43",
+                            "description": ["C"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "4B",
+                            "description": ["K"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "20",
+                            "description": ["{space}"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "87",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "????",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "554_2",
+            "displayedId": "554",
+            "network": "CAN-INFO",
+            "source": "Radio",
+            "destination": "Display",
+            "notes": [
+                "Radio Info (sort of mostly)", "Not seen in my car - no HU installed"
+            ],
+            "examples": [
+                "554 RA- 81 D3 91 53 4B 59 52 4F 43 4B 20 81 A",
+            ],
+            "msgDescription": [
+                "Probably requested by multifunctional display?"
+            ],
+            "shortDescription": "Radio info",
+            "margin": "13",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-13",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "81",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "offset-10",
+                            "value": "D3",
+                            "description": ["D3 = Radio preset data (probably for displaying preset choices when you scroll the remote wheel)"],
+                        },
+                        {
+                            "offset": "offset-9",
+                            "value": "7",
+                            "description": ["This is a preset? (seems always set)"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-8",
+                            "value": "6",
+                            "description": ["(some reports of this rather than bit 4 indicating RDS or frequency)"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "5",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-7",
+                            "value": "4",
+                            "description": ["RDS data avaliable (Display frequency if this is zero)"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "3210",
+                            "description": ["Preset Number"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "53",
+                            "description": ["S"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "4B",
+                            "description": ["K"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "59",
+                            "description": ["Y"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "52",
+                            "description": ["R"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "4F",
+                            "description": ["O"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "43",
+                            "description": ["C"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "4B",
+                            "description": ["K"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "20",
+                            "description": ["{space}"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "81",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "????",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "554_3",
+            "displayedId": "554",
+            "network": "CAN-INFO",
+            "source": "Radio",
+            "destination": "Display",
+            "notes": [
+                "Radio Info (sort of mostly)", "Not seen in my car - no HU installed"
+            ],
+            "examples": [
+                "554 RA- 81 D6 00 03 00 00 01 01 20 81 ???? A",
+            ],
+            "msgDescription": [
+                "Probably requested by multifunctional display?"
+            ],
+            "shortDescription": "Radio info",
+            "margin": "13",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-13",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "81",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "offset-10",
+                            "value": "D6",
+                            "description": ["D6 = CD track info"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-8",
+                            "value": "03",
+                            "description": ["0x13 for first packet after changed track"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "0001",
+                            "description": ["00:01 mm:ss current track position"],
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "020",
+                            "description": ["track 1 of 20 on CD"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "81",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "????",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "564",
+            "displayedId": "564",
+            "network": "CAN-INFO",
+            "source": "BSI",
+            "destination": "Display",
+            "notes": [
+                "Engine not running", "Car Status"
+            ],
+            "examples": [
+                "564 RA0 84 00 00 00 00 00 00 80 00 FF 00 39 39 1D 03 53 00 43 03 53 00 43 FF FF 01 13 84 DE8A A",
+            ],
+            "msgDescription": [
+                "Probably read by display unit to decide what to display"
+            ],
+            "shortDescription": "Display data",
+            "margin": "23",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-23",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-21",
+                            "value": "7",
+                            "description": ["Header", "Sequence byte"],
+                            "isBit": "true"
+                        },
+                        {
+                            "value": "6",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "5",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "4",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "3",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-20",
+                            "value": "210",
+                            "description": ["Sequence number (constantly incrementing probably used to indicate changed data or new packet)"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-18",
+                            "value": "7",
+                            "description": ["Front Right"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-17",
+                            "value": "6",
+                            "description": ["Front Left"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-16",
+                            "value": "5",
+                            "description": ["Rear Right"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-15",
+                            "value": "4",
+                            "description": ["Rear Left"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-14",
+                            "value": "3",
+                            "description": ["Boot Lid"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "2",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "1",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "0",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "FF",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "7",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "6",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "5",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "4",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "3",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "2",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "1",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "0",
+                            "description": ["Right stalk button pushed"],
+                        },
+                        {
+                            "offset": "offset-11",
+                            "value": "39",
+                            "description": ["trip 1 mean speed"],
+                        },
+                        {
+                            "offset": "offset-10",
+                            "value": "39",
+                            "description": ["trip 2 mean speed"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "1D",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-8",
+                            "value": "0353",
+                            "description": ["trip 1 distance"],
+                        },
+                        {
+                            "offset": "offset-7",
+                            "value": "0043",
+                            "description": ["trip 1 fuel consumption"],
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "0353",
+                            "description": ["trip 2 distance"],
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "0043",
+                            "description": ["trip 2 fuel consumption"],
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "FFFF",
+                            "description": ["instantaneous fuel consumption"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "0113",
+                            "description": ["0x0113 = 275 miles fuel left"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "84",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "DE8A",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5E4",
+            "displayedId": "5E4",
+            "network": "CAN-INFO",
+            "source": "Display",
+            "destination": "",
+            "notes": [
+                "Display Settings?", "Engine not running"
+            ],
+            "examples": [
+                "5E4 WA0 20FF F934 A",
+            ],
+            "msgDescription": [
+                "Display writes these apparently - quite regularly"
+            ],
+            "shortDescription": "Display settings?",
+            "margin": "12",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-12",
+                            "value": "WA0",
+                            "description": ["Write & Req ACK"],
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "20FF",
+                            "description": [
+                                "Byte 0 - I've seen it change from 20 to 00 in a capture where key was removed and capture left running",
+                                "reference 524 Databyte 4 with my key in guess???",
+                                "00 01 - Sent by display during power up before it's ready to display anything",
+                                "20 1E - Display is ready",
+                                "20 1F - ?",
+                                "20 FF - ?",
+                            ],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "F934",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "64E",
+            "displayedId": "64E",
+            "network": "CAN-INFO",
+            "source": "",
+            "destination": "",
+            "notes": [
+                "SatNav Stuff", "Engine not running"
+            ],
+            "examples": [
+                "64E RA0 80 05 01 80 0B7A A",
+            ],
+            "msgDescription": [
+                "This example packets appeared after me using the satnav to set a destination"
+            ],
+            "shortDescription": "SatNav",
+            "margin": "5",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-5",
+                            "value": "RA0",
+                            "description": ["Read & Req ACK"],
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "80",
+                            "description": ["Header?"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "0501",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "80",
+                            "description": ["Footer?"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "0B7A",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "664",
+            "displayedId": "664",
+            "network": "CAN-INFO",
+            "source": "Dashboard",
+            "destination": "BSI",
+            "notes": [
+                "Engine not running", "Car Status"
+            ],
+            "examples": [
+                "664 WA0 00 00 0F 04 24 2C 00 FF 00 FF 00 9ED8 A",
+            ],
+            "msgDescription": [
+                "Suspect this is broadcast by the dashboard dials"
+            ],
+            "shortDescription": "Dashboard",
+            "margin": "7",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-7",
+                            "value": "WA0",
+                            "description": "Write & Req ACK",
+                        },
+                        {
+                            "offset": "",
+                            "value": "7",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "value": "6",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "5",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "4",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "3",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "2",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "1",
+                            "description": ["Hazard lights"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "0",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "7",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "6",
+                            "description": ["Door lock"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "5",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "4",
+                            "description": [""],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "3210",
+                            "description": ["F = brightness (perhaps this cycles between levels?)"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "04",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "24",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "2C",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "FF",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "FF",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "9ED8",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "6CE",
+            "displayedId": "6CE",
+            "network": "CAN-INFO",
+            "source": "",
+            "destination": "",
+            "notes": [
+                "Engine not running", "SatNav Stuff"
+            ],
+            "examples": [
+                "6CE RA0 89 4D 20 51 54 48 00 01 48 45 4C 45 4E 00 01 48 4F 4D 45 00 01 89 752E A",
+                "6CE RA0 05 11 56 00 53 43 4F 54 4C 41 4E 44 00 41 42 45 52 44 45 45 4E 53 48 49 52 45 00 05 FAB0 A",
+                "6CE RA0 97 00 32 35 00 32 35 00 01 97 D088 A",
+                "6CE RA0 00 10 56 00 45 4E 47 4C 41 4E 44 00 48 41 4D 50 53 48 49 52 45 00 41 4E 44 4F 56 00 4B70 A",
+                "6CE RA0 89 45 52 00 00 44 43 6C 6F 73 65 20 00 43 41 4D 45 4C 4F 54 00 30 00 01 89 DC1E A",
+            ],
+            "msgDescription": [
+                "The example packets appeared in that order multiple times through me setting a destination.",
+                "The packets appear in sequence and example 5 is regularly on the bus after I set a destination,",
+                "the car was in a garage though so had no GPS reception, and couldn't start directions - I expect more packets like these once navigation starts. This seems to be the display reading what to show.",
+                "6CE - ASCII chars House Number and Street set for navigation (start&end 0x89) also memory lookup -"
+            ],
+            "shortDescription": "SatNav",
+            "margin": "7",
+            "structures":
+            [
+                {
+                    "comment": ["This contains 3 of my destinations stored in memory (as it happens the first 3 to be displayed on opening the satnav screen)"],
+                    "bytes": [
+                        {
+                            "offset": "offset-3",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "89",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4D",
+                            "description": ["M"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "20",
+                            "description": ["{space}"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "51",
+                            "description": ["Q"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "54",
+                            "description": ["T"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "48",
+                            "description": ["H"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "01",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "48",
+                            "description": ["H"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4C",
+                            "description": ["L"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4E",
+                            "description": ["N"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "01",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "48",
+                            "description": ["H"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4F",
+                            "description": ["O"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4D",
+                            "description": ["M"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "01",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "89",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "A67E",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                },
+                {
+                    "comment": ["Being a recent destination area - this pops up on my satnav screen when you go past choosing a memory and into looking up an address."],
+                    "bytes": [
+                        {
+                            "offset": "offset-3",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "05",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "11",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "56",
+                            "description": ["V"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "53",
+                            "description": ["S"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "43",
+                            "description": ["C"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4F",
+                            "description": ["O"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "54",
+                            "description": ["T"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4C",
+                            "description": ["L"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "41",
+                            "description": ["A"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4E",
+                            "description": ["N"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "44",
+                            "description": ["D"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "41",
+                            "description": ["A"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "42",
+                            "description": ["B"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "52",
+                            "description": ["R"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "44",
+                            "description": ["D"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4E",
+                            "description": ["N"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "53",
+                            "description": ["S"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "48",
+                            "description": ["H"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "49",
+                            "description": ["I"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "52",
+                            "description": ["R"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "0",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "05",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "A67E",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                },
+                {
+                    "comment": ["Hmm, 2 possible house numbers? I can't remember what comes on the screen next!"],
+                    "bytes": [
+                        {
+                            "offset": "offset-3",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "97",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "11",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "32",
+                            "description": ["2"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "35",
+                            "description": ["5"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "32",
+                            "description": ["2"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "34",
+                            "description": ["5"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "01",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "97",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "A67E",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                },
+                {
+                    "comment": ["This looks like me entering an address"],
+                    "bytes": [
+                        {
+                            "offset": "offset-3",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "00",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "10",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "56",
+                            "description": ["V"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4E",
+                            "description": ["N"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "47",
+                            "description": ["G"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4C",
+                            "description": ["L"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "41",
+                            "description": ["A"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4E",
+                            "description": ["N"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "44",
+                            "description": ["D"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "48",
+                            "description": ["H"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "41",
+                            "description": ["A"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4D",
+                            "description": ["M"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "50",
+                            "description": ["P"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "53",
+                            "description": ["S"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "48",
+                            "description": ["H"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "49",
+                            "description": ["I"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "52",
+                            "description": ["R"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "41",
+                            "description": ["A"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4E",
+                            "description": ["N"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "44",
+                            "description": ["D"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4F",
+                            "description": ["O"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "56",
+                            "description": ["V"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "00",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "4B70",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                },
+                {
+                    "comment": ["This looks like it follows on from Example 4"],
+                    "bytes": [
+                        {
+                            "offset": "offset-3",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "89",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "52",
+                            "description": ["R"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "44",
+                            "description": ["D"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "43",
+                            "description": ["C"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "6C",
+                            "description": ["l"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "6F",
+                            "description": ["o"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "73",
+                            "description": ["s"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "65",
+                            "description": ["e"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "20",
+                            "description": ["{space}"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "43",
+                            "description": ["C"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "41",
+                            "description": ["A"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4D",
+                            "description": ["M"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "45",
+                            "description": ["E"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4C",
+                            "description": ["L"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "4F",
+                            "description": ["O"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "54",
+                            "description": ["T"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "30",
+                            "description": ["0"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "01",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "89",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "DC1E",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                }
+
+            ]
+        },
+        {
+            "id": "74E",
+            "displayedId": "74E",
+            "network": "CAN-INFO",
+            "source": "",
+            "destination": "",
+            "notes": [
+                "SatNav Stuff", "Engine not running"
+            ],
+            "examples": [
+                "74E RA0 81 1B 00 00 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 81 6A06 A",
+            ],
+            "msgDescription": [
+                "This example packets appeared after me using the satnav to set a destination"
+            ],
+            "shortDescription": "SatNav",
+            "margin": "5",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-5",
+                            "value": "RA0",
+                            "description": ["Read & Req ACK"],
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "87",
+                            "description": ["Header?"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "1B 00 00 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "81",
+                            "description": ["Footer?"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "6A06",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7CE",
+            "displayedId": "7CE",
+            "network": "CAN-INFO",
+            "source": "",
+            "destination": "",
+            "notes": [
+                "SatNav?", "Engine not running"
+            ],
+            "examples": [
+                "7CE RA0 87 11 3C 10 07 01 02 00 00 00 00 00 00 00 00 00 00 20 00 87 89DC A",
+            ],
+            "msgDescription": [
+                "This packet is on the bus regularly without satnav access but because I couldn't find any mention of it on the web and it looks a bit like other satnav messages with a similar IDENT I guess it might be from there. At some point I will unplug the SatNav and see if it vanishes.",
+                "Header&footer seems to run from 0x80 to 0x87 over some captures accompanied by some bit changes (LSB bytes 1 and 2)"
+            ],
+            "shortDescription": "SatNav",
+            "margin": "5",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-5",
+                            "value": "RA0",
+                            "description": ["Read & Req ACK"],
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "87",
+                            "description": ["Header?"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "11 3C 10 07 01 02 00 00 00 00 00 00 00 00 00 00 20 00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "81",
+                            "description": ["Footer?"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "89DC",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "824",
+            "displayedId": "824",
+            "network": "CAN-INFO",
+            "source": "BSI",
+            "destination": "Dashboard/Broadcast",
+            "notes": [
+                "Speed&RPM", "Engine not running"
+            ],
+            "examples": [
+                "824 W00 18 F8 00 00 00 00 44 28BA N",
+            ],
+            "msgDescription": [
+                "I guess this must come out of the BSI via the ECU",
+            ],
+            "shortDescription": "Speed&RPM",
+            "margin": "5",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-7",
+                            "value": "W00",
+                            "description": ["Write"],
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "87",
+                            "description": ["Header?"],
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "18 F8",
+                            "description": ["RPM (x8)", "0x18F8 = 6392/8 = 799 rpm"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "00 00",
+                            "description": ["Speed (x100) Km/h"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "00 00 44",
+                            "description": ["Sequence number"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "28BA",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "N",
+                            "description": ["NO ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8A4",
+            "displayedId": "8A4",
+            "network": "CAN-INFO",
+            "source": "BSI",
+            "destination": "Dashboard/Broadcast",
+            "notes": [
+                "Dashboard Gauges", "Engine not running"
+            ],
+            "examples": [
+                "8A4 W00 8F 03 3C 1A 6E 90 7D 4EB8 N",
+            ],
+            "msgDescription": [
+                "I guess this must come out of the ECU via the BSI",
+            ],
+            "shortDescription": "Dashboard",
+            "margin": "23",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-23",
+                            "value": "W00",
+                            "description": ["Write"],
+                        },
+                        {
+                            "offset": "offset-22",
+                            "value": "7",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-21",
+                            "value": "6",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-20",
+                            "value": "5",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-19",
+                            "value": "4",
+                            "description": ["Heartbeat"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-18",
+                            "value": "3210",
+                            "description": ["Dial brightness"],
+                        },
+                        {
+                            "offset": "offset-17",
+                            "value": "7",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-16",
+                            "value": "6",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-15",
+                            "value": "5",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-14",
+                            "value": "4",
+                            "description": ["Economy mode active"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-13",
+                            "value": "3",
+                            "description": ["Door open warning light?(don't think so now)"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "2",
+                            "description": ["Engine running"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-11",
+                            "value": "1",
+                            "description": ["Ignition on"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-10",
+                            "value": "0",
+                            "description": ["Accessories on (drops out while starting car)"],
+                        },
+                        {
+                            "offset": "offset-8",
+                            "value": "3C",
+                            "description": ["Water temp 0x3C=60/2=30 degrees?", "FF until key set to Ignition"],
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "1A",
+                            "description": ["Oil level"],
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "6E",
+                            "description": ["Fuel level"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "90",
+                            "description": ["Oil temp 0x90=144/2=72 degrees?", "this value takes at least one bit from the previous byte."],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "7D",
+                            "description": ["Outside temp 0x7D-0x50=45/2=22.5 degrees?"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "4EB8",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "N",
+                            "description": ["NO ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8C4",
+            "displayedId": "8C4",
+            "network": "CAN-INFO",
+            "source": "Radio",
+            "destination": "Display",
+            "notes": [
+                "Radio Buttons", "Not seen in my car - no HU installed"
+            ],
+            "examples": [
+                "8C4 WA- 8A 44 40 ???? A",
+            ],
+            "msgDescription": [
+                "I can't begin to decode this until I put the headunit back in the car.",
+            ],
+            "shortDescription": "Radio buttons",
+            "margin": "8",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-8",
+                            "value": "WA0",
+                            "description": ["Write Write & Req ACK"],
+                        },
+                        {
+                            "offset": "offset-7",
+                            "value": "8A",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "44",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "7",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "6",
+                            "description": ["Button released"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "5",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "43210",
+                            "description": [
+                                "buttons as below",
+                            ],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "????",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ],
+                    "table":
+                    {
+                        "title": "First AND mask the byte with 0x1F then:",
+                        "rows":
+                        [
+                            {
+                                "key": "0x01",
+                                "value": "1"
+                            },
+                            {
+                                "key": "0x02",
+                                "value": "2"
+                            },
+                            {
+                                "key": "0x03",
+                                "value": "3"
+                            },
+                            {
+                                "key": "0x04",
+                                "value": "4"
+                            },
+                            {
+                                "key": "0x05",
+                                "value": "5"
+                            },
+                            {
+                                "key": "0x06",
+                                "value": "6"
+                            },
+                            {
+                                "key": "0x10",
+                                "value": "audio up"
+                            },
+                            {
+                                "key": "0x11",
+                                "value": "audio down"
+                            },
+                            {
+                                "key": "0x16",
+                                "value": "audio"
+                            },
+                            {
+                                "key": "0x1B",
+                                "value": "radio"
+                            },
+                            {
+                                "key": "0x1D",
+                                "value": "CD(maybe tape on other units?)"
+                            },
+                            {
+                                "key": "0x1E",
+                                "value": "CDC"
+                            },
+                            {
+                                "key": "",
+                                "value": "OR/AND"
+                            },
+                            {
+                                "key": "",
+                                "value": "Bytes 2 and 3 like so..."
+                            },
+                            {
+                                "key": "C2 11",
+                                "value": "Audio setting down button pressed (note: only sent when changing audio settings)"
+                            },
+                            {
+                                "key": "C2 12",
+                                "value": "Audio setting up button pressed (note: only sent when changing audio settings)"
+                            },
+                            {
+                                "key": "C2 16",
+                                "value": "Audio button pressed"
+                            },
+                            {
+                                "key": "22 13",
+                                "value": "Seek- button pressed (note: only sent when cdc input is active)"
+                            },
+                            {
+                                "key": "22 14",
+                                "value": "Seek+ button pressed (note: only sent when cdc input is active)"
+                            },
+                            {
+                                "key": "22 17",
+                                "value": "MAN button pressed (note: only sent when cdc input is active)"
+                            },
+                            {
+                                "key": "C2 1B",
+                                "value": "Radio button pressed"
+                            },
+                            {
+                                "key": "C2 1D",
+                                "value": "CD button pressed"
+                            },
+                            {
+                                "key": "C2 1E",
+                                "value": "CDC button pressed"
+                            },
+                            {
+                                "key": "",
+                                "value": ""
+                            },
+                            {
+                                "key": "Notes for the keys above:",
+                                "value": ""
+                            },
+                            {
+                                "key": "",
+                                "value": "1. When a button is released, bit 6 of the second byte is set (for example C2 5D when CD button is released)"
+                            },
+                            {
+                                "key": "",
+                                "value": "2. If a button is pressed longer than 2 seconds, a new packet is sent with bit 7 set, then also bit 6 is set and a new packet is sent every second. When the button is released, bit 7 are set to zero and a final packet described in note 1 above is sent.",
+                            },
+                            {
+                                "key": "",
+                                "value": ""
+                            },
+                            {
+                                "key": "21 40",
+                                "value": "Volume knob has been turned"
+                            },
+                            {
+                                "key": "24 40",
+                                "value": "Either RDS or TA button has been pressed and released"
+                            },
+                            {
+                                "key": "",
+                                "value": "The port also tells the display to read new data (for example RDS data or cd time information) from port 0x554."
+                            },
+                        ],
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8CE",
+            "displayedId": "8CE",
+            "network": "CAN-INFO",
+            "source": "",
+            "destination": "",
+            "notes": [
+                " SatNav", "Engine not running"
+            ],
+            "examples": [
+                "8CE WA0 00 01 7DA2 A",
+            ],
+            "msgDescription": [
+                "Appeared after using remote to access SatNav",
+            ],
+            "shortDescription": "SatNav",
+            "margin": "5",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-4",
+                            "value": "WA0",
+                            "description": ["Write & Req ACK"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "00 01",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "7DA2",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8D4",
+            "displayedId": "8D4",
+            "network": "CAN-INFO",
+            "source": "Display",
+            "destination": "Radio",
+            "notes": [
+                "Radio control"
+            ],
+            "examples": [
+                "8D4 ??? ?? ?? ?? ?? ???? ?",
+            ],
+            "msgDescription": [
+                "Taken from old rt3 wiki, I have not confirmed this data",
+            ],
+            "shortDescription": "Radio control",
+            "margin": "5",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-3",
+                            "value": "???",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "?? ?? ?? ??",
+                            "description": ["controls, see table"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "????",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "?",
+                            "description": ["ACK"],
+                        },
+                    ],
+                    "table":
+                    {
+                        "title": "First AND mask the byte with 0x1F then:",
+                        "rows":
+                        [
+                            {
+                                "key": "11 01",
+                                "value": "Switch off radio?"
+                            },
+                            {
+                                "key": "11 C0",
+                                "value": "Update settings for Loudness On"
+                            },
+                            {
+                                "key": "11 C2",
+                                "value": "Update settings for Loudness Off"
+                            },
+                            {
+                                "key": "11 E0",
+                                "value": "Update settings for Speed Volume On"
+                            },
+                            {
+                                "key": "11 E1",
+                                "value": "Update settings for Speed Volume Off"
+                            },
+                            {
+                                "key": "12 01",
+                                "value": "Switch to Radio"
+                            },
+                            {
+                                "key": "12 02",
+                                "value": "Switch to internal CD"
+                            },
+                            {
+                                "key": "12 03",
+                                "value": "switch to CD Changer (CDC)"
+                            },
+                            {
+                                "key": "14 xx xx xx xx",
+                                "value": "Update fader, balance, bass and treble"
+                            },
+                            {
+                                "key": "27 21",
+                                "value": "Read preset memory address 1"
+                            },
+                            {
+                                "key": "27 22",
+                                "value": "Read preset memory address 2"
+                            },
+                            {
+                                "key": "27 23",
+                                "value": "Read preset memory address 3"
+                            },
+                            {
+                                "key": "27 24",
+                                "value": "Read preset memory address 4"
+                            },
+                            {
+                                "key": "27 25",
+                                "value": "Read preset memory address 5"
+                            },
+                            {
+                                "key": "27 26",
+                                "value": "Read preset memory address 6"
+                            },
+                            {
+                                "key": "D1",
+                                "value": "Tell radio to return radio info when reading from port 0x554"
+                            },
+                            {
+                                "key": "D3",
+                                "value": "Tell radio to return preset stations when reading from port 0x554"
+                            },
+                            {
+                                "key": "D6",
+                                "value": "Tell radio to return CD/track info when reading from port 0x554"
+                            },
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8FC",
+            "displayedId": "8FC",
+            "network": "CAN-INFO",
+            "source": "",
+            "destination": "",
+            "notes": [
+                "Odometer reading", "Engine start"
+            ],
+            "examples": [
+                "8FC RA0 81 03 0D 40 81 ???? A",
+            ],
+            "msgDescription": [
+                "This is probably the dash reading mileage from the BSI at startup. The value is in kilometres even in UK vehicles configured for miles",
+            ],
+            "shortDescription": "Odometer",
+            "margin": "5",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-4",
+                            "value": "81",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "03 0D 81",
+                            "description": ["0x030D40=20000.0km"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "81",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "89DC",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "94E",
+            "displayedId": "94E",
+            "network": "CAN-INFO",
+            "source": "",
+            "destination": "",
+            "notes": [
+                "SatNav", "Engine not running"
+            ],
+            "examples": [
+                "94E WA0 10 FF 01 00 00 00 00 00 01 C4AC A",
+            ],
+            "msgDescription": [
+                "Appeared after using remote to access SatNav",
+            ],
+            "shortDescription": "SatNav",
+            "margin": "5",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-4",
+                            "value": "WA0",
+                            "description": ["Write & Req ACK 	"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "10 FF 01 00 00 00 00 00 01",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "C4AC",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "984",
+            "displayedId": "984",
+            "network": "CAN-INFO",
+            "source": "Display",
+            "destination": "Broadcast",
+            "notes": [
+                "Time", "Engine not running (time approx 22:50-23:05)"
+            ],
+            "examples": [
+                "984 W00 00 71 00 01 0C CCE4 N",
+                "984 W00 00 89 00 01 0C B930 N",
+            ],
+            "msgDescription": [
+                "I'm not convinced, this doesn't appear on the bus all that often - I guess once a minute is enough tho...",
+                "Also the info I've seen from other people is that the hours and minutes are in BCD... I have two captures from my car that are NOT BCD???",
+            ],
+            "shortDescription": "Time",
+            "margin": "7",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-7",
+                            "value": "W00",
+                            "description": ["Write"],
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "00",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "71",
+                            "description": ["Increases every 23:59-->00:00"],
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "00",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "01",
+                            "description": ["01 hours"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "0C",
+                            "description": ["0C (12) minutes"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "C4AC",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9C4",
+            "displayedId": "9C4",
+            "network": "CAN-INFO",
+            "source": "COM2000",
+            "destination": "Broadcast",
+            "notes": [
+                "Radio remote control",
+            ],
+            "examples": [
+                "9C4 WA0 20 98 2764 A",
+            ],
+            "msgDescription": [
+                "Transmitted regularly by the stalk - all but bits 4&5 are understood, I think bit 0 is a spare for some other button.",
+            ],
+            "shortDescription": "Radio remote control",
+            "margin": "11",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-11",
+                            "value": "WA0",
+                            "description": ["Write & Req ACK"],
+                        },
+                        {
+                            "offset": "offset-10",
+                            "value": "7",
+                            "description": ["seek up"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-9",
+                            "value": "6",
+                            "description": ["seek down"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-8",
+                            "value": "5",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-7",
+                            "value": "4",
+                            "description": ["bits 4 and 5 are set in some way when you roll the wheel position past 0x00 or 0xFF and the number is reset to 0x80. I suspect some mechanism that says which direction it rolled over in to allow you to keep track of the wheel rotation."],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "3",
+                            "description": ["volume up"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "2",
+                            "description": ["volume down"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "1",
+                            "description": ["source"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "0",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "98",
+                            "description": ["Wheel position (starts at 0x80 and returns there on overflow)"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "2764",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9CE",
+            "displayedId": "9CE",
+            "network": "CAN-INFO",
+            "source": "",
+            "destination": "",
+            "notes": [
+                "SatNav", "Engine not running",
+            ],
+            "examples": [
+                "9CE RA0 80 00 5D 00 00 82 1F 81 9E 00 C8 81 69 02 21 80 08E8 A",
+            ],
+            "msgDescription": [
+                "Appeared after using remote to access SatNav",
+            ],
+            "shortDescription": "SatNav",
+            "margin": "4",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-4",
+                            "value": "RA0",
+                            "description": ["Read & Req ACK"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "80",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "00 5D 00 00 82 1F 81 9E 00 C8 81 69 02 21",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "08E8",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": ["ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "B0E",
+            "displayedId": "B0E",
+            "network": "CAN-INFO",
+            "source": "",
+            "destination": "",
+            "notes": [
+                "Not a clue", "Engine not running",
+            ],
+            "examples": [
+                "B0E W00 FF AE AC 58 0A FD 9F 7E 4D C5 5D E4 00 00 00 CB74 N",
+            ],
+            "msgDescription": [
+                "Don't know what this is, it's regularly on the bus with no engine running. Byte 9 increments 00-FF and rolls over (incrementing byte 8).",
+                "Seems to be broadcast by something that's not interested in getting an ACK - this is similar to other packets that probably come from ECU via BSI?",
+            ],
+            "shortDescription": "Unknown",
+            "margin": "4",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-4",
+                            "value": "W00",
+                            "description": ["Write"],
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "80",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "FF AE AC 58 0A FD 9F 7E 4D C5 5D E4 00 00 00",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "CB74",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "N",
+                            "description": ["NO ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "E24",
+            "displayedId": "E24",
+            "network": "CAN-INFO",
+            "source": "BSI",
+            "destination": "Radio/Broadcast",
+            "notes": [
+                "VIN", "Engine not running",
+            ],
+            "examples": [
+                "E24 W00 56 46 33 38 42 52 48 5A 46 38 31 35 30 30 30 30 30 ???? N 	",
+            ],
+            "msgDescription": [
+                "Regularly broadcast, once again, no ACK requested - probably from ECU via BSI",
+                "This may be part of the radio security... only run if it sees a matching VIN on the bus.?",
+            ],
+            "shortDescription": "VIN",
+            "margin": "3",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-3",
+                            "value": "W00",
+                            "description": ["Write"],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "56 46 33 38 42 52 48 5A 46 38 31 35 30 30 30 30 30",
+                            "description": ["ASCII Data [VF38BRNZF81500000] (not my VIN)"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "????",
+                            "description": ["Checksum"],
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "N",
+                            "description": ["NO ACK"],
+                        },
+                    ]
+                }
+            ]
+        },
+    ]
+};
+
+            function loadData() {
+                var template = $('#template').html();
+                Mustache.parse(template);   // optional, speeds up future uses
+                var rendered = Mustache.render(template, data);
+                $('#target').html(rendered);
+            }
+
+            </script>
+            <script id="template" type="x-tmpl-mustache">
+            <table class="table table-hover">
+                <caption>Table of contents</caption>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Length</th>
+                        <th>Data</th>
+                        <th>Period</th>
+                        <th>Source</th>
+                        <th>Comment</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#messages}}
+                    <tr>
+                        <td><a href="#{{id}}">{{displayedId}}</a></td>
+                        <td>?</td>
+                        <td>{{examples.0}}</td>
+                        <td>?</td>
+                        <td>
+                            <span class="label label-info">{{source}}</span>
+                        </td>
+                        <td>{{shortDescription}}</td>
+                        <td></td>
+                    </tr>
+                    {{/messages}}
+                </tbody>
+            </table>
+            
+            
+            {{#messages}}
+            <div class="message" id="{{id}}">
+                <div class="network">Network: {{network}}</div>
+                <div class="source">Source: <span class="label label-primary">{{source}}</span></div>
+                <div class="dest">Dest: <span class="label label-success">{{destination}}</span></div>
+                <div>Note: </div>
+                {{#notes}}
+                    <div class="note"><span class="label label-success">{{.}}</span></div>
+                {{/notes}}
+                <div class="example">Example:
+                <br/>
+                {{#examples}}
+                    {{.}}<br/>
+                {{/examples}}
+                </div>
+                <br/>
+                <div class="description">
+                    <p>
+                    {{#msgDescription}}
+                        {{.}}<br/>
+                    {{/msgDescription}}
+                    </p>
+                </div>           
+                
+                {{#structures}}
+                <div>
+                {{#comment}}{{.}}<br/>{{/comment}}
+                </div>
+                <div class="id">{{displayedId}}</div>
+                <div class="structure clearfix margin-{{margin}}">
+                    {{#bytes}}
+                        <div class="bits">{{value}}{{^isBit}}&nbsp;{{/isBit}}
+                            <div class="info {{offset}}">{{#description}}{{.}}<br/>{{/description}}</div>
+                        </div>
+                    {{/bytes}}                    
+                </div>
+                {{#table}}
+                <div class="col-lg-12 col-md-2 col-sm-2">
+                    <table class="table table-condensed" style="width: auto;">
+                        <caption>{{title}}</caption>
+                        <thead>
+                            <tr><th>Key</th><th>Value</th></tr>
+                        </thead>
+                        <tbody>
+                            {{#rows}}
+                            <tr><td>{{key}}</td><td>{{value}}</td></tr>
+                            {{/rows}}
+                        </tbody>
+                    </table>
+                </div>
+                {{/table}}
+                {{/structures}}
+            </div>
+            {{/messages}}
+            </script>
+            <div id="target">            
+            </div>
+    </body>
