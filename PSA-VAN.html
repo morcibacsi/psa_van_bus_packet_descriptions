@@ -101,18 +101,16 @@
         <div class="container-fluid">
             <div class="jumbotron">
                 <h1>PSA VAN bus</h1>
-                <p>All data related to Peugeot 206 307 406 S2 Citroen C3 2004</p>
-                <a href="https://github.com/autowp/autowp.github.io" class="btn btn-primary">View on github, contribute</a>
+                <p>All data related to Peugeot 206 307 406 S2, Citroen C3 2004</p>
             </div>
             <script>
             var data =
-
 {
     "messages": [
         {
             "id": "464",
             "displayedId": "464",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "AirCon",
             "destination": "",
             "notes": [
@@ -122,9 +120,10 @@
                 "464 WA0 00 00 00 00 00 8CDA A"
             ],
             "msgDescription": [
-                "BSI Ignition, Dashboard lightning"
+                "Regular from AirCon"
             ],
-            "shortDescription": "BSI Ignition, Dashboard lightning",
+            "shortDescription": "On the bus regularly without engine running (all 0x00)",
+            "status" : "0%",
             "margin": "8",
             "structures":
             [
@@ -172,7 +171,7 @@
         {
             "id": "4D4",
             "displayedId": "4D4",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "Radio",
             "destination": "Display",
             "notes": [
@@ -184,7 +183,8 @@
             "msgDescription": [
                 "I can't begin to decode this until I put the headunit back in the car."
             ],
-            "shortDescription": "Audio settings",
+            "shortDescription": "Audio settings - I've not seen this (but I have no HU installed)",
+            "status" : "0%",
             "margin": "14",
             "structures":
             [
@@ -267,7 +267,7 @@
         {
             "id": "4DC",
             "displayedId": "4DC",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "AirCon",
             "destination": "",
             "notes": [
@@ -279,7 +279,8 @@
             "msgDescription": [
                 "Lots of guessing here"
             ],
-            "shortDescription": "AirCon?",
+            "shortDescription": "AC/Auto/Demist cabin temp...",
+            "status" : "0%",
             "margin": "24",
             "structures":
             [
@@ -341,7 +342,6 @@
                             "offset": "offset-11",
                             "value": "0",
                             "description": ["AC compressor running"],
-                            "isBit": "true"
                         },
                         {
                             "offset": "offset-7",
@@ -385,7 +385,7 @@
         {
             "id": "4EC",
             "displayedId": "4EC",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "CD Changer info",
             "destination": "",
             "notes": [
@@ -397,7 +397,8 @@
             "msgDescription": [
                 "I can't begin to decode this until I put the headunit back in the car."
             ],
-            "shortDescription": "CD Changer",
+            "shortDescription": "CD Changer - I've not seen this (but I have no CDC connected - see 4D4)",
+            "status" : "Partial",
             "margin": "7",
             "structures":
             [
@@ -410,7 +411,7 @@
         {
             "id": "4FC",
             "displayedId": "4FC",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "BSI",
             "destination": "Dashboard",
             "notes": [
@@ -422,6 +423,8 @@
             "msgDescription": [
                 "The bit wise info for the lights byte is correct in my car"
             ],
+            "shortDescription" : "headlight, foglight, indicator state",
+            "status" : "Partial",
             "margin": "20",
             "structures":
             [
@@ -546,7 +549,7 @@
         {
             "id": "524",
             "displayedId": "524",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "COM2000",
             "destination": "Dashboard",
             "notes": [
@@ -558,7 +561,8 @@
             "msgDescription": [
                 "I suspected this was mostly for the benefit of the multifunctional display - but it doesn't get acknowledged or ask for one! (well not with the engine off anyway)"
             ],
-            "shortDescription": "Car status 2",
+            "shortDescription": "Car status 2 - handbrake, left stalk btn, seatbelt warning, door lock, doors open, auto lights/wipers",
+            "status" : "Partial",
             "margin": "20",
             "structures":
             [
@@ -814,7 +818,7 @@
         {
             "id": "54E",
             "displayedId": "54E",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "SatNav Stuff",
             "destination": "",
             "notes": [
@@ -831,7 +835,8 @@
             "msgDescription": [
                 "The example packets appeared in that order multiple times through me setting a destination"
             ],
-            "shortDescription": "SatNav",
+            "shortDescription": "SatNav - Appeared after using remote to access sat-nav (start&end 0x81,0x82,0x83,0x84,0x85,0x86)",
+            "status" : "0%",
             "margin": "4",
             "structure":
             [
@@ -889,7 +894,7 @@
         {
             "id": "554_1",
             "displayedId": "554",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "Radio",
             "destination": "Display",
             "notes": [
@@ -901,7 +906,8 @@
             "msgDescription": [
                 "Probably requested by multifunctional display?"
             ],
-            "shortDescription": "Radio info",
+            "shortDescription": "Radio info - Multiple message types - includes radio rds data",
+            "status" : "Partial",
             "margin": "15",
             "structures":
             [
@@ -1071,7 +1077,7 @@
         {
             "id": "554_2",
             "displayedId": "554",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "Radio",
             "destination": "Display",
             "notes": [
@@ -1083,7 +1089,8 @@
             "msgDescription": [
                 "Probably requested by multifunctional display?"
             ],
-            "shortDescription": "Radio info",
+            "shortDescription": "Radio info - Multiple message types - includes radio rds data",
+            "status" : "Partial",
             "margin": "13",
             "structures":
             [
@@ -1195,7 +1202,7 @@
         {
             "id": "554_3",
             "displayedId": "554",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "Radio",
             "destination": "Display",
             "notes": [
@@ -1207,7 +1214,8 @@
             "msgDescription": [
                 "Probably requested by multifunctional display?"
             ],
-            "shortDescription": "Radio info",
+            "shortDescription": "Radio info - Multiple message types - includes radio rds data",
+            "status" : "Partial",
             "margin": "13",
             "structures":
             [
@@ -1245,12 +1253,12 @@
                         },
                         {
                             "offset": "offset-6",
-                            "value": "0001",
+                            "value": "00 01",
                             "description": ["00:01 mm:ss current track position"],
                         },
                         {
                             "offset": "offset-4",
-                            "value": "020",
+                            "value": "01 20",
                             "description": ["track 1 of 20 on CD"],
                         },
                         {
@@ -1275,7 +1283,7 @@
         {
             "id": "564",
             "displayedId": "564",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "BSI",
             "destination": "Display",
             "notes": [
@@ -1288,6 +1296,7 @@
                 "Probably read by display unit to decide what to display"
             ],
             "shortDescription": "Display data",
+            "status" : "Partial",
             "margin": "23",
             "structures":
             [
@@ -1528,7 +1537,7 @@
         {
             "id": "5E4",
             "displayedId": "5E4",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "Display",
             "destination": "",
             "notes": [
@@ -1540,7 +1549,8 @@
             "msgDescription": [
                 "Display writes these apparently - quite regularly"
             ],
-            "shortDescription": "Display settings?",
+            "shortDescription": "Display settings? - On the bus regularly without engine running",
+            "status" : "0%",
             "margin": "12",
             "structures":
             [
@@ -1580,7 +1590,7 @@
         {
             "id": "64E",
             "displayedId": "64E",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "",
             "destination": "",
             "notes": [
@@ -1592,7 +1602,8 @@
             "msgDescription": [
                 "This example packets appeared after me using the satnav to set a destination"
             ],
-            "shortDescription": "SatNav",
+            "shortDescription": "SatNav - Appeared after using remote to access sat-nav (start&end 0x80)",
+            "status" : "0%",
             "margin": "5",
             "structures":
             [
@@ -1610,7 +1621,7 @@
                         },
                         {
                             "offset": "",
-                            "value": "0501",
+                            "value": "05 01",
                             "description": [""],
                         },
                         {
@@ -1635,7 +1646,7 @@
         {
             "id": "664",
             "displayedId": "664",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "Dashboard",
             "destination": "BSI",
             "notes": [
@@ -1647,7 +1658,8 @@
             "msgDescription": [
                 "Suspect this is broadcast by the dashboard dials"
             ],
-            "shortDescription": "Dashboard",
+            "shortDescription": "Dashboard - hazard lights, lock doors and brightness.",
+            "status" : "Partial",
             "margin": "7",
             "structures":
             [
@@ -1795,7 +1807,7 @@
         {
             "id": "6CE",
             "displayedId": "6CE",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "",
             "destination": "",
             "notes": [
@@ -1814,7 +1826,8 @@
                 "the car was in a garage though so had no GPS reception, and couldn't start directions - I expect more packets like these once navigation starts. This seems to be the display reading what to show.",
                 "6CE - ASCII chars House Number and Street set for navigation (start&end 0x89) also memory lookup -"
             ],
-            "shortDescription": "SatNav",
+            "shortDescription": "SatNav - ASCII chars House Number and Street set for navigation (start&end 0x89) also memory lookup",
+            "status" : "0%",
             "margin": "7",
             "structures":
             [
@@ -2489,7 +2502,7 @@
         {
             "id": "74E",
             "displayedId": "74E",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "",
             "destination": "",
             "notes": [
@@ -2501,7 +2514,8 @@
             "msgDescription": [
                 "This example packets appeared after me using the satnav to set a destination"
             ],
-            "shortDescription": "SatNav",
+            "shortDescription": "SatNav - Appeared after using remote to access sat-nav - nav instruction?(start&end 0x81)",
+            "status" : "0%",
             "margin": "5",
             "structures":
             [
@@ -2544,7 +2558,7 @@
         {
             "id": "7CE",
             "displayedId": "7CE",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "",
             "destination": "",
             "notes": [
@@ -2557,7 +2571,8 @@
                 "This packet is on the bus regularly without satnav access but because I couldn't find any mention of it on the web and it looks a bit like other satnav messages with a similar IDENT I guess it might be from there. At some point I will unplug the SatNav and see if it vanishes.",
                 "Header&footer seems to run from 0x80 to 0x87 over some captures accompanied by some bit changes (LSB bytes 1 and 2)"
             ],
-            "shortDescription": "SatNav",
+            "shortDescription": "SatNav - On the bus regularly without engine running(start&end 0x87) (like satnav stuff)",
+            "status" : "0%",
             "margin": "5",
             "structures":
             [
@@ -2600,7 +2615,7 @@
         {
             "id": "824",
             "displayedId": "824",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "BSI",
             "destination": "Dashboard/Broadcast",
             "notes": [
@@ -2612,7 +2627,8 @@
             "msgDescription": [
                 "I guess this must come out of the BSI via the ECU",
             ],
-            "shortDescription": "Speed&RPM",
+            "shortDescription": "Speed&RPM - rpm, mph and sequence number (presumably because of needle display?)",
+            "status" : "Partial",
             "margin": "5",
             "structures":
             [
@@ -2660,7 +2676,7 @@
         {
             "id": "8A4",
             "displayedId": "8A4",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "BSI",
             "destination": "Dashboard/Broadcast",
             "notes": [
@@ -2672,7 +2688,8 @@
             "msgDescription": [
                 "I guess this must come out of the ECU via the BSI",
             ],
-            "shortDescription": "Dashboard",
+            "shortDescription": "Dashboard - hbeat, brightness, contact? engine?, economy(mode?) temp oil, water & ext oil+fuel",
+            "status" : "Partial",
             "margin": "23",
             "structures":
             [
@@ -2801,7 +2818,7 @@
         {
             "id": "8C4",
             "displayedId": "8C4",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "Radio",
             "destination": "Display",
             "notes": [
@@ -2813,7 +2830,8 @@
             "msgDescription": [
                 "I can't begin to decode this until I put the headunit back in the car.",
             ],
-            "shortDescription": "Radio buttons",
+            "shortDescription": "Radio buttons - two message formats on this iden? I still get one type in car with no HU",
+            "status" : "Partial",
             "margin": "8",
             "structures":
             [
@@ -3007,7 +3025,7 @@
         {
             "id": "8CE",
             "displayedId": "8CE",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "",
             "destination": "",
             "notes": [
@@ -3019,7 +3037,8 @@
             "msgDescription": [
                 "Appeared after using remote to access SatNav",
             ],
-            "shortDescription": "SatNav",
+            "shortDescription": "SatNav - Appeared after using remote to access sat-nav",
+            "status" : "0%",
             "margin": "5",
             "structures":
             [
@@ -3052,7 +3071,7 @@
         {
             "id": "8D4",
             "displayedId": "8D4",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "Display",
             "destination": "Radio",
             "notes": [
@@ -3064,7 +3083,8 @@
             "msgDescription": [
                 "Taken from old rt3 wiki, I have not confirmed this data",
             ],
-            "shortDescription": "Radio control",
+            "shortDescription": "Radio control - Unverified",
+            "status" : "Partial",
             "margin": "5",
             "structures":
             [
@@ -3176,7 +3196,7 @@
         {
             "id": "8FC",
             "displayedId": "8FC",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "",
             "destination": "",
             "notes": [
@@ -3188,7 +3208,8 @@
             "msgDescription": [
                 "This is probably the dash reading mileage from the BSI at startup. The value is in kilometres even in UK vehicles configured for miles",
             ],
-            "shortDescription": "Odometer",
+            "shortDescription": "Odometer - Odometer reading with header an footer in km only read at engine start",
+            "status" : "100%",
             "margin": "5",
             "structures":
             [
@@ -3226,7 +3247,7 @@
         {
             "id": "94E",
             "displayedId": "94E",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "",
             "destination": "",
             "notes": [
@@ -3238,7 +3259,8 @@
             "msgDescription": [
                 "Appeared after using remote to access SatNav",
             ],
-            "shortDescription": "SatNav",
+            "shortDescription": "SatNav - Appeared after using remote to access sat-nav",
+            "status" : "0%",
             "margin": "5",
             "structures":
             [
@@ -3271,7 +3293,7 @@
         {
             "id": "984",
             "displayedId": "984",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "Display",
             "destination": "Broadcast",
             "notes": [
@@ -3285,7 +3307,8 @@
                 "I'm not convinced, this doesn't appear on the bus all that often - I guess once a minute is enough tho...",
                 "Also the info I've seen from other people is that the hours and minutes are in BCD... I have two captures from my car that are NOT BCD???",
             ],
-            "shortDescription": "Time",
+            "shortDescription": "Time? - Not very regular hh:mm dosn't seem to change much either",
+            "status" : "Partial",
             "margin": "7",
             "structures":
             [
@@ -3338,7 +3361,7 @@
         {
             "id": "9C4",
             "displayedId": "9C4",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "COM2000",
             "destination": "Broadcast",
             "notes": [
@@ -3350,7 +3373,8 @@
             "msgDescription": [
                 "Transmitted regularly by the stalk - all but bits 4&5 are understood, I think bit 0 is a spare for some other button.",
             ],
-            "shortDescription": "Radio remote control",
+            "shortDescription": "Radio remote control - vol, seek, src button positions and wheel position",
+            "status" : "All but 3 bits",
             "margin": "11",
             "structures":
             [
@@ -3430,7 +3454,7 @@
         {
             "id": "9CE",
             "displayedId": "9CE",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "",
             "destination": "",
             "notes": [
@@ -3442,7 +3466,8 @@
             "msgDescription": [
                 "Appeared after using remote to access SatNav",
             ],
-            "shortDescription": "SatNav",
+            "shortDescription": "SatNav - Appeared after using remote to access sat-nav(start&end 0x80)",
+            "status" : "0%",
             "margin": "4",
             "structures":
             [
@@ -3480,7 +3505,7 @@
         {
             "id": "B0E",
             "displayedId": "B0E",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "",
             "destination": "",
             "notes": [
@@ -3493,7 +3518,8 @@
                 "Don't know what this is, it's regularly on the bus with no engine running. Byte 9 increments 00-FF and rolls over (incrementing byte 8).",
                 "Seems to be broadcast by something that's not interested in getting an ACK - this is similar to other packets that probably come from ECU via BSI?",
             ],
-            "shortDescription": "Unknown",
+            "shortDescription": "Unknown - On the bus regularly without engine running byte 9 goes 00-FF and increments 8...",
+            "status" : "0%",
             "margin": "4",
             "structures":
             [
@@ -3531,7 +3557,7 @@
         {
             "id": "E24",
             "displayedId": "E24",
-            "network": "CAN-INFO",
+            "network": "VAN-INFO",
             "source": "BSI",
             "destination": "Radio/Broadcast",
             "notes": [
@@ -3544,7 +3570,8 @@
                 "Regularly broadcast, once again, no ACK requested - probably from ECU via BSI",
                 "This may be part of the radio security... only run if it sees a matching VIN on the bus.?",
             ],
-            "shortDescription": "VIN",
+            "shortDescription": "VIN - 18 ASCII characters matches Vehicle Identification Number",
+            "status" : "100%",
             "margin": "3",
             "structures":
             [
@@ -3610,7 +3637,7 @@
                             <span class="label label-info">{{source}}</span>
                         </td>
                         <td>{{shortDescription}}</td>
-                        <td></td>
+                        <td>{{status}}</td>
                     </tr>
                     {{/messages}}
                 </tbody>
@@ -3675,3 +3702,4 @@
             <div id="target">            
             </div>
     </body>
+</html>
