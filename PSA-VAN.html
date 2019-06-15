@@ -1739,32 +1739,78 @@
                 "554 RA- 87 D1 09 80 F0 02 00 65 F2 14 A1 00 53 4B 59 52 4F 43 4B 20 00 87 A",
             ],
             "msgDescription": [
-                "Probably requested by multifunctional display?"
+                "Radio information"
             ],
             "shortDescription": "Radio info - Multiple message types - includes radio rds data",
             "status" : "Partial",
-            "margin": "15",
+            "margin": "23",
             "structures":
             [
                 {
                     "bytes": [
                         {
-                            "offset": "offset-15",
+                            "offset": "offset-28",
                             "value": "RA0",
                             "description": "Read & Req ACK",
                         },
                         {
-                            "offset": "offset-13",
+                            "offset": "offset-26",
                             "value": "87",
                             "description": ["Part of header footer pair for message (starts and ends in 87) - this is another *data updated* header and footer", "These headers and footers are common to many messages that carry updated information"],
                         },
                         {
-                            "offset": "offset-10",
+                            "offset": "offset-25",
                             "value": "D1",
-                            "description": ["D1 = Radio frequency data (probably for radio display)"],
+                            "description": ["D1 = Radio frequency data"],
                         },
                         {
-                            "offset": "offset-8",
+                            "offset": "",
+                            "value": "7",
+                            "description": "",
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-21",
+                            "value": "6543",
+                            "description": "Memory position",
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-16",
+                            "value": "210",
+                            "description": ["Band", "1=FM1", "2=FM2", "3=AM", "4=FMAST"],
+                        },
+                        {
+                            "offset": "offset-13",
+                            "value": "7",
+                            "description": ["Freq scan direction", "0=DOWN", "1=UP"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "56",
+                            "description": "",
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "4",
+                            "description": "Freq scan is running",
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-11",
+                            "value": "3",
+                            "description": "Manual scan in progress",
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "",
+                            "value": "210",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-9",
                             "value": "0980",
                             "description": ["Frequency", "(0980*.05)+50 = 99.00MHz"],
                         },
@@ -1780,15 +1826,15 @@
                             "isBit": "true"
                         },
                         {
-                            "offset": "",
+                            "offset": "offset-8",
                             "value": "6",
-                            "description": [""],
+                            "description": ["TA data present"],
                             "isBit": "true"
                         },
                         {
-                            "offset": "",
+                            "offset": "offset-7",
                             "value": "5",
-                            "description": [""],
+                            "description": ["RDS data present"],
                             "isBit": "true"
                         },
                         {
@@ -1812,13 +1858,13 @@
                         {
                             "offset": "offset-6",
                             "value": "1",
-                            "description": ["RDS"],
+                            "description": ["RDS active"],
                             "isBit": "true"
                         },
                         {
                             "offset": "offset-5",
                             "value": "0",
-                            "description": ["TA"],
+                            "description": ["TA active"],
                         },
                         {
                             "offset": "",
@@ -1841,9 +1887,9 @@
                             "description": "",
                         },
                         {
-                            "offset": "offset-4",
+                            "offset": "",
                             "value": "A1",
-                            "description": ["RDS available (non zero)"],
+                            "description": [""],
                         },
                         {
                             "offset": "offset-3",
@@ -1919,12 +1965,102 @@
                 "Radio Info (sort of mostly)", "Not seen in my car - no HU installed"
             ],
             "examples": [
+                "554 RA- 8x D2 0D 00 8x ???? A",
+            ],
+            "msgDescription": [
+                "Tape info"
+            ],
+            "shortDescription": "Radio info - Multiple message types - Tape info",
+            "status" : "Partial",
+            "margin": "13",
+            "structures":
+            [
+                {
+                    "bytes": [
+                        {
+                            "offset": "offset-14",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-13",
+                            "value": "81",
+                            "description": ["Header"],
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "D2",
+                            "description": ["D2 = Tape"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "765",
+                            "description": [""],
+                            "isBit": true
+                        },
+                        {
+                            "offset": "offset-9",
+                            "value": "4",
+                            "description": ["Fast forward"],
+                            "isBit": true
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "32",
+                            "description": ["Play in progress", "3=ON", "0=OFF"],
+                            "isBit": true
+                        },
+                        {
+                            "offset": "",
+                            "value": "1",
+                            "description": [""],
+                            "isBit": true
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "0",
+                            "description": ["Casette side", "0=Side 1", "1=Side 2"],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "81",
+                            "description": ["Footer"],
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "????",
+                            "description": "Checksum",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "A",
+                            "description": "ACK",
+                        },
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "554_3",
+            "displayedId": "554",
+            "network": "VAN-INFO",
+            "source": "Radio",
+            "destination": "Display",
+            "notes": [
+                "Radio Info (sort of mostly)", "Not seen in my car - no HU installed"
+            ],
+            "examples": [
                 "554 RA- 81 D3 91 53 4B 59 52 4F 43 4B 20 81 A",
             ],
             "msgDescription": [
-                "Probably requested by multifunctional display?"
+                "Radio preset data"
             ],
-            "shortDescription": "Radio info - Multiple message types - includes radio rds data",
+            "shortDescription": "Radio info - Multiple message types - Radio preset data",
             "status" : "Partial",
             "margin": "13",
             "structures":
@@ -2035,7 +2171,7 @@
             ]
         },
         {
-            "id": "554_3",
+            "id": "554_6",
             "displayedId": "554",
             "network": "VAN-INFO",
             "source": "Radio",
@@ -2049,7 +2185,7 @@
             "msgDescription": [
                 "Probably requested by multifunctional display?"
             ],
-            "shortDescription": "Radio info - Multiple message types - includes radio rds data",
+            "shortDescription": "Radio info - Multiple message types - CD track info",
             "status" : "Partial",
             "margin": "13",
             "structures":
