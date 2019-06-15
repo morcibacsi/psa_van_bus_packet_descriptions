@@ -61,6 +61,12 @@
 .offset-22 { padding-top: 440px; }
 .offset-23 { padding-top: 460px; }
 .offset-24 { padding-top: 480px; }
+.offset-25 { padding-top: 500px; }
+.offset-26 { padding-top: 520px; }
+.offset-27 { padding-top: 540px; }
+.offset-28 { padding-top: 560px; }
+.offset-29 { padding-top: 580px; }
+.offset-30 { padding-top: 600px; }
 .margin-1 { padding-bottom: 40px; }
 .margin-2 { padding-bottom: 60px; }
 .margin-3 { padding-bottom: 80px; }
@@ -85,6 +91,12 @@
 .margin-22 { padding-bottom: 460px; }
 .margin-23 { padding-bottom: 480px; }
 .margin-24 { padding-bottom: 500px; }
+.margin-25 { padding-bottom: 520px; }
+.margin-26 { padding-bottom: 540px; }
+.margin-27 { padding-bottom: 560px; }
+.margin-28 { padding-bottom: 580px; }
+.margin-29 { padding-bottom: 600px; }
+.margin-30 { padding-bottom: 620px; }
 .color-rt6 { background: green; color: white }
 .color-bsi { background: yellow }
 .color-steering-wheel { background: blue; color: white }
@@ -890,92 +902,134 @@
             ],
             "shortDescription" : "headlight, foglight, indicator state",
             "status" : "Partial",
-            "margin": "20",
+            "margin": "23",
             "structures":
             [
                 {
                     "bytes": [
                         {
-                            "offset": "offset-20",
+                            "offset": "offset-28",
                             "value": "WA0",
                             "description": "Write & Req ACK",
                         },
                         {
-                            "offset": "offset-19",
-                            "value": "80",
-                            "description": [""]
-                        },
-                        {
-                            "offset": "offset-19",
-                            "value": "00",
-                            "description": [""],
-                        },
-                        {
-                            "offset": "offset-19",
-                            "value": "03",
-                            "description": [""],
-                        },
-                        {
-                            "offset": "offset-18",
-                            "value": "71",
-                            "description": [""],
-                        },
-                        {
-                            "offset": "offset-17",
-                            "value": "F0",
-                            "description": ["?"],
-                        },
-                        {
-                            "offset": "offset-16",
+                            "offset": "offset-27",
                             "value": "7",
-                            "description": ["Dipped beam"],
+                            "description": ["Relay BSI on / Tempo ON"],
                             "isBit": "true"
                         },
                         {
-                            "offset": "offset-15",
+                            "offset": "offset-26",
                             "value": "6",
-                            "description": ["High beam"],
+                            "description": ["Speed regulator wheel ON"],
                             "isBit": "true"
                         },
                         {
-                            "offset": "offset-14",
+                            "offset": "offset-25",
                             "value": "5",
-                            "description": ["Front fog"],
+                            "description": ["Led warning ON"],
                             "isBit": "true"
                         },
                         {
-                            "offset": "offset-13",
+                            "offset": "offset-24",
                             "value": "4",
-                            "description": ["Rear fog"],
+                            "description": ["?"],
                             "isBit": "true"
                         },
                         {
-                            "offset": "offset-12",
+                            "offset": "offset-23",
                             "value": "3",
-                            "description": ["Right indicator"],
+                            "description": ["?"],
                             "isBit": "true"
                         },
                         {
-                            "offset": "offset-11",
+                            "offset": "offset-22",
                             "value": "2",
-                            "description": ["Left indicator"],
+                            "description": ["Led prechauffage (heat spark)"],
                             "isBit": "true"
                         },
                         {
-                            "offset": "offset-10",
+                            "offset": "offset-21",
                             "value": "1",
                             "description": ["?"],
                             "isBit": "true"
                         },
                         {
+                            "offset": "offset-20",
+                            "value": "0",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-19",
+                            "value": "00",
+                            "description": ["0X01 = led door car open"],
+                        },
+                        {
+                            "offset": "offset-18",
+                            "value": "03",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-17",
+                            "value": "71",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-16",
+                            "value": "F0",
+                            "description": ["?"],
+                        },
+                        {
+                            "offset": "offset-15",
+                            "value": "7",
+                            "description": ["Dipped beam"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-14",
+                            "value": "6",
+                            "description": ["High beam"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-13",
+                            "value": "5",
+                            "description": ["Front fog"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-12",
+                            "value": "4",
+                            "description": ["Rear fog"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-11",
+                            "value": "3",
+                            "description": ["Right indicator"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-10",
+                            "value": "2",
+                            "description": ["Left indicator"],
+                            "isBit": "true"
+                        },
+                        {
                             "offset": "offset-9",
+                            "value": "1",
+                            "description": ["?"],
+                            "isBit": "true"
+                        },
+                        {
+                            "offset": "offset-8",
                             "value": "0",
                             "description": ["?"],
                         },
                         {
                             "offset": "offset-7",
                             "value": "FF",
-                            "description": ["?"],
+                            "description": ["temp gauge (water? oil ?)"],
                         },
                         {
                             "offset": "offset-6",
