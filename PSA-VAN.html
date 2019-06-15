@@ -799,11 +799,76 @@
             ],
             "shortDescription": "CD Changer - I've not seen this (but I have no CDC connected - see 4D4)",
             "status" : "Partial",
-            "margin": "7",
+            "margin": "15",
             "structures":
             [
                 {
                     "bytes": [
+                        {
+                            "offset": "offset-17",
+                            "value": "RA0",
+                            "description": "Read & Req ACK",
+                        },
+                        {
+                            "offset": "offset-16",
+                            "value": "8x",
+                            "description": "Header",
+                        },
+                        {
+                            "offset": "offset-15",
+                            "value": "00",
+                            "description": "0x01 = random track play",
+                        },
+                        {
+                            "offset": "offset-9",
+                            "value": "C1",
+                            "description": ["0x41 = OFF", "0xC1 = Powered on and standing by (paused)", "0xD3 = 'Busy' (Time = 0xFFFF)", "0xC3 = Playing", "0xC4 = fast forward", "0xC5 = fast rewind"]
+                        },
+                        {
+                            "offset": "offset-8",
+                            "value": "16",
+                            "description": "Either 0x06 (no cartridge) or 0x16",
+                        },
+                        {
+                            "offset": "offset-7",
+                            "value": "01",
+                            "description": "track time (m)(0xFF when changing track or play mode)",
+                        },
+                        {
+                            "offset": "offset-6",
+                            "value": "22",
+                            "description": "track time (s)(0xFF when changing track or play mode)",
+                        },
+                        {
+                            "offset": "offset-5",
+                            "value": "17",
+                            "description": "current track (0xFF if no cartridge)",
+                        },
+                        {
+                            "offset": "offset-4",
+                            "value": "01",
+                            "description": "cd number (0xFF if no cartridge)",
+                        },
+                        {
+                            "offset": "offset-3",
+                            "value": "21",
+                            "description": "track count (0xFF if no cartridge ?)",
+                        },
+                        {
+                            "offset": "offset-2",
+                            "value": "00",
+                            "description": "?",
+                        },
+                        {
+                            "offset": "offset-1",
+                            "value": "3F",
+                            "description": "0x00 (no cartridge) or 0xXX: cd present bit",
+                        },
+                        {
+                            "offset": "offset-0",
+                            "value": "8x",
+                            "description": "Footer",
+                        },
                     ]
                 }
             ]
