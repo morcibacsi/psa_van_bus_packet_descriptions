@@ -661,37 +661,32 @@
             ],
             "shortDescription": "AC/Auto/Demist cabin temp...",
             "status" : "0%",
-            "margin": "24",
+            "margin": "20",
             "structures":
             [
                 {
                     "bytes": [
                         {
-                            "offset": "offset-24",
+                            "offset": "offset-19",
                             "value": "WA0",
                             "description": "Write & Req ACK",
                         },
                         {
-                            "offset": "offset-19",
-                            "value": "80",
-                            "description": ["00 = Off", "80 = Auto (AC off)", "C0 = Auto AC on but not running?", "C1 = Auto AC on and running?", "E1 = Rear window heater on"]
-                        },
-                        {
                             "offset": "offset-18",
                             "value": "7",
-                            "description": ["Auto"],
+                            "description": ["Power On"],
                             "isBit": "true"
                         },
                         {
                             "offset": "offset-17",
                             "value": "6",
-                            "description": ["AC Enabled"],
+                            "description": ["A/C Enabled"],
                             "isBit": "true"
                         },
                         {
                             "offset": "offset-16",
                             "value": "5",
-                            "description": ["Rear window heater"],
+                            "description": ["Rear window heating on"],
                             "isBit": "true"
                         },
                         {
@@ -721,22 +716,22 @@
                         {
                             "offset": "offset-11",
                             "value": "0",
-                            "description": ["AC compressor running"],
+                            "description": ["A/C compressor running"],
+                        },
+                        {
+                            "offset": "offset-10",
+                            "value": "00",
+                            "description": ["0x1C on AUX or OFF / 0x00 on contact"]
                         },
                         {
                             "offset": "offset-7",
-                            "value": "00010110",
-                            "description": ["internal temperature /2?", "00010110 = 0x16", "0x16 = 22", "22/2 = 11 degrees"],
-                        },
-                        {
-                            "offset": "offset-6",
-                            "value": "12",
-                            "description": ["?"],
+                            "value": "16",
+                            "description": ["internal temperature /2?", "0x16 = 22", "22/2 = 11 degrees"],
                         },
                         {
                             "offset": "offset-5",
-                            "value": "3E",
-                            "description": ["?"],
+                            "value": "123E",
+                            "description": ["Evaporator temperature (X/10 - 40)"],
                         },
                         {
                             "offset": "offset-4",
@@ -758,7 +753,32 @@
                             "value": "A",
                             "description": ["ACK"],
                         }
-                    ]
+                    ],
+                    "table": {
+                        "title": "Byte0 values",
+                        "rows": [
+                            {
+                                "key": "0x00",
+                                "value": "Off",
+                            },
+                            {
+                                "key": "0x80",
+                                "value": "Auto (AC off)",
+                            },
+                            {
+                                "key": "0xC0",
+                                "value": "Auto AC on but not running?",
+                            },
+                            {
+                                "key": "0xC1",
+                                "value": "Auto AC on and running?",
+                            },
+                            {
+                                "key": "0xE1",
+                                "value": "Rear window heater on",
+                            },
+                        ]
+                    }
                 }
             ]
         },
