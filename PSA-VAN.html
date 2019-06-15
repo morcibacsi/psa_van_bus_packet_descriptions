@@ -2264,7 +2264,7 @@
                 "564 RA0 84 00 00 00 00 00 00 80 00 FF 00 39 39 1D 03 53 00 43 03 53 00 43 FF FF 01 13 84 DE8A A",
             ],
             "msgDescription": [
-                "Probably read by display unit to decide what to display"
+                "Probably read by display unit to decide what to display. The display does not send this message on a bench. If you remove the display from the car this message dissappears from the bus."
             ],
             "shortDescription": "Display data",
             "status" : "Partial",
@@ -2392,6 +2392,11 @@
                         {
                             "offset": "",
                             "value": "FF",
+                            "description": [""],
+                        },
+                        {
+                            "offset": "",
+                            "value": "00",
                             "description": [""],
                         },
                         {
