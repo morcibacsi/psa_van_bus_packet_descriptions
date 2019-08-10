@@ -11,7 +11,7 @@
         "564 RA0 84 00 00 00 00 00 00 80 00 FF 00 39 39 1D 03 53 00 43 03 53 00 43 FF FF 01 13 84 DE8A A"
     ],
     "msgDescription": [
-        "Read by display unit to decide what to display. So if you remove the display from the car this message dissappears from the bus. This is a reply request type message so when testing on the bench only 564 RA0 6B 56 N can be seen. As the data part is filled by the BSI."
+        "Read by display unit to decide what to display. So if you remove the display from the car this message dissappears from the bus. This is a reply request type message so when testing on the bench only 564 RA0 6B 56 N can be seen. The data part is filled by the BSI."
     ],
     "shortDescription": "Display data",
     "status": "Partial",
