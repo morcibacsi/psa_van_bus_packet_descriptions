@@ -28,17 +28,17 @@
                 {
                     "offset": "offset-17",
                     "value": "00",
-                    "description": ["0x02 = time out after go off...", "0x08 = Brake dot level alarm"]
+                    "description": ["0x01 = Water temperature maximum", "0x02 = time out after go off...", "0x08 = Brake dot level alarm"]
                 },
                 {
                     "offset": "offset-8",
                     "value": "01",
-                    "description": ["0x80 = Contact key", "0x08 = Fuel cap open"]
+                    "description": ["0x08 = Fuel cap open", "0x40 = Oil light", "0x80 = Contact key"]
                 },
                 {
-                    "offset": "offset-6",
+                    "offset": "",
                     "value": "7",
-                    "description": ["Set brief on contact", "key ASR/ESP fault?"],
+                    "description": [""],
                     "isBit": "true"
                 },
                 {
@@ -48,15 +48,63 @@
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-4",
+                    "offset": "offset-5",
                     "value": "5",
-                    "description": ["Set brief on contact", "key ABS fault?"],
+                    "description": ["ABS fault"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "4",
+                    "description": ["ESP fault"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "3",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "2",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "1",
+                    "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-3",
+                    "value": "0",
+                    "description": ["Engine check fault (MIL)"]
+                },
+
+                {
+                    "offset": "",
+                    "value": "7",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "6",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "5",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
                     "value": "4",
-                    "description": ["Airbag fault"],
+                    "description": [""],
                     "isBit": "true"
                 },
                 {
@@ -80,13 +128,9 @@
                 {
                     "offset": "offset-2",
                     "value": "0",
-                    "description": ["Engine check fault"]
+                    "description": ["Airbag fault"]
                 },
-                {
-                    "offset": "",
-                    "value": "00",
-                    "description": [""]
-                },
+
                 {
                     "offset": "",
                     "value": "76",
@@ -143,7 +187,7 @@
                 {
                     "offset": "offset-25",
                     "value": "1",
-                    "description": ["Seatbelt warning on - not sure about this"],
+                    "description": ["Seatbelt warning on"],
                     "isBit": "true"
                 },
                 {
@@ -154,7 +198,7 @@
                 {
                     "offset": "offset-23",
                     "value": "7",
-                    "description": [""],
+                    "description": ["Fuel level low"],
                     "isBit": "true"
                 },
                 {
@@ -190,7 +234,7 @@
                 {
                     "offset": "offset-17",
                     "value": "1",
-                    "description": ["Seatbelt warning on"],
+                    "description": ["Seatbelt warning on (it doesn't look like)"],
                     "isBit": "true"
                 },
                 {
