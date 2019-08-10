@@ -52,7 +52,7 @@
                 {
                     "offset": "offset-18",
                     "value": "3210",
-                    "description": ["Dial brightness"]
+                    "description": ["Dial brightness (When the whole byte equals 0x8F it means the dashboard lighting is off)"]
                 },
                 {
                     "offset": "offset-17",
@@ -104,7 +104,7 @@
                 {
                     "offset": "offset-8",
                     "value": "3C",
-                    "description": ["Water temp 0x3C=60/2=30 degrees?", "FF until key set to Ignition"]
+                    "description": ["Water temperature 0x3C = (60-39) = 21 degrees", "FF until key set to Ignition"]
                 },
                 {
                     "offset": "offset-6",
@@ -114,7 +114,7 @@
                 {
                     "offset": "offset-5",
                     "value": "6E",
-                    "description": ["Fuel level"]
+                    "description": ["Fuel level (in %)"]
                 },
                 {
                     "offset": "offset-3",
