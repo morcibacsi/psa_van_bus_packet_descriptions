@@ -1,0 +1,46 @@
+{
+    "id": "94E",
+    "displayedId": "94E",
+    "network": "VAN-INFO",
+    "source": "",
+    "destination": "",
+    "notes": [
+        "SatNav", "Engine not running"
+    ],
+    "examples": [
+        "94E WA0 10 FF 01 00 00 00 00 00 01 C4AC A"
+    ],
+    "msgDescription": [
+        "Appeared after using remote to access SatNav"
+    ],
+    "shortDescription": "SatNav - Appeared after using remote to access sat-nav",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-4",
+                    "value": "WA0",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "10 FF 01 00 00 00 00 00 01",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "C4AC",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

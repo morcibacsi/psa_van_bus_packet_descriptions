@@ -1,0 +1,81 @@
+{
+    "id": "554_6",
+    "displayedId": "554",
+    "network": "VAN-INFO",
+    "source": "Radio",
+    "destination": "Display",
+    "notes": [
+        "Radio Info (sort of mostly)", "Not seen in my car - no HU installed"
+    ],
+    "examples": [
+        "554 RA- 81 D6 00 03 00 00 01 01 20 81 ???? A"
+    ],
+    "msgDescription": [
+        "Probably requested by multifunctional display?"
+    ],
+    "shortDescription": "Radio info - Multiple message types - CD track info",
+    "status": "Partial",
+    "margin": "13",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-13",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-12",
+                    "value": "81",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "offset-10",
+                    "value": "D6",
+                    "description": ["D6 = CD track info"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "03",
+                    "description": ["0x13 for first packet after changed track"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "00 01",
+                    "description": ["00:01 mm:ss current track position"]
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "01 20",
+                    "description": ["track 1 of 20 on CD"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "81",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "????",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        }
+    ]
+}

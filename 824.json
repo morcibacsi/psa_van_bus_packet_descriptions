@@ -1,0 +1,56 @@
+{
+    "id": "824",
+    "displayedId": "824",
+    "network": "VAN-INFO",
+    "source": "BSI",
+    "destination": "Dashboard/Broadcast",
+    "notes": [
+        "Speed&RPM", "Engine not running"
+    ],
+    "examples": [
+        "824 W00 18 F8 00 00 00 00 44 28BA N"
+    ],
+    "msgDescription": [
+        "I guess this must come out of the BSI via the ECU"
+    ],
+    "shortDescription": "Speed&RPM - rpm, mph and sequence number (presumably because of needle display?)",
+    "status": "Partial",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-7",
+                    "value": "W00",
+                    "description": ["Write"]
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "18 F8",
+                    "description": ["RPM (x8)", "0x18F8 = 6392/8 = 799 rpm"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00 00",
+                    "description": ["Speed (x100) Km/h"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00 00 44",
+                    "description": ["Sequence number (second?)"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "28BA",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "N",
+                    "description": ["NO ACK"]
+                }
+            ]
+        }
+    ]
+}

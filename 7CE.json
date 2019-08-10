@@ -1,0 +1,57 @@
+{
+    "id": "7CE",
+    "displayedId": "7CE",
+    "network": "VAN-INFO",
+    "source": "",
+    "destination": "",
+    "notes": [
+        "SatNav?", "Engine not running"
+    ],
+    "examples": [
+        "7CE RA0 87 11 3C 10 07 01 02 00 00 00 00 00 00 00 00 00 00 20 00 87 89DC A"
+    ],
+    "msgDescription": [
+        "This packet is on the bus regularly without satnav access but because I couldn't find any mention of it on the web and it looks a bit like other satnav messages with a similar IDENT I guess it might be from there. At some point I will unplug the SatNav and see if it vanishes.",
+        "Header&footer seems to run from 0x80 to 0x87 over some captures accompanied by some bit changes (LSB bytes 1 and 2)"
+    ],
+    "shortDescription": "SatNav - On the bus regularly without engine running(start&end 0x87) (like satnav stuff)",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-5",
+                    "value": "RA0",
+                    "description": ["Read & Req ACK"]
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "87",
+                    "description": ["Header?"]
+                },
+                {
+                    "offset": "",
+                    "value": "11 3C 10 07 01 02 00 00 00 00 00 00 00 00 00 00 20 00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "81",
+                    "description": ["Footer?"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "89DC",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

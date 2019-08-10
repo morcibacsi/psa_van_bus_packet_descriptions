@@ -1,0 +1,76 @@
+{
+    "id": "54E",
+    "displayedId": "54E",
+    "network": "VAN-INFO",
+    "source": "SatNav Stuff",
+    "destination": "",
+    "notes": [
+        "Engine not running", "Satnav accessed"
+    ],
+    "examples": [
+        "54E RA0 81 00 80 00 00 81 28FA A",
+        "54E RA0 82 04 00 00 00 82 58B6 A",
+        "54E RA0 83 08 00 00 00 83 8282 A",
+        "54E RA0 84 90 00 00 00 84 8356 A",
+        "54E RA0 85 03 01 00 00 85 CDE6 A",
+        "54E RA0 86 40 00 00 00 86 A67E A"
+    ],
+    "msgDescription": [
+        "The example packets appeared in that order multiple times through me setting a destination"
+    ],
+    "shortDescription": "SatNav - Appeared after using remote to access sat-nav (start&end 0x81,0x82,0x83,0x84,0x85,0x86)",
+    "status": "0%",
+    "margin": "4",
+    "structure":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-4",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "81",
+                    "description": "Header?"
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": ""
+                },
+                {
+                    "offset": "",
+                    "value": "80",
+                    "description": ""
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": ""
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": ""
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "81",
+                    "description": "Footer?"
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "28FA",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        }
+    ]
+}

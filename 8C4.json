@@ -1,0 +1,207 @@
+{
+    "id": "8C4",
+    "displayedId": "8C4",
+    "network": "VAN-INFO",
+    "source": "Radio",
+    "destination": "Display",
+    "notes": [
+        "Radio Buttons", "Not seen in my car - no HU installed"
+    ],
+    "examples": [
+        "8C4 WA- 8A 44 40 ???? A"
+    ],
+    "msgDescription": [
+        "I can't begin to decode this until I put the headunit back in the car."
+    ],
+    "shortDescription": "Radio buttons - two message formats on this iden? I still get one type in car with no HU",
+    "status": "Partial",
+    "margin": "8",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-8",
+                    "value": "WA0",
+                    "description": ["Write Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-7",
+                    "value": "8A",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "44",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-5",
+                    "value": "7",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "6",
+                    "description": ["Button released"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "5",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "43210",
+                    "description": [
+                        "buttons as below"
+                    ]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "????",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ],
+            "table":
+            {
+                "title": "First AND mask the byte with 0x1F then:",
+                "rows":
+                [
+                    {
+                        "key": "0x01",
+                        "value": "1"
+                    },
+                    {
+                        "key": "0x02",
+                        "value": "2"
+                    },
+                    {
+                        "key": "0x03",
+                        "value": "3"
+                    },
+                    {
+                        "key": "0x04",
+                        "value": "4"
+                    },
+                    {
+                        "key": "0x05",
+                        "value": "5"
+                    },
+                    {
+                        "key": "0x06",
+                        "value": "6"
+                    },
+                    {
+                        "key": "0x10",
+                        "value": "audio up"
+                    },
+                    {
+                        "key": "0x11",
+                        "value": "audio down"
+                    },
+                    {
+                        "key": "0x16",
+                        "value": "audio"
+                    },
+                    {
+                        "key": "0x1B",
+                        "value": "radio"
+                    },
+                    {
+                        "key": "0x1D",
+                        "value": "CD(maybe tape on other units?)"
+                    },
+                    {
+                        "key": "0x1E",
+                        "value": "CDC"
+                    },
+                    {
+                        "key": "",
+                        "value": "OR/AND"
+                    },
+                    {
+                        "key": "",
+                        "value": "Bytes 2 and 3 like so..."
+                    },
+                    {
+                        "key": "C2 11",
+                        "value": "Audio setting down button pressed (note: only sent when changing audio settings)"
+                    },
+                    {
+                        "key": "C2 12",
+                        "value": "Audio setting up button pressed (note: only sent when changing audio settings)"
+                    },
+                    {
+                        "key": "C2 16",
+                        "value": "Audio button pressed"
+                    },
+                    {
+                        "key": "22 13",
+                        "value": "Seek- button pressed (note: only sent when cdc input is active)"
+                    },
+                    {
+                        "key": "22 14",
+                        "value": "Seek+ button pressed (note: only sent when cdc input is active)"
+                    },
+                    {
+                        "key": "22 17",
+                        "value": "MAN button pressed (note: only sent when cdc input is active)"
+                    },
+                    {
+                        "key": "C2 1B",
+                        "value": "Radio button pressed"
+                    },
+                    {
+                        "key": "C2 1D",
+                        "value": "CD button pressed"
+                    },
+                    {
+                        "key": "C2 1E",
+                        "value": "CDC button pressed"
+                    },
+                    {
+                        "key": "",
+                        "value": ""
+                    },
+                    {
+                        "key": "Notes for the keys above:",
+                        "value": ""
+                    },
+                    {
+                        "key": "",
+                        "value": "1. When a button is released, bit 6 of the second byte is set (for example C2 5D when CD button is released)"
+                    },
+                    {
+                        "key": "",
+                        "value": "2. If a button is pressed longer than 2 seconds, a new packet is sent with bit 7 set, then also bit 6 is set and a new packet is sent every second. When the button is released, bit 7 are set to zero and a final packet described in note 1 above is sent."
+                    },
+                    {
+                        "key": "",
+                        "value": ""
+                    },
+                    {
+                        "key": "21 40",
+                        "value": "Volume knob has been turned"
+                    },
+                    {
+                        "key": "24 40",
+                        "value": "Either RDS or TA button has been pressed and released"
+                    },
+                    {
+                        "key": "",
+                        "value": "The port also tells the display to read new data (for example RDS data or cd time information) from port 0x554."
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "id": "B0E",
+    "displayedId": "B0E",
+    "network": "VAN-INFO",
+    "source": "",
+    "destination": "",
+    "notes": [
+        "Not a clue", "Engine not running"
+    ],
+    "examples": [
+        "B0E W00 FF AE AC 58 0A FD 9F 7E 4D C5 5D E4 00 00 00 CB74 N"
+    ],
+    "msgDescription": [
+        "Don't know what this is, it's regularly on the bus with no engine running. Byte 9 increments 00-FF and rolls over (incrementing byte 8).",
+        "Seems to be broadcast by something that's not interested in getting an ACK - this is similar to other packets that probably come from ECU via BSI?"
+    ],
+    "shortDescription": "Unknown - On the bus regularly without engine running byte 9 goes 00-FF and increments 8...",
+    "status": "0%",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-4",
+                    "value": "W00",
+                    "description": ["Write"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "80",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "FF AE AC 58 0A FD 9F 7E 4D C5 5D E4 00 00 00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "CB74",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "N",
+                    "description": ["NO ACK"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,586 @@
+{
+    "id": "524",
+    "displayedId": "524",
+    "network": "VAN-INFO",
+    "source": "COM2000",
+    "destination": "Dashboard",
+    "notes": [
+        "Car Status 2", "Engine not running"
+    ],
+    "examples": [
+        "524 W00 00 00 01 00 20 01 00 01 00 FF 00 00 00 00 E28A N"
+    ],
+    "msgDescription": [
+        "I suspected this was mostly for the benefit of the multifunctional display - but it doesn't get acknowledged or ask for one! (well not with the engine off anyway)"
+    ],
+    "shortDescription": "Car status 2 - handbrake, left stalk btn, seatbelt warning, door lock, doors open, auto lights/wipers",
+    "status": "Partial",
+    "margin": "24",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-20",
+                    "value": "W00",
+                    "description": "Write"
+                },
+                {
+                    "offset": "offset-17",
+                    "value": "00",
+                    "description": ["0x02 = time out after go off...", "0x08 = Brake dot level alarm"]
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "01",
+                    "description": ["0x80 = Contact key", "0x08 = Fuel cap open"]
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "7",
+                    "description": ["Set brief on contact", "key ASR/ESP fault?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "6",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "5",
+                    "description": ["Set brief on contact", "key ABS fault?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "4",
+                    "description": ["Airbag fault"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "3",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "2",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "1",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "0",
+                    "description": ["Engine check fault"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "76",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "5",
+                    "description": ["Battery fault"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "43210",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "7",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "6",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "5",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "4",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "3",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-26",
+                    "value": "2",
+                    "description": ["Passenger airbag disabled"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-25",
+                    "value": "1",
+                    "description": ["Seatbelt warning on - not sure about this"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-24",
+                    "value": "0",
+                    "description": ["Handbrake on (if contact on)"]
+                },
+                {
+                    "offset": "offset-23",
+                    "value": "7",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-22",
+                    "value": "6",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-21",
+                    "value": "5",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-20",
+                    "value": "4",
+                    "description": ["Left stick button pushed"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-19",
+                    "value": "3",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-18",
+                    "value": "2",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-17",
+                    "value": "1",
+                    "description": ["Seatbelt warning on"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-16",
+                    "value": "0",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-15",
+                    "value": "7",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-14",
+                    "value": "6",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-13",
+                    "value": "5",
+                    "description": ["Automatic wiping is active"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-12",
+                    "value": "4",
+                    "description": ["Automatic lighting is active"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-11",
+                    "value": "3",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-10",
+                    "value": "2",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-9",
+                    "value": "1",
+                    "description": ["ESP/ASR deactivated"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "0",
+                    "description": ["Car locked"]
+                },
+                {
+                    "offset": "offset-7",
+                    "value": "FF",
+                    "description": ["See table below"]
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-5",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "5A96",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ],
+            "table":
+            {
+                "title": "Messages shown on display",
+                "rows":
+                [
+                    {
+                        "key": "0x00",
+                        "value": "TYRES DEFLATED"
+                    },
+                    {
+                        "key": "0x01",
+                        "value": "DOOR OPEN"
+                    },
+                    {
+                        "key": "0x02",
+                        "value": "GEARBOX OIL TEMP TOO HIGH"
+                    },
+                    {
+                        "key": "0x03",
+                        "value": "BRAKE FLUID LEVEL LOW"
+                    },
+                    {
+                        "key": "0x04",
+                        "value": "HYDRAULIC SUSPENSION PRESSURE"
+                    },
+                    {
+                        "key": "0x05",
+                        "value": "SERIOUS SUSPENSION FAULT"
+                    },
+                    {
+                        "key": "0x06",
+                        "value": "ENGINE OIL TEMPERATURE TOO HIGH"
+                    },
+                    {
+                        "key": "0x07",
+                        "value": "ENGINE COOLANT TEMP TOO HIGH"
+                    },
+                    {
+                        "key": "0x08",
+                        "value": "UNBLOCK DIESEL FILTER"
+                    },
+                    {
+                        "key": "0x09",
+                        "value": "AUTO ICON WITH STOP"
+                    },
+                    {
+                        "key": "0x0A",
+                        "value": "DIESEL ADDITIVE MINIMUM LEVEL"
+                    },
+                    {
+                        "key": "0x0B",
+                        "value": "FUEL TANK ACCESS OPEN"
+                    },
+                    {
+                        "key": "0x0C",
+                        "value": "TYRES PUNCTURED"
+                    },
+                    {
+                        "key": "0x0D",
+                        "value": "TOP UP ENGINE COOLANT LEVEL"
+                    },
+                    {
+                        "key": "0x0E",
+                        "value": "OIL PRESSURE INSUFFICIENT"
+                    },
+                    {
+                        "key": "0x0F",
+                        "value": "TOP UP ENGINE OIL LEVEL"
+                    },
+                    {
+                        "key": "0x10",
+                        "value": "ANTIPOLLUTION FAULT"
+                    },
+                    {
+                        "key": "0x11",
+                        "value": "BRAKE PADS WORN"
+                    },
+                    {
+                        "key": "0x12",
+                        "value": "CHECK CONTROL OK"
+                    },
+                    {
+                        "key": "0x13",
+                        "value": "AUTOMATIC GEAR FAULT"
+                    },
+                    {
+                        "key": "0x14",
+                        "value": "ESP ASR NOT FUNCTIONING"
+                    },
+                    {
+                        "key": "0x15",
+                        "value": "ABS FAULT"
+                    },
+                    {
+                        "key": "0x16",
+                        "value": "SUSPENSION OR STEERING FAULT"
+                    },
+                    {
+                        "key": "0x17",
+                        "value": "BRAKING FAULT"
+                    },
+                    {
+                        "key": "0x18",
+                        "value": "AIRBAG FAULT"
+                    },
+                    {
+                        "key": "0x19",
+                        "value": "AIRBAG FAULT"
+                    },
+                    {
+                        "key": "0x1A",
+                        "value": "CRUISE CONTROL FAULT"
+                    },
+                    {
+                        "key": "0x1B",
+                        "value": "ENGINE COOLANT TEMPERATURE HIGH"
+                    },
+                    {
+                        "key": "0x1D",
+                        "value": "AUTO LIGHTING FAULT"
+                    },
+                    {
+                        "key": "0x1E",
+                        "value": "AUTO WIPER FAULT"
+                    },
+                    {
+                        "key": "0x1F",
+                        "value": "WATER IN DIESEL FUEL FILTER"
+                    },
+                    {
+                        "key": "0x20",
+                        "value": "LEFT SLIDING DOOR FAULT"
+                    },
+                    {
+                        "key": "0x21",
+                        "value": "HEADLIGHT CORRECTOR FAULT"
+                    },
+                    {
+                        "key": "0x22",
+                        "value": "RIGHT SLIDING DOOR FAULT"
+                    },
+                    {
+                        "key": "0x24",
+                        "value": "SECONDARY BATTERY CHARGE FAULT"
+                    },
+                    {
+                        "key": "0x25",
+                        "value": "BATTERY CHARGE FAULT"
+                    },
+                    {
+                        "key": "0x26",
+                        "value": "DIESEL FUEL ADDITIVE FAULT"
+                    },
+                    {
+                        "key": "0x27",
+                        "value": "CATALYTIC CONVERTER FAULT"
+                    },
+                    {
+                        "key": "0x28",
+                        "value": "HANDBRAKE ON"
+                    },
+                    {
+                        "key": "0x29",
+                        "value": "SEAT BELT REMINDER"
+                    },
+                    {
+                        "key": "0x2A",
+                        "value": "PASSENGER AIRBAG DEACTIVATED"
+                    },
+                    {
+                        "key": "0x2B",
+                        "value": "TOP UP WASHER FLUID"
+                    },
+                    {
+                        "key": "0x2C",
+                        "value": "SPEED TOO HIGH"
+                    },
+                    {
+                        "key": "0x2D",
+                        "value": "KEY REMINDER"
+                    },
+                    {
+                        "key": "0x2E",
+                        "value": "SIDE LIGHTS REMINDER"
+                    },
+                    {
+                        "key": "0x2F",
+                        "value": "HILL HOLDER ACTIVE"
+                    },
+                    {
+                        "key": "0x30",
+                        "value": "IMPACT SENSOR FAULT"
+                    },
+                    {
+                        "key": "0x32",
+                        "value": "PRESSURE SENSOR BATTERY LOW"
+                    },
+                    {
+                        "key": "0x33",
+                        "value": "REMOTE CONTROL BATTERY LOW"
+                    },
+                    {
+                        "key": "0x35",
+                        "value": "PUT AUTO TRANSMISSION LEVER IN POSITION P"
+                    },
+                    {
+                        "key": "0x36",
+                        "value": "TEST STOP LIGHTS BRAKE GENTLY"
+                    },
+                    {
+                        "key": "0x37",
+                        "value": "FUEL LEVEL LOW"
+                    },
+                    {
+                        "key": "0x38",
+                        "value": "AUTOMATIC LIGHTING INACTIVE"
+                    },
+                    {
+                        "key": "0x39",
+                        "value": "HEADLIGHT BEND SYSTEM FAULT"
+                    },
+                    {
+                        "key": "0x3A",
+                        "value": "HEADLIGHT BEND SYSTEM DEACTIVATED"
+                    },
+                    {
+                        "key": "0x3B",
+                        "value": "HEADLIGHT BEND SYSTEM ACTIVATED"
+                    },
+                    {
+                        "key": "0x3D",
+                        "value": "5 TYRE PRESSURE SENSORS MISSING"
+                    },
+                    {
+                        "key": "0x40",
+                        "value": "DOORS LOCKED"
+                    },
+                    {
+                        "key": "0x41",
+                        "value": "ESP ASR DEACTIVATED"
+                    },
+                    {
+                        "key": "0x42",
+                        "value": "CHILD SAFETY ACTIVE"
+                    },
+                    {
+                        "key": "0x43",
+                        "value": "DEADLOCKING ACTIVE"
+                    },
+                    {
+                        "key": "0x44",
+                        "value": "AUTOMATIC LIGHTING ACTIVE"
+                    },
+                    {
+                        "key": "0x45",
+                        "value": "AUTOMATIC WIPING ACTIVE"
+                    },
+                    {
+                        "key": "0x46",
+                        "value": "ENGINE IMMOBILISER FAULT"
+                    },
+                    {
+                        "key": "0x47",
+                        "value": "SPORTS SUSPENSION ACTIVE"
+                    },
+                    {
+                        "key": "0x54",
+                        "value": "LPG COMBUSTION REFUSED"
+                    },
+                    {
+                        "key": "0x55",
+                        "value": "LPG DEFAULT"
+                    },
+                    {
+                        "key": "0x5B",
+                        "value": "STOP AND START SYSTEM ACTIVE"
+                    },
+                    {
+                        "key": "0x5C",
+                        "value": "STOP AND START SYSTEM DEACTIVATED"
+                    },
+                    {
+                        "key": "0x5E",
+                        "value": "XSARA DYNALTO"
+                    },
+                    {
+                        "key": "0x5F",
+                        "value": "307 DYNALTO"
+                    },
+                    {
+                        "key": "0x67",
+                        "value": "PLACE LEVER IN NEUTRAL"
+                    }
+                ]
+            }
+        }
+    ]
+}

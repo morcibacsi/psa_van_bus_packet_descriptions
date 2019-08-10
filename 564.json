@@ -1,0 +1,259 @@
+{
+    "id": "564",
+    "displayedId": "564",
+    "network": "VAN-INFO",
+    "source": "BSI",
+    "destination": "Display",
+    "notes": [
+        "Engine not running", "Car Status"
+    ],
+    "examples": [
+        "564 RA0 84 00 00 00 00 00 00 80 00 FF 00 39 39 1D 03 53 00 43 03 53 00 43 FF FF 01 13 84 DE8A A"
+    ],
+    "msgDescription": [
+        "Probably read by display unit to decide what to display. The display does not send this message on a bench. If you remove the display from the car this message dissappears from the bus."
+    ],
+    "shortDescription": "Display data",
+    "status": "Partial",
+    "margin": "23",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-23",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-21",
+                    "value": "7",
+                    "description": ["Header", "Sequence byte"],
+                    "isBit": "true"
+                },
+                {
+                    "value": "6",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "5",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "4",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "3",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-20",
+                    "value": "210",
+                    "description": ["Sequence number (constantly incrementing probably used to indicate changed data or new packet)"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-18",
+                    "value": "7",
+                    "description": ["Front Right"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-17",
+                    "value": "6",
+                    "description": ["Front Left"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-16",
+                    "value": "5",
+                    "description": ["Rear Right"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-15",
+                    "value": "4",
+                    "description": ["Rear Left"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-14",
+                    "value": "3",
+                    "description": ["Boot Lid"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "2",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "1",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "0",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "FF",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "7",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "6",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "5",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "4",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "3",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "2",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "1",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-12",
+                    "value": "0",
+                    "description": ["Right stalk button pushed"]
+                },
+                {
+                    "offset": "offset-11",
+                    "value": "39",
+                    "description": ["trip 1 mean speed"]
+                },
+                {
+                    "offset": "offset-10",
+                    "value": "39",
+                    "description": ["trip 2 mean speed"]
+                },
+                {
+                    "offset": "",
+                    "value": "1D",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "0353",
+                    "description": ["trip 1 distance"]
+                },
+                {
+                    "offset": "offset-7",
+                    "value": "0043",
+                    "description": ["trip 1 fuel consumption"]
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "0353",
+                    "description": ["trip 2 distance"]
+                },
+                {
+                    "offset": "offset-5",
+                    "value": "0043",
+                    "description": ["trip 2 fuel consumption"]
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "FFFF",
+                    "description": ["instantaneous fuel consumption"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "0113",
+                    "description": ["0x0113 = 275 miles fuel left"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "84",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "DE8A",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        }
+    ]
+}

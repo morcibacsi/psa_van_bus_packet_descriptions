@@ -1,0 +1,361 @@
+{
+    "id": "464",
+    "displayedId": "464",
+    "network": "VAN-INFO",
+    "source": "AirCon",
+    "destination": "",
+    "notes": [
+        "Engine not running"
+    ],
+    "examples": [
+        "464 WA0 00 00 00 00 00 8CDA A"
+    ],
+    "msgDescription": [
+        "Regular from AirCon"
+    ],
+    "shortDescription": "On the bus regularly without engine running (all 0x00)",
+    "status": "0%",
+    "margin": "23",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-19",
+                    "value": "WA0",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-18",
+                    "value": "7",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-17",
+                    "value": "6",
+                    "description": ["Auto mode on - not sure, it is also set, when fan speed is above 3"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-16",
+                    "value": "5",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-15",
+                    "value": "4",
+                    "description": ["A/C enabled (does not mean it is operating)"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-14",
+                    "value": "3",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-13",
+                    "value": "2",
+                    "description": ["Air recycling on"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-12",
+                    "value": "1",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-11",
+                    "value": "0",
+                    "description": ["Toggled when air recycling button pressed"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["Fan speed, see table for details"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "8CDA",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ],
+            "table":
+            {
+                "title": "The reported fan speed has some very weird logic. It reports different bytes for the same value based on whether the AC is on, the rear window heating is enabled and the air recycling is on. I could not figure out any formula or masking to get the real value.",
+                "rows":
+                [
+                    {
+                        "key": "A/C is enabled, rear window heating is disabled (air recycling state does not matter)",
+                        "value": "",
+                        "isStrong": true
+                    },
+                    {
+                        "key": "Byte",
+                        "value": "Speed"
+                    },
+                    {
+                        "key": "0x04",
+                        "value": "1"
+                    },
+                    {
+                        "key": "0x05",
+                        "value": "2"
+                    },
+                    {
+                        "key": "0x06",
+                        "value": "3"
+                    },
+                    {
+                        "key": "0x07",
+                        "value": "4"
+                    },
+                    {
+                        "key": "0x08",
+                        "value": "5"
+                    },
+                    {
+                        "key": "0x0A",
+                        "value": "6"
+                    },
+                    {
+                        "key": "0x0C",
+                        "value": "7"
+                    },
+                    {
+                        "key": "0x0E",
+                        "value": "8"
+                    },
+                    {
+                        "key": "A/C is enabled, rear window heating is enabled, air recycling is disabled",
+                        "value": "",
+                        "isStrong": true
+                    },
+                    {
+                        "key": "Byte",
+                        "value": "Speed"
+                    },
+                    {
+                        "key": "0x12",
+                        "value": "1"
+                    },
+                    {
+                        "key": "0x13",
+                        "value": "2"
+                    },
+                    {
+                        "key": "0x14",
+                        "value": "3"
+                    },
+                    {
+                        "key": "0x15",
+                        "value": "4"
+                    },
+                    {
+                        "key": "0x16",
+                        "value": "5"
+                    },
+                    {
+                        "key": "0x18",
+                        "value": "6"
+                    },
+                    {
+                        "key": "0x1A",
+                        "value": "7"
+                    },
+                    {
+                        "key": "0x1C",
+                        "value": "8"
+                    },
+                    {
+                        "key": "A/C is enabled, rear window heating is enabled, air recycling is enabled",
+                        "value": "",
+                        "isStrong": true
+                    },
+                    {
+                        "key": "Byte",
+                        "value": "Speed"
+                    },
+                    {
+                        "key": "0x18",
+                        "value": "1"
+                    },
+                    {
+                        "key": "0x19",
+                        "value": "2"
+                    },
+                    {
+                        "key": "0x20",
+                        "value": "3"
+                    },
+                    {
+                        "key": "0x21",
+                        "value": "4"
+                    },
+                    {
+                        "key": "0x22",
+                        "value": "5"
+                    },
+                    {
+                        "key": "0x24",
+                        "value": "6"
+                    },
+                    {
+                        "key": "0x26",
+                        "value": "7"
+                    },
+                    {
+                        "key": "0x28",
+                        "value": "8"
+                    },
+                    {
+                        "key": "A/C is disabled, rear window heating is disabled (air recycling state does not matter)",
+                        "value": "",
+                        "isStrong": true
+                    },
+                    {
+                        "key": "Byte",
+                        "value": "Speed"
+                    },
+                    {
+                        "key": "0x02",
+                        "value": "1"
+                    },
+                    {
+                        "key": "0x03",
+                        "value": "2"
+                    },
+                    {
+                        "key": "0x04",
+                        "value": "3"
+                    },
+                    {
+                        "key": "0x05",
+                        "value": "4"
+                    },
+                    {
+                        "key": "0x06",
+                        "value": "5"
+                    },
+                    {
+                        "key": "0x08",
+                        "value": "6"
+                    },
+                    {
+                        "key": "0x0A",
+                        "value": "7"
+                    },
+                    {
+                        "key": "0x0C",
+                        "value": "8"
+                    },
+                    {
+                        "key": "A/C is disabled, rear window heating is enabled, air recycling is disabled",
+                        "value": "",
+                        "isStrong": true
+                    },
+                    {
+                        "key": "Byte",
+                        "value": "Speed"
+                    },
+                    {
+                        "key": "0x10",
+                        "value": "1"
+                    },
+                    {
+                        "key": "0x11",
+                        "value": "2"
+                    },
+                    {
+                        "key": "0x12",
+                        "value": "3"
+                    },
+                    {
+                        "key": "0x13",
+                        "value": "4"
+                    },
+                    {
+                        "key": "0x14",
+                        "value": "5"
+                    },
+                    {
+                        "key": "0x16",
+                        "value": "6"
+                    },
+                    {
+                        "key": "0x18",
+                        "value": "7"
+                    },
+                    {
+                        "key": "0x1A",
+                        "value": "8"
+                    },
+                    {
+                        "key": "A/C is disabled, rear window heating is enabled, air recycling is enabled",
+                        "value": "",
+                        "isStrong": true
+                    },
+                    {
+                        "key": "Byte",
+                        "value": "Speed"
+                    },
+                    {
+                        "key": "0x16",
+                        "value": "1"
+                    },
+                    {
+                        "key": "0x17",
+                        "value": "2"
+                    },
+                    {
+                        "key": "0x18",
+                        "value": "3"
+                    },
+                    {
+                        "key": "0x19",
+                        "value": "4"
+                    },
+                    {
+                        "key": "0x20",
+                        "value": "5"
+                    },
+                    {
+                        "key": "0x22",
+                        "value": "6"
+                    },
+                    {
+                        "key": "0x24",
+                        "value": "7"
+                    },
+                    {
+                        "key": "0x26",
+                        "value": "8"
+                    }
+                ]
+            }
+        }
+    ]
+}

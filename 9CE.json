@@ -1,0 +1,51 @@
+{
+    "id": "9CE",
+    "displayedId": "9CE",
+    "network": "VAN-INFO",
+    "source": "",
+    "destination": "",
+    "notes": [
+        "SatNav", "Engine not running"
+    ],
+    "examples": [
+        "9CE RA0 80 00 5D 00 00 82 1F 81 9E 00 C8 81 69 02 21 80 08E8 A"
+    ],
+    "msgDescription": [
+        "Appeared after using remote to access SatNav"
+    ],
+    "shortDescription": "SatNav - Appeared after using remote to access sat-nav(start&end 0x80)",
+    "status": "0%",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-4",
+                    "value": "RA0",
+                    "description": ["Read & Req ACK"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "80",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00 5D 00 00 82 1F 81 9E 00 C8 81 69 02 21",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "08E8",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

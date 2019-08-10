@@ -1,0 +1,48 @@
+
+{
+    "id": "E24",
+    "displayedId": "E24",
+    "network": "VAN-INFO",
+    "source": "BSI",
+    "destination": "Radio/Broadcast",
+    "notes": [
+        "VIN", "Engine not running"
+    ],
+    "examples": [
+        "E24 W00 56 46 33 38 42 52 48 5A 46 38 31 35 30 30 30 30 30 ???? N"
+    ],
+    "msgDescription": [
+        "Regularly broadcast, once again, no ACK requested - probably from ECU via BSI",
+        "This may be part of the radio security... only run if it sees a matching VIN on the bus.?"
+    ],
+    "shortDescription": "VIN - 18 ASCII characters matches Vehicle Identification Number",
+    "status": "100%",
+    "margin": "3",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "W00",
+                    "description": ["Write"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "56 46 33 38 42 52 48 5A 46 38 31 35 30 30 30 30 30",
+                    "description": ["ASCII Data [VF38BRNZF81500000] (not my VIN)"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "????",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "N",
+                    "description": ["NO ACK"]
+                }
+            ]
+        }
+    ]
+}

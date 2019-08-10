@@ -1,0 +1,694 @@
+{
+    "id": "6CE",
+    "displayedId": "6CE",
+    "network": "VAN-INFO",
+    "source": "",
+    "destination": "",
+    "notes": [
+        "Engine not running", "SatNav Stuff"
+    ],
+    "examples": [
+        "6CE RA0 89 4D 20 51 54 48 00 01 48 45 4C 45 4E 00 01 48 4F 4D 45 00 01 89 752E A",
+        "6CE RA0 05 11 56 00 53 43 4F 54 4C 41 4E 44 00 41 42 45 52 44 45 45 4E 53 48 49 52 45 00 05 FAB0 A",
+        "6CE RA0 97 00 32 35 00 32 35 00 01 97 D088 A",
+        "6CE RA0 00 10 56 00 45 4E 47 4C 41 4E 44 00 48 41 4D 50 53 48 49 52 45 00 41 4E 44 4F 56 00 4B70 A",
+        "6CE RA0 89 45 52 00 00 44 43 6C 6F 73 65 20 00 43 41 4D 45 4C 4F 54 00 30 00 01 89 DC1E A"
+    ],
+    "msgDescription": [
+        "The example packets appeared in that order multiple times through me setting a destination.",
+        "The packets appear in sequence and example 5 is regularly on the bus after I set a destination,",
+        "the car was in a garage though so had no GPS reception, and couldn't start directions - I expect more packets like these once navigation starts. This seems to be the display reading what to show.",
+        "6CE - ASCII chars House Number and Street set for navigation (start&end 0x89) also memory lookup -"
+    ],
+    "shortDescription": "SatNav - ASCII chars House Number and Street set for navigation (start&end 0x89) also memory lookup",
+    "status": "0%",
+    "margin": "7",
+    "structures":
+    [
+        {
+            "comment": ["This contains 3 of my destinations stored in memory (as it happens the first 3 to be displayed on opening the satnav screen)"],
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "89",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "",
+                    "value": "4D",
+                    "description": ["M"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "20",
+                    "description": ["{space}"]
+                },
+                {
+                    "offset": "",
+                    "value": "51",
+                    "description": ["Q"]
+                },
+                {
+                    "offset": "",
+                    "value": "54",
+                    "description": ["T"]
+                },
+                {
+                    "offset": "",
+                    "value": "48",
+                    "description": ["H"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "01",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "48",
+                    "description": ["H"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "4C",
+                    "description": ["L"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "4E",
+                    "description": ["N"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "01",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "48",
+                    "description": ["H"]
+                },
+                {
+                    "offset": "",
+                    "value": "4F",
+                    "description": ["O"]
+                },
+                {
+                    "offset": "",
+                    "value": "4D",
+                    "description": ["M"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "01",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "89",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "A67E",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        },
+        {
+            "comment": ["Being a recent destination area - this pops up on my satnav screen when you go past choosing a memory and into looking up an address."],
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "05",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "",
+                    "value": "11",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "56",
+                    "description": ["V"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "53",
+                    "description": ["S"]
+                },
+                {
+                    "offset": "",
+                    "value": "43",
+                    "description": ["C"]
+                },
+                {
+                    "offset": "",
+                    "value": "4F",
+                    "description": ["O"]
+                },
+                {
+                    "offset": "",
+                    "value": "54",
+                    "description": ["T"]
+                },
+                {
+                    "offset": "",
+                    "value": "4C",
+                    "description": ["L"]
+                },
+                {
+                    "offset": "",
+                    "value": "41",
+                    "description": ["A"]
+                },
+                {
+                    "offset": "",
+                    "value": "4E",
+                    "description": ["N"]
+                },
+                {
+                    "offset": "",
+                    "value": "44",
+                    "description": ["D"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "41",
+                    "description": ["A"]
+                },
+                {
+                    "offset": "",
+                    "value": "42",
+                    "description": ["B"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "52",
+                    "description": ["R"]
+                },
+                {
+                    "offset": "",
+                    "value": "44",
+                    "description": ["D"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "4E",
+                    "description": ["N"]
+                },
+                {
+                    "offset": "",
+                    "value": "53",
+                    "description": ["S"]
+                },
+                {
+                    "offset": "",
+                    "value": "48",
+                    "description": ["H"]
+                },
+                {
+                    "offset": "",
+                    "value": "49",
+                    "description": ["I"]
+                },
+                {
+                    "offset": "",
+                    "value": "52",
+                    "description": ["R"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "0",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "05",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "A67E",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        },
+        {
+            "comment": ["Hmm, 2 possible house numbers? I can't remember what comes on the screen next!"],
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "97",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "",
+                    "value": "11",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "32",
+                    "description": ["2"]
+                },
+                {
+                    "offset": "",
+                    "value": "35",
+                    "description": ["5"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "32",
+                    "description": ["2"]
+                },
+                {
+                    "offset": "",
+                    "value": "34",
+                    "description": ["5"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "01",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "97",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "A67E",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        },
+        {
+            "comment": ["This looks like me entering an address"],
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "",
+                    "value": "10",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "56",
+                    "description": ["V"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "4E",
+                    "description": ["N"]
+                },
+                {
+                    "offset": "",
+                    "value": "47",
+                    "description": ["G"]
+                },
+                {
+                    "offset": "",
+                    "value": "4C",
+                    "description": ["L"]
+                },
+                {
+                    "offset": "",
+                    "value": "41",
+                    "description": ["A"]
+                },
+                {
+                    "offset": "",
+                    "value": "4E",
+                    "description": ["N"]
+                },
+                {
+                    "offset": "",
+                    "value": "44",
+                    "description": ["D"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "48",
+                    "description": ["H"]
+                },
+                {
+                    "offset": "",
+                    "value": "41",
+                    "description": ["A"]
+                },
+                {
+                    "offset": "",
+                    "value": "4D",
+                    "description": ["M"]
+                },
+                {
+                    "offset": "",
+                    "value": "50",
+                    "description": ["P"]
+                },
+                {
+                    "offset": "",
+                    "value": "53",
+                    "description": ["S"]
+                },
+                {
+                    "offset": "",
+                    "value": "48",
+                    "description": ["H"]
+                },
+                {
+                    "offset": "",
+                    "value": "49",
+                    "description": ["I"]
+                },
+                {
+                    "offset": "",
+                    "value": "52",
+                    "description": ["R"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "41",
+                    "description": ["A"]
+                },
+                {
+                    "offset": "",
+                    "value": "4E",
+                    "description": ["N"]
+                },
+                {
+                    "offset": "",
+                    "value": "44",
+                    "description": ["D"]
+                },
+                {
+                    "offset": "",
+                    "value": "4F",
+                    "description": ["O"]
+                },
+                {
+                    "offset": "",
+                    "value": "56",
+                    "description": ["V"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "4B70",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        },
+        {
+            "comment": ["This looks like it follows on from Example 4"],
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "89",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "52",
+                    "description": ["R"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "44",
+                    "description": ["D"]
+                },
+                {
+                    "offset": "",
+                    "value": "43",
+                    "description": ["C"]
+                },
+                {
+                    "offset": "",
+                    "value": "6C",
+                    "description": ["l"]
+                },
+                {
+                    "offset": "",
+                    "value": "6F",
+                    "description": ["o"]
+                },
+                {
+                    "offset": "",
+                    "value": "73",
+                    "description": ["s"]
+                },
+                {
+                    "offset": "",
+                    "value": "65",
+                    "description": ["e"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "20",
+                    "description": ["{space}"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "43",
+                    "description": ["C"]
+                },
+                {
+                    "offset": "",
+                    "value": "41",
+                    "description": ["A"]
+                },
+                {
+                    "offset": "",
+                    "value": "4D",
+                    "description": ["M"]
+                },
+                {
+                    "offset": "",
+                    "value": "45",
+                    "description": ["E"]
+                },
+                {
+                    "offset": "",
+                    "value": "4C",
+                    "description": ["L"]
+                },
+                {
+                    "offset": "",
+                    "value": "4F",
+                    "description": ["O"]
+                },
+                {
+                    "offset": "",
+                    "value": "54",
+                    "description": ["T"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "30",
+                    "description": ["0"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "01",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "89",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "DC1E",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        }
+    ]
+}

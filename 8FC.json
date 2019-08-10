@@ -1,0 +1,51 @@
+{
+    "id": "8FC",
+    "displayedId": "8FC",
+    "network": "VAN-INFO",
+    "source": "",
+    "destination": "",
+    "notes": [
+        "Odometer reading", "Engine start"
+    ],
+    "examples": [
+        "8FC RA0 81 03 0D 40 81 ???? A"
+    ],
+    "msgDescription": [
+        "This is probably the dash reading mileage from the BSI at startup. The value is in kilometres even in UK vehicles configured for miles"
+    ],
+    "shortDescription": "Odometer - Odometer reading with header an footer in km only read at engine start",
+    "status": "100%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-4",
+                    "value": "81",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "03 0D 81",
+                    "description": ["0x030D40=20000.0km"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "81",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "89DC",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

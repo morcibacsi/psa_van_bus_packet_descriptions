@@ -1,0 +1,142 @@
+{
+    "id": "8A4",
+    "displayedId": "8A4",
+    "network": "VAN-INFO",
+    "source": "BSI",
+    "destination": "Dashboard/Broadcast",
+    "notes": [
+        "Dashboard Gauges", "Engine not running"
+    ],
+    "examples": [
+        "8A4 W00 8F 03 3C 1A 6E 90 7D 4EB8 N"
+    ],
+    "msgDescription": [
+        "I guess this must come out of the ECU via the BSI"
+    ],
+    "shortDescription": "Dashboard - hbeat, brightness, contact? engine?, economy(mode?) temp oil, water & ext oil+fuel",
+    "status": "Partial",
+    "margin": "23",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-23",
+                    "value": "W00",
+                    "description": ["Write"]
+                },
+                {
+                    "offset": "offset-22",
+                    "value": "7",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-21",
+                    "value": "6",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-20",
+                    "value": "5",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-19",
+                    "value": "4",
+                    "description": ["Heartbeat"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-18",
+                    "value": "3210",
+                    "description": ["Dial brightness"]
+                },
+                {
+                    "offset": "offset-17",
+                    "value": "7",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-16",
+                    "value": "6",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-15",
+                    "value": "5",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-14",
+                    "value": "4",
+                    "description": ["Economy mode active"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-13",
+                    "value": "3",
+                    "description": ["Door open warning light?(don't think so now)"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-12",
+                    "value": "2",
+                    "description": ["Engine running"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-11",
+                    "value": "1",
+                    "description": ["Ignition on"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-10",
+                    "value": "0",
+                    "description": ["Accessories on (drops out while starting car)"]
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "3C",
+                    "description": ["Water temp 0x3C=60/2=30 degrees?", "FF until key set to Ignition"]
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "1A",
+                    "description": ["Oil level"]
+                },
+                {
+                    "offset": "offset-5",
+                    "value": "6E",
+                    "description": ["Fuel level"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "90",
+                    "description": ["Oil temp 0x90=144/2=72 degrees?", "this value takes at least one bit from the previous byte."]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "7D",
+                    "description": ["Outside temp 0x7D-0x50=45/2=22.5 degrees"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "4EB8",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "N",
+                    "description": ["NO ACK"]
+                }
+            ]
+        }
+    ]
+}

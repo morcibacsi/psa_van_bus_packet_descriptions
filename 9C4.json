@@ -1,0 +1,93 @@
+{
+    "id": "9C4",
+    "displayedId": "9C4",
+    "network": "VAN-INFO",
+    "source": "COM2000",
+    "destination": "Broadcast",
+    "notes": [
+        "Radio remote control"
+    ],
+    "examples": [
+        "9C4 WA0 20 98 2764 A"
+    ],
+    "msgDescription": [
+        "Transmitted regularly by the stalk - all but bits 4&5 are understood, I think bit 0 is a spare for some other button."
+    ],
+    "shortDescription": "Radio remote control - vol, seek, src button positions and wheel position",
+    "status": "All but 3 bits",
+    "margin": "11",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-11",
+                    "value": "WA0",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-10",
+                    "value": "7",
+                    "description": ["seek up"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-9",
+                    "value": "6",
+                    "description": ["seek down"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "5",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-7",
+                    "value": "4",
+                    "description": ["bits 4 and 5 are set in some way when you roll the wheel position past 0x00 or 0xFF and the number is reset to 0x80. I suspect some mechanism that says which direction it rolled over in to allow you to keep track of the wheel rotation."],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "3",
+                    "description": ["volume up"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-5",
+                    "value": "2",
+                    "description": ["volume down"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "1",
+                    "description": ["source"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "0",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "98",
+                    "description": ["Wheel position (starts at 0x80 and returns there on overflow)"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "2764",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

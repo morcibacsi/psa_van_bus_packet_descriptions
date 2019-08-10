@@ -1,0 +1,78 @@
+{
+    "id": "8EC",
+    "displayedId": "8EC",
+    "network": "VAN-INFO",
+    "source": "Head unit",
+    "destination": "CDC",
+    "notes": [
+        "CDC COMMAND"
+    ],
+    "examples": [
+        "8EC WA0 11 00 A"
+    ],
+    "msgDescription": [
+        "CD Changer command"
+    ],
+    "shortDescription": "CD Changer command",
+    "status": "Partial",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "",
+                    "value": "11 00 A",
+                    "description": [""]
+                }
+            ],
+            "table":
+            {
+                "title": "Command list",
+                "rows":
+                [
+                    {
+                        "key": "11 00",
+                        "value": "?"
+                    },
+                    {
+                        "key": "21 00",
+                        "value": "?"
+                    },
+                    {
+                        "key": "11 01",
+                        "value": "Go to power OFF"
+                    },
+                    {
+                        "key": "21 01",
+                        "value": "Go to power OFF"
+                    },
+                    {
+                        "key": "11 81",
+                        "value": "Go to power ON"
+                    },
+                    {
+                        "key": "11 83",
+                        "value": "Go to play"
+                    },
+                    {
+                        "key": "31 FE",
+                        "value": "? = 41 FE"
+                    },
+                    {
+                        "key": "41 01",
+                        "value": "Select disk CD 1 (02=CD 2...)"
+                    },
+                    {
+                        "key": "41 FE",
+                        "value": "Previous disc"
+                    },
+                    {
+                        "key": "41 FF",
+                        "value": "Next disc"
+                    }
+                ]
+            }
+        }
+    ]
+}

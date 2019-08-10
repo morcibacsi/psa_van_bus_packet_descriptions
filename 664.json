@@ -1,0 +1,161 @@
+{
+    "id": "664",
+    "displayedId": "664",
+    "network": "VAN-INFO",
+    "source": "Dashboard",
+    "destination": "BSI",
+    "notes": [
+        "Engine not running", "Car Status"
+    ],
+    "examples": [
+        "664 WA0 00 00 0F 04 24 2C 00 FF 00 FF 00 9ED8 A"
+    ],
+    "msgDescription": [
+        "Suspect this is broadcast by the dashboard dials"
+    ],
+    "shortDescription": "Dashboard - hazard lights, lock doors and brightness.",
+    "status": "Partial",
+    "margin": "7",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-7",
+                    "value": "WA0",
+                    "description": "Write & Req ACK"
+                },
+                {
+                    "offset": "",
+                    "value": "7",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "value": "6",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "5",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "4",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "3",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "2",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "1",
+                    "description": ["Hazard lights"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "0",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "7",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "6",
+                    "description": ["Door lock"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "5",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "4",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "3210",
+                    "description": ["F = brightness (perhaps this cycles between levels?)"]
+                },
+                {
+                    "offset": "",
+                    "value": "04",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "24",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "2C",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "FF",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "FF",
+                    "description": [""]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "9ED8",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        }
+    ]
+}

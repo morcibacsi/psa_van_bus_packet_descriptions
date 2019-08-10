@@ -1,0 +1,56 @@
+{
+    "id": "74E",
+    "displayedId": "74E",
+    "network": "VAN-INFO",
+    "source": "",
+    "destination": "",
+    "notes": [
+        "SatNav Stuff", "Engine not running"
+    ],
+    "examples": [
+        "74E RA0 81 1B 00 00 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 81 6A06 A"
+    ],
+    "msgDescription": [
+        "This example packets appeared after me using the satnav to set a destination"
+    ],
+    "shortDescription": "SatNav - Appeared after using remote to access sat-nav - nav instruction?(start&end 0x81)",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-5",
+                    "value": "RA0",
+                    "description": ["Read & Req ACK"]
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "87",
+                    "description": ["Header?"]
+                },
+                {
+                    "offset": "",
+                    "value": "1B 00 00 00 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "81",
+                    "description": ["Footer?"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "6A06",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

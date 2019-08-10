@@ -1,0 +1,53 @@
+{
+    "id": "5E4",
+    "displayedId": "5E4",
+    "network": "VAN-INFO",
+    "source": "Display",
+    "destination": "",
+    "notes": [
+        "Display Settings?", "Engine not running"
+    ],
+    "examples": [
+        "5E4 WA0 20FF F934 A"
+    ],
+    "msgDescription": [
+        "Display writes these apparently - quite regularly"
+    ],
+    "shortDescription": "Display settings? - On the bus regularly without engine running",
+    "status": "0%",
+    "margin": "12",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-12",
+                    "value": "WA0",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-5",
+                    "value": "20FF",
+                    "description": [
+                        "Byte 0 - I've seen it change from 20 to 00 in a capture where key was removed and capture left running",
+                        "reference 524 Databyte 4 with my key in guess???",
+                        "00 01 - Sent by display during power up before it's ready to display anything",
+                        "20 1E - Display is ready",
+                        "20 1F - ?",
+                        "20 FF - ?"
+                    ]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "F934",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

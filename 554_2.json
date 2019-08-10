@@ -1,0 +1,90 @@
+{
+    "id": "554_2",
+    "displayedId": "554",
+    "network": "VAN-INFO",
+    "source": "Radio",
+    "destination": "Display",
+    "notes": [
+        "Radio Info (sort of mostly)", "Not seen in my car - no HU installed"
+    ],
+    "examples": [
+        "554 RA- 8x D2 0D 00 8x ???? A"
+    ],
+    "msgDescription": [
+        "Tape info"
+    ],
+    "shortDescription": "Radio info - Multiple message types - Tape info",
+    "status": "Partial",
+    "margin": "13",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-14",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-13",
+                    "value": "81",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "offset-12",
+                    "value": "D2",
+                    "description": ["D2 = Tape"]
+                },
+                {
+                    "offset": "",
+                    "value": "765",
+                    "description": [""],
+                    "isBit": true
+                },
+                {
+                    "offset": "offset-9",
+                    "value": "4",
+                    "description": ["Fast forward"],
+                    "isBit": true
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "32",
+                    "description": ["Play in progress", "3=ON", "0=OFF"],
+                    "isBit": true
+                },
+                {
+                    "offset": "",
+                    "value": "1",
+                    "description": [""],
+                    "isBit": true
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "0",
+                    "description": ["Casette side", "0=Side 1", "1=Side 2"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "81",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "????",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        }
+    ]
+}

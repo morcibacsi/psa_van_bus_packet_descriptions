@@ -1,0 +1,125 @@
+{
+    "id": "554_3",
+    "displayedId": "554",
+    "network": "VAN-INFO",
+    "source": "Radio",
+    "destination": "Display",
+    "notes": [
+        "Radio Info (sort of mostly)", "Not seen in my car - no HU installed"
+    ],
+    "examples": [
+        "554 RA- 81 D3 91 53 4B 59 52 4F 43 4B 20 81 A"
+    ],
+    "msgDescription": [
+        "Radio preset data"
+    ],
+    "shortDescription": "Radio info - Multiple message types - Radio preset data",
+    "status": "Partial",
+    "margin": "13",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-13",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-12",
+                    "value": "81",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "offset-10",
+                    "value": "D3",
+                    "description": ["D3 = Radio preset data (probably for displaying preset choices when you scroll the remote wheel)"]
+                },
+                {
+                    "offset": "offset-9",
+                    "value": "7",
+                    "description": ["This is a preset? (seems always set)"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "6",
+                    "description": ["(some reports of this rather than bit 4 indicating RDS or frequency)"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "5",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-7",
+                    "value": "4",
+                    "description": ["RDS data avaliable (Display frequency if this is zero)"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "3210",
+                    "description": ["Preset Number"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "53",
+                    "description": ["S"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "4B",
+                    "description": ["K"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "59",
+                    "description": ["Y"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "52",
+                    "description": ["R"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "4F",
+                    "description": ["O"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "43",
+                    "description": ["C"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "4B",
+                    "description": ["K"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "20",
+                    "description": ["{space}"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "81",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "????",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        }
+    ]
+}

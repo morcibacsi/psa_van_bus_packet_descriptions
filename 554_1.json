@@ -1,0 +1,229 @@
+{
+    "id": "554_1",
+    "displayedId": "554",
+    "network": "VAN-INFO",
+    "source": "Radio",
+    "destination": "Display",
+    "notes": [
+        "Radio Info (sort of mostly)", "Not seen in my car - no HU installed"
+    ],
+    "examples": [
+        "554 RA- 87 D1 09 80 F0 02 00 65 F2 14 A1 00 53 4B 59 52 4F 43 4B 20 00 87 A"
+    ],
+    "msgDescription": [
+        "Radio information"
+    ],
+    "shortDescription": "Radio info - Multiple message types - includes radio rds data",
+    "status": "Partial",
+    "margin": "23",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-28",
+                    "value": "RA0",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-26",
+                    "value": "87",
+                    "description": ["Part of header footer pair for message (starts and ends in 87) - this is another *data updated* header and footer", "These headers and footers are common to many messages that carry updated information"]
+                },
+                {
+                    "offset": "offset-25",
+                    "value": "D1",
+                    "description": ["D1 = Radio frequency data"]
+                },
+                {
+                    "offset": "",
+                    "value": "7",
+                    "description": "",
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-21",
+                    "value": "6543",
+                    "description": "Memory position",
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-16",
+                    "value": "210",
+                    "description": ["Band", "1=FM1", "2=FM2", "3=AM", "4=FMAST"]
+                },
+                {
+                    "offset": "offset-13",
+                    "value": "7",
+                    "description": ["Freq scan direction", "0=DOWN", "1=UP"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "56",
+                    "description": "",
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-12",
+                    "value": "4",
+                    "description": "Freq scan is running",
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-11",
+                    "value": "3",
+                    "description": "Manual scan in progress",
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "210",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-9",
+                    "value": "0980",
+                    "description": ["Frequency", "(0980*.05)+50 = 99.00MHz"]
+                },
+                {
+                    "offset": "",
+                    "value": "F0",
+                    "description": ""
+                },
+                {
+                    "offset": "",
+                    "value": "7",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "6",
+                    "description": ["TA data present"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-7",
+                    "value": "5",
+                    "description": ["RDS data present"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "4",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "3",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "",
+                    "value": "2",
+                    "description": [""],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "1",
+                    "description": ["RDS active"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-5",
+                    "value": "0",
+                    "description": ["TA active"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": ""
+                },
+                {
+                    "offset": "",
+                    "value": "65",
+                    "description": ""
+                },
+                {
+                    "offset": "",
+                    "value": "F2",
+                    "description": ""
+                },
+                {
+                    "offset": "",
+                    "value": "14",
+                    "description": ""
+                },
+                {
+                    "offset": "",
+                    "value": "A1",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "53",
+                    "description": ["S"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "4B",
+                    "description": ["K"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "59",
+                    "description": ["Y"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "52",
+                    "description": ["R"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "4F",
+                    "description": ["O"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "43",
+                    "description": ["C"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "4B",
+                    "description": ["K"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "20",
+                    "description": ["{space}"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "87",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "????",
+                    "description": "Checksum"
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": "ACK"
+                }
+            ]
+        }
+    ]
+}

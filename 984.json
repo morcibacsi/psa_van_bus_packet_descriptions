@@ -1,0 +1,63 @@
+{
+    "id": "984",
+    "displayedId": "984",
+    "network": "VAN-INFO",
+    "source": "Display",
+    "destination": "Broadcast",
+    "notes": [
+        "Time", "Engine not running (time approx 22:50-23:05)"
+    ],
+    "examples": [
+        "984 W00 00 71 00 01 0C CCE4 N",
+        "984 W00 00 89 00 01 0C B930 N"
+    ],
+    "msgDescription": [
+        "I'm not convinced, this doesn't appear on the bus all that often - I guess once a minute is enough tho...",
+        "Also the info I've seen from other people is that the hours and minutes are in BCD... I have two captures from my car that are NOT BCD???"
+    ],
+    "shortDescription": "Time? - Not very regular hh:mm dosn't seem to change much either",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-5",
+                    "value": "W00",
+                    "description": ["Write"]
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "00 01",
+                    "description": ["Uptime battery (days)"]
+                },
+                {
+                    "offset": "",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": ["01 hours"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "0C",
+                    "description": ["0C (12) minutes"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "C4AC",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

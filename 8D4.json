@@ -1,0 +1,125 @@
+{
+    "id": "8D4",
+    "displayedId": "8D4",
+    "network": "VAN-INFO",
+    "source": "Display",
+    "destination": "Radio",
+    "notes": [
+        "Radio control"
+    ],
+    "examples": [
+        "8D4 ??? ?? ?? ?? ?? ???? ?"
+    ],
+    "msgDescription": [
+        "Taken from old rt3 wiki, I have not confirmed this data"
+    ],
+    "shortDescription": "Radio control - Unverified",
+    "status": "Partial",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "???",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "?? ?? ?? ??",
+                    "description": ["controls, see table"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "????",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "?",
+                    "description": ["ACK"]
+                }
+            ],
+            "table":
+            {
+                "title": "First AND mask the byte with 0x1F then:",
+                "rows":
+                [
+                    {
+                        "key": "11 01",
+                        "value": "Switch off radio?"
+                    },
+                    {
+                        "key": "11 C0",
+                        "value": "Update settings for Loudness On"
+                    },
+                    {
+                        "key": "11 C2",
+                        "value": "Update settings for Loudness Off"
+                    },
+                    {
+                        "key": "11 E0",
+                        "value": "Update settings for Speed Volume On"
+                    },
+                    {
+                        "key": "11 E1",
+                        "value": "Update settings for Speed Volume Off"
+                    },
+                    {
+                        "key": "12 01",
+                        "value": "Switch to Radio"
+                    },
+                    {
+                        "key": "12 02",
+                        "value": "Switch to internal CD"
+                    },
+                    {
+                        "key": "12 03",
+                        "value": "switch to CD Changer (CDC)"
+                    },
+                    {
+                        "key": "14 xx xx xx xx",
+                        "value": "Update fader, balance, bass and treble"
+                    },
+                    {
+                        "key": "27 21",
+                        "value": "Read preset memory address 1"
+                    },
+                    {
+                        "key": "27 22",
+                        "value": "Read preset memory address 2"
+                    },
+                    {
+                        "key": "27 23",
+                        "value": "Read preset memory address 3"
+                    },
+                    {
+                        "key": "27 24",
+                        "value": "Read preset memory address 4"
+                    },
+                    {
+                        "key": "27 25",
+                        "value": "Read preset memory address 5"
+                    },
+                    {
+                        "key": "27 26",
+                        "value": "Read preset memory address 6"
+                    },
+                    {
+                        "key": "D1",
+                        "value": "Tell radio to return radio info when reading from port 0x554"
+                    },
+                    {
+                        "key": "D3",
+                        "value": "Tell radio to return preset stations when reading from port 0x554"
+                    },
+                    {
+                        "key": "D6",
+                        "value": "Tell radio to return CD/track info when reading from port 0x554"
+                    }
+                ]
+            }
+        }
+    ]
+}

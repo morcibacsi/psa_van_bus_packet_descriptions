@@ -1,0 +1,177 @@
+{
+    "id": "4D4",
+    "displayedId": "4D4",
+    "network": "VAN-INFO",
+    "source": "Radio",
+    "destination": "Display",
+    "notes": [
+        "Audio Settings", "Not seen in my car - no HU installed"
+    ],
+    "examples": [
+        "4D4 RA- 86 14 81 01 31 02 3F 3F 44 43 86 ???? A"
+    ],
+    "msgDescription": [
+        ""
+    ],
+    "shortDescription": "Audio settings - I've not seen this (but I have no HU installed)",
+    "status": "0%",
+    "margin": "18",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-21",
+                    "value": "RA-",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "offset": "offset-20",
+                    "value": "86",
+                    "description": ["Sequence Header"]
+                },
+                {
+                    "offset": "offset-19",
+                    "value": "76",
+                    "description": [
+                        "?"
+                    ]
+                },
+                {
+                    "offset": "offset-18",
+                    "value": "5",
+                    "description": ["Audio properties menu open"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-17",
+                    "value": "4",
+                    "description": ["Loudness on"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-16",
+                    "value": "3",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-15",
+                    "value": "2",
+                    "description": ["Auto volume"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-14",
+                    "value": "10",
+                    "description": [
+                        "?"
+                    ]
+                },
+                {
+                    "offset": "offset-11",
+                    "value": "7",
+                    "description": ["Power On"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-10",
+                    "value": "6543210",
+                    "description": [
+                        "?"
+                    ]
+                },
+                {
+                    "offset": "",
+                    "value": "01",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-14",
+                    "value": "31",
+                    "description": ["Source  0x51 = Radio 0x52 = Built in cd"]
+                },
+                {
+                    "offset": "offset-13",
+                    "value": "7",
+                    "description": ["Volume updating"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-12",
+                    "value": "6543210",
+                    "description": [
+                        "Volume (X-0x3F)"
+                    ]
+                },
+                {
+                    "offset": "offset-11",
+                    "value": "7",
+                    "description": ["Bass updating"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-10",
+                    "value": "6543210",
+                    "description": [
+                        "Bass (X-0x3F)"
+                    ]
+                },
+                {
+                    "offset": "offset-9",
+                    "value": "7",
+                    "description": ["Treble updating"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "6543210",
+                    "description": [
+                        "Treble (X-0x3F)"
+                    ]
+                },
+                {
+                    "offset": "offset-7",
+                    "value": "7",
+                    "description": ["Fader updating"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "6543210",
+                    "description": [
+                        "Fader (X-0x3F)"
+                    ]
+                },
+                {
+                    "offset": "offset-5",
+                    "value": "7",
+                    "description": ["Balance updating"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "6543210",
+                    "description": [
+                        "Balance (X-0x3F)"
+                    ]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "86",
+                    "description": ["Sequence Footer"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "????",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}
