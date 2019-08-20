@@ -147,7 +147,7 @@
                 {
                     "offset": "offset-6",
                     "value": "FF",
-                    "description": ["?"]
+                    "description": ["Fuel level (in %)"]
                 },
                 {
                     "offset": "offset-5",
