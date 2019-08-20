@@ -107,6 +107,9 @@
 .color-fmux { background: GreenYellow }
 .color-radio { background: HotPink }
 .color-dashboard { background: LightCoral }
+.showInPopup {display: none}
+.bits:hover .showInPopup {display: block}
+.table-content {display: contents}
         </style>
     </head>
     <body>
@@ -237,12 +240,12 @@
                 <div class="structure clearfix margin-{{margin}}">
                     {{#bytes}}
                         <div class="bits">{{value}}{{^isBit}}&nbsp;{{/isBit}}
-                            <div class="info {{offset}}">{{#description}}{{.}}<br/>{{/description}}</div>
+                            <div class="info {{offset}} {{#showInPopup}}showInPopup{{/showInPopup}}">{{#description}}{{.}}<br/>{{/description}}</div>
                         </div>
                     {{/bytes}}
                 </div>
                 {{#table}}
-                <div class="col-lg-12 col-md-2 col-sm-2">
+                <div class="table-content col-lg-12 col-md-2 col-sm-2">
                     <table class="table table-condensed" style="width: 100%;">
                         <caption>{{title}}</caption>
                         <thead>

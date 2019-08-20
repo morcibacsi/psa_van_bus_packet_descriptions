@@ -5,329 +5,210 @@
     "source": "COM2000",
     "destination": "Dashboard",
     "notes": [
-        "Car Status 2", "Engine not running"
+        "Car Status 2"
     ],
     "examples": [
         "524 W00 00 00 01 00 20 01 00 01 00 FF 00 00 00 00 E28A N"
     ],
     "msgDescription": [
-        "I suspected this was mostly for the benefit of the multifunctional display - but it doesn't get acknowledged or ask for one! (well not with the engine off anyway)"
+        "HOVER YOUR MOUSE OVER THE BYTES TO SEE FURTHER INFO ON THEM",
+        "",
+        "This packet is mainly dedicated to the central display and it's messages however some bits might be used by the instrument cluster also. The 9th byte (using zero based indexing) contains the ID of the messages which needs to be shown on the multifunction display (MFD). The bits and the message ID's in the 9th byte have a connection: msg 0: byte 0 bit 1, msg 1: byte 0 bit 2, msg 3: byte 0 bit 3..."
     ],
     "shortDescription": "Car status 2 - handbrake, left stalk btn, seatbelt warning, door lock, doors open, auto lights/wipers",
     "status": "Partial",
-    "margin": "24",
+    "margin": "10",
     "structures":
     [
         {
             "bytes": [
                 {
-                    "offset": "offset-20",
+                    "offset": "offset-0",
                     "value": "W00",
                     "description": "Write"
                 },
                 {
-                    "offset": "offset-17",
-                    "value": "00",
-                    "description": ["0x01 = Water temperature maximum", "0x02 = time out after go off...", "0x08 = Brake dot level alarm"]
-                },
-                {
-                    "offset": "offset-8",
-                    "value": "01",
-                    "description": ["0x08 = Fuel cap open", "0x40 = Oil light", "0x80 = Contact key"]
-                },
-                {
-                    "offset": "",
-                    "value": "7",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "",
-                    "value": "6",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-5",
-                    "value": "5",
-                    "description": ["ABS fault"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-4",
-                    "value": "4",
-                    "description": ["ESP fault"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "",
-                    "value": "3",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "",
-                    "value": "2",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "",
-                    "value": "1",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
+                    "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "0",
-                    "description": ["Engine check fault (MIL)"]
-                },
-
-                {
-                    "offset": "",
-                    "value": "7",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "",
-                    "value": "6",
-                    "description": [""],
-                    "isBit": "true"
+                    "value": "00",
+                    "description": [
+                        "0x01 = Tyre pressure low", 
+                        "0x02 = No door open", 
+                        "0x04 = Auto gearbox temperature too high",
+                        "0x08 = Brake system fault",
+                        "0x10 = Hydraulic suspension fault",
+                        "0x20 = Suspension fault",
+                        "0x40 = Engine oil temperature too high",
+                        "0x80 = Water temperature too high"
+                    ]
                 },
                 {
-                    "offset": "",
-                    "value": "5",
-                    "description": [""],
-                    "isBit": "true"
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": [
+                        "0x01 = Unblock diesel filter", 
+                        "0x02 = Stop car icon", 
+                        "0x04 = Diesel additive too low", 
+                        "0x08 = Fuel cap open", 
+                        "0x10 = Tyres punctured", 
+                        "0x20 = Coolant level low", 
+                        "0x40 = Oil pressure too low", 
+                        "0x80 = Oil level too low"]
                 },
                 {
-                    "offset": "",
-                    "value": "4",
-                    "description": [""],
-                    "isBit": "true"
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": [
+                        "0x01 = MIL", 
+                        "0x02 = Brake pads worn", 
+                        "0x04 = Diagnosis ok", 
+                        "0x08 = Auto gearbox faulty", 
+                        "0x10 = ESP", 
+                        "0x20 = ABS", 
+                        "0x40 = Suspension or steering fault", 
+                        "0x80 = Braking system faulty"]
                 },
                 {
-                    "offset": "",
-                    "value": "3",
-                    "description": [""],
-                    "isBit": "true"
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": [
+                        "0x01 = Side airbag faulty", 
+                        "0x02 = Airbags faulty", 
+                        "0x04 = Cruise control faulty", 
+                        "0x08 = Engine temperature too high", 
+                        "0x10 = Fault: Load shedding in progress (RT3 mono)", 
+                        "0x20 = Ambient brightness sensor fault", 
+                        "0x40 = Rain sensor fault", 
+                        "0x80 = Water in diesel fuel filter"]
                 },
                 {
-                    "offset": "",
-                    "value": "2",
-                    "description": [""],
-                    "isBit": "true"
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": [
+                        "0x01 = Left rear sliding door faulty", 
+                        "0x02 = Headlight corrector fault", 
+                        "0x04 = Right rear sliding door faulty", 
+                        "0x08 = No broken lamp (RT3 mono)", 
+                        "0x10 = Battery low", 
+                        "0x20 = Battery charge fault", 
+                        "0x40 = Diesel particle filter faulty", 
+                        "0x80 = Catalytic converter fault"]
                 },
                 {
-                    "offset": "",
-                    "value": "1",
-                    "description": [""],
-                    "isBit": "true"
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": [
+                        "0x01 = Handbrake on", 
+                        "0x02 = Seatbelt warning", 
+                        "0x04 = Passenger airbag deactivated", 
+                        "0x08 = Screen washer liquid level too low", 
+                        "0x10 = Current speed too high", 
+                        "0x20 = Ignition key left in", 
+                        "0x40 = Sidelights left on", 
+                        "0x80 = Hill holder active (On RT3 mono: Driver's seatbelt not fastened)"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": [
+                        "0x01 = Shock sensor faulty", 
+                        "0x02 = Seatbelt warning (not sure, there is no message with 0x31 so could not check)", 
+                        "0x04 = Check and re-init tyre pressure", 
+                        "0x08 = Remote control battery low", 
+                        "0x10 = Left stick button pressed", 
+                        "0x20 = Put automatic gearbox in P position", 
+                        "0x40 = Stop lights test: brake gently", 
+                        "0x80 = Fuel level low"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": [
+                        "0x01 = Automatic headlamp lighting deactivated",
+                        "0x02 = Rear LH passenger seatbelt not fastened",
+                        "0x04 = Rear RH passenger seatbelt not fastened",
+                        "0x08 = Front passenger seatbelt not fastened",
+                        "0x10 = Driving school pedals indication",
+                        "0x20-0x80 = These 3 bits contain the number of tyre pressure monitor sensors when displaying message with ID: 0x3D, 0x3E, 0X3F"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": [
+                        "0x01 = Doors locked", 
+                        "0x02 = ESP/ASR deactivated", 
+                        "0x04 = Child safety activated", 
+                        "0x08 = Deadlocking active", 
+                        "0x10 = Automatic lighting active", 
+                        "0x20 = Automatic wiping active", 
+                        "0x40 = Engine immobiliser fault", 
+                        "0x80 = Sport suspension mode active"]
                 },
                 {
                     "offset": "offset-2",
-                    "value": "0",
-                    "description": ["Airbag fault"]
-                },
-
-                {
-                    "offset": "",
-                    "value": "76",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-1",
-                    "value": "5",
-                    "description": ["Battery fault"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "",
-                    "value": "43210",
-                    "description": [""]
-                },
-                {
-                    "offset": "",
-                    "value": "7",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "",
-                    "value": "6",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "",
-                    "value": "5",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "",
-                    "value": "4",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "",
-                    "value": "3",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-26",
-                    "value": "2",
-                    "description": ["Passenger airbag disabled"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-25",
-                    "value": "1",
-                    "description": ["Seatbelt warning on"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-24",
-                    "value": "0",
-                    "description": ["Handbrake on (if contact on)"]
-                },
-                {
-                    "offset": "offset-23",
-                    "value": "7",
-                    "description": ["Fuel level low"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-22",
-                    "value": "6",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-21",
-                    "value": "5",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-20",
-                    "value": "4",
-                    "description": ["Left stick button pushed"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-19",
-                    "value": "3",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-18",
-                    "value": "2",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-17",
-                    "value": "1",
-                    "description": ["Seatbelt warning on (it doesn't look like)"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-16",
-                    "value": "0",
-                    "description": [""]
-                },
-                {
-                    "offset": "",
-                    "value": "00",
-                    "description": ["?"]
-                },
-                {
-                    "offset": "offset-15",
-                    "value": "7",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-14",
-                    "value": "6",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-13",
-                    "value": "5",
-                    "description": ["Automatic wiping is active"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-12",
-                    "value": "4",
-                    "description": ["Automatic lighting is active"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-11",
-                    "value": "3",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-10",
-                    "value": "2",
-                    "description": [""],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-9",
-                    "value": "1",
-                    "description": ["ESP/ASR deactivated"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-8",
-                    "value": "0",
-                    "description": ["Car locked"]
-                },
-                {
-                    "offset": "offset-7",
                     "value": "FF",
                     "description": ["See table below"]
                 },
                 {
-                    "offset": "offset-6",
-                    "value": "00",
-                    "description": ["?"]
-                },
-                {
-                    "offset": "offset-5",
-                    "value": "00",
-                    "description": ["?"]
-                },
-                {
-                    "offset": "offset-4",
-                    "value": "00",
-                    "description": ["?"]
-                },
-                {
+                    "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "00",
-                    "description": ["?"]
+                    "value": "01",
+                    "description": [
+                        "0x01 = unknown", 
+                        "0x02 = unknown", 
+                        "0x04 = unknown", 
+                        "0x08 = Change of fuel used in progress", 
+                        "0x10 = LPG fuel refused", 
+                        "0x20 = LPG system faulty", 
+                        "0x40 = LPG in use", 
+                        "0x80 = Min level LPG"]
                 },
                 {
-                    "offset": "offset-2",
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": [
+                        "0x01 = ADIN fault", 
+                        "0x02 = User stop & start", 
+                        "0x04 = Stop & start available", 
+                        "0x08 = Stop & start activated", 
+                        "0x10 = Stop & start deactivated", 
+                        "0x20 = Stop & start deferred", 
+                        "0x40 = unknown", 
+                        "0x80 = unknown"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "01",
+                    "description": [
+                        "0x01 = unknown", 
+                        "0x02 = unknown", 
+                        "0x04 = unknown", 
+                        "0x08 = unknown", 
+                        "0x10 = unknown", 
+                        "0x20 = unknown", 
+                        "0x40 = unknown", 
+                        "0x80 = change to neutral"]
+                },
+                {
+                    "offset": "offset-1",
                     "value": "5A96",
                     "description": ["Checksum"]
                 },
                 {
-                    "offset": "offset-1",
-                    "value": "A",
-                    "description": ["ACK"]
+                    "offset": "offset-0",
+                    "value": "N",
+                    "description": ["NO ACK"]
                 }
             ],
             "table":
@@ -433,7 +314,7 @@
                     },
                     {
                         "key": "0x18",
-                        "value": "AIRBAG FAULT"
+                        "value": "AIRBAG FAULT (on RT3 mono: SIDE AIRBAG FAULT)"
                     },
                     {
                         "key": "0x19",
@@ -470,6 +351,10 @@
                     {
                         "key": "0x22",
                         "value": "RIGHT SLIDING DOOR FAULT"
+                    },
+                    {
+                        "key": "0x23",
+                        "value": "NO BROKEN LAMP! (RT3 mono)"
                     },
                     {
                         "key": "0x24",
@@ -549,19 +434,31 @@
                     },
                     {
                         "key": "0x39",
-                        "value": "HEADLIGHT BEND SYSTEM FAULT"
+                        "value": "HEADLIGHT BEND SYSTEM FAULT (on RT3 mono: Rear LH passenger seatbelt unfastened)"
                     },
                     {
                         "key": "0x3A",
-                        "value": "HEADLIGHT BEND SYSTEM DEACTIVATED"
+                        "value": "HEADLIGHT BEND SYSTEM DEACTIVATED (on RT3 mono: Rear RH passenger seatbelt unfastened)"
                     },
                     {
                         "key": "0x3B",
-                        "value": "HEADLIGHT BEND SYSTEM ACTIVATED"
+                        "value": "HEADLIGHT BEND SYSTEM ACTIVATED (on RT3 mono: Front passenger seatbelt unfastened)"
+                    },
+                    {
+                        "key": "0x3C",
+                        "value": "DRIVING SVHOOL PEDALS INDICATION"
                     },
                     {
                         "key": "0x3D",
-                        "value": "5 TYRE PRESSURE SENSORS MISSING"
+                        "value": "X TYRE PRESSURE SENSORS MISSING"
+                    },
+                    {
+                        "key": "0x3E",
+                        "value": "X TYRE PRESSURE SENSORS MISSING"
+                    },
+                    {
+                        "key": "0x3F",
+                        "value": "X TYRE PRESSURE SENSORS MISSING"
                     },
                     {
                         "key": "0x40",
@@ -596,12 +493,36 @@
                         "value": "SPORTS SUSPENSION ACTIVE"
                     },
                     {
+                        "key": "0x53",
+                        "value": "CHANGE OF FUEL USED IN PROGRESS"
+                    },
+                    {
                         "key": "0x54",
-                        "value": "LPG COMBUSTION REFUSED"
+                        "value": "LPG COMBUSTION REFUSED (on RT3 mono: LPG fuel refused)"
                     },
                     {
                         "key": "0x55",
-                        "value": "LPG DEFAULT"
+                        "value": "LPG DEFAULT (on RT3 mono: LPG system faulty)"
+                    },
+                    {
+                        "key": "0x56",
+                        "value": "LPG IN USE)"
+                    },
+                    {
+                        "key": "0x57",
+                        "value": "MIN LEVEL LPG)"
+                    },
+                    {
+                        "key": "0x58",
+                        "value": "ADIN FAULT)"
+                    },
+                    {
+                        "key": "0x59",
+                        "value": "USE STOP AND START)"
+                    },
+                    {
+                        "key": "0x5A",
+                        "value": "STOP AND START AVAILABLE)"
                     },
                     {
                         "key": "0x5B",
@@ -610,6 +531,10 @@
                     {
                         "key": "0x5C",
                         "value": "STOP AND START SYSTEM DEACTIVATED"
+                    },                    
+                    {
+                        "key": "0x5D",
+                        "value": "STOP AND START DEFERRED"
                     },
                     {
                         "key": "0x5E",
