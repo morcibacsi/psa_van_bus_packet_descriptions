@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "CD Changer info",
     "destination": "",
+    "type": "Read",
+    "requireAck": "A",
     "notes": [
         "Engine not running", "Not seen in my car - no HU installed"
     ],

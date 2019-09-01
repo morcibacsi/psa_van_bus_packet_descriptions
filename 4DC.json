@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "AirCon",
     "destination": "",
+    "type": "Write",
+    "requireAck": "A",
     "notes": [
         "Engine not running"
     ],

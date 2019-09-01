@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "BSI",
     "destination": "Display",
+    "type": "Read",
+    "requireAck": "A",
     "notes": [
         "Engine not running", "Car Status"
     ],

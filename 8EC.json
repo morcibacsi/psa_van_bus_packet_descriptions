@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "Head unit",
     "destination": "CDC",
+    "type": "Write",
+    "requireAck": "A",
     "notes": [
         "CDC COMMAND"
     ],

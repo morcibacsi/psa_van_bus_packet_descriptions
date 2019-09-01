@@ -182,6 +182,8 @@
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Type</th>
+                        <th>ACK</th>
                         <th>Length</th>
                         <th>Data</th>
                         <th>Period</th>
@@ -194,6 +196,8 @@
                     {{#messages}}
                     <tr>
                         <td><a href="#{{id}}">{{displayedId}}</a></td>
+                        <td>{{type}}</a></td>
+                        <td>{{requireAck}}</a></td>
                         <td>?</td>
                         <td>{{examples.0}}</td>
                         <td>?</td>

@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "",
     "destination": "",
+    "type": "Read",
+    "requireAck": "A",
     "notes": [
         "SatNav?", "Engine not running"
     ],

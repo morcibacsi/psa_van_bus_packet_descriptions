@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "Radio",
     "destination": "Display",
+    "type": "Read",
+    "requireAck": "A",
     "notes": [
         "Audio Settings", "Not seen in my car - no HU installed"
     ],

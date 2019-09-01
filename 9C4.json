@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "COM2000",
     "destination": "Broadcast",
+    "type": "Write",
+    "requireAck": "A",
     "notes": [
         "Radio remote control"
     ],

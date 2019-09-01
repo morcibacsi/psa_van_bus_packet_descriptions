@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "",
     "destination": "",
+    "type": "Write",
+    "requireAck": "N",
     "notes": [
         "Not a clue", "Engine not running"
     ],

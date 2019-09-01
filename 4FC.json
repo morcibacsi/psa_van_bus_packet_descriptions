@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "BSI",
     "destination": "Dashboard",
+    "type": "Write",
+    "requireAck": "A",
     "notes": [
         "Lights status", "Engine not running"
     ],

@@ -5,6 +5,8 @@
     "network": "VAN-INFO",
     "source": "BSI",
     "destination": "Radio/Broadcast",
+    "type": "Write",
+    "requireAck": "N",
     "notes": [
         "VIN", "Engine not running"
     ],

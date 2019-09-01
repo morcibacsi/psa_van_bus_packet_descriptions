@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "Display",
     "destination": "",
+    "type": "Write",
+    "requireAck": "A",
     "notes": [
         "Display Settings?", "Engine not running"
     ],

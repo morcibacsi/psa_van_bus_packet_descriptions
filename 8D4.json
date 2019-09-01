@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "Display",
     "destination": "Radio",
+    "type": "Write",
+    "requireAck": "A",
     "notes": [
         "Radio control"
     ],

@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "Radio",
     "destination": "Display",
+    "type": "Write",
+    "requireAck": "A",
     "notes": [
         "Radio Buttons", "Not seen in my car - no HU installed"
     ],

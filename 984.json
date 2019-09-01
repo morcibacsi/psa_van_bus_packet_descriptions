@@ -4,6 +4,8 @@
     "network": "VAN-INFO",
     "source": "Display",
     "destination": "Broadcast",
+    "type": "Write",
+    "requireAck": "N",
     "notes": [
         "Time", "Engine not running (time approx 22:50-23:05)"
     ],
