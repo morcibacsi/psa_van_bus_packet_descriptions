@@ -1,0 +1,172 @@
+{
+    "id": "4FC_1",
+    "displayedId": "4FC",
+    "network": "VAN-COMFORT",
+    "source": "BSI",
+    "destination": "Dashboard",
+    "type": "Write",
+    "length": "11",
+    "requireAck": "A",
+    "notes": [
+        "The length of this message depends on which year the car was manufactured. In cars made until 2002 it is 11 bytes long, however in a car made in 2004 it is 14 bytes long",
+        "Necessary to have the dashboard working on a bench"
+    ],
+    "examples": [
+        "4FC WA0 80 00 03 71 F0 00 FF FF 5C 48 FF 5A96 A"
+    ],
+    "msgDescription": [
+        "Lights status, fuel level, oil level, service indicator, cruise control, automatic gearbox"
+    ],
+    "shortDescription": "Lights status, fuel level, oil level, service indicator, cruise control, automatic gearbox",
+    "status": "Partial",
+    "margin": "12",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "WA0",
+                    "description": "Write & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "01",
+                    "description": [
+                        "Byte 0",
+                        "Bitwise info",
+                        "0x01 = ?",
+                        "0x02 = ?",
+                        "0x04 = Led prechauffage (heat spark)",
+                        "0x08 = ?",
+                        "0x10 = ?",
+                        "0x20 = Led warning ON",
+                        "0x40 = Speed regulator wheel ON",
+                        "0x80 = Enable instrument cluster"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": ["0X01 = led door car open"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "03 71",
+                    "description": ["Remaining km to service"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "01",
+                    "description": [
+                        "Byte 4",
+                        "Automatic gearbox (only tested on newer instrument cluster)",
+                        "0x00 = P", 
+                        "0x02 = ?",
+                        "0x04 = Sport mode", 
+                        "0x08 = Snow mode (together with 0x04 bit)",
+                        "0x10 = R", 
+                        "0x20 = N", 
+                        "0x30 = D", 
+                        "0x40 = 4", 
+                        "0x50 = 3",
+                        "0x60 = 2",
+                        "0x70 = 1",
+                        "0x80 = 1 blinking",
+                        "0xB0 = - and blinking snow and sport"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Byte 5",
+                        "Bitwise info: Light indicators", 
+                        "0X01 = ?",
+                        "0X02 = Automatic gearbox display enabled",
+                        "0X04 = Left indicator",
+                        "0X08 = Right indicator",
+                        "0X10 = Rear fog light",
+                        "0X20 = Front fog light",
+                        "0X40 = High beam",
+                        "0X80 = Low beam"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "FF",
+                    "description": [
+                        "Byte 6",
+                        "Oil temperature"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "32",
+                    "description": [
+                        "Byte 7",
+                        "Fuel level (in %)",
+                        "0x32 = 50 %"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "1A",
+                    "description": [
+                        "Byte 8",
+                        "Oil level 'gauge' at ignition",
+                        "0x00 - 0x19 = ______",
+                        "0x1A - 0x27 = OO____",
+                        "0x28 - 0x35 = OOO___",
+                        "0x36 - 0x43 = OOOO__",
+                        "0x44 - 0x51 = OOOOO_",
+                        "0x52 - 0XFE = OOOOOO"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "FF",
+                    "description": ["?"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "22",
+                    "description": [
+                        "Byte 10",
+                        "LPG fuel level? (only tested on newer instrument cluster)",
+                        "0x00 - 0x08 = 1",
+                        "0x09 - 0x11 = 2",
+                        "0x12 - 0x21 = 3",
+                        "0x22 - 0x32 = 4",
+                        "0x33 - 0x43 = 5",
+                        "0x34 - 0x53 = 6",
+                        "0x54 - 0xFF = 7"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "5A96",
+                    "description": ["Checksum"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}
