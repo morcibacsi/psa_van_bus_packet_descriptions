@@ -15,7 +15,7 @@
     "msgDescription": [
         "HOVER YOUR MOUSE OVER THE BYTES TO SEE FURTHER INFO ON THEM",
         "",
-        "This packet is mainly dedicated to the central display and it's messages however some bits might be used by the instrument cluster also. The 9th byte (using zero based indexing) contains the ID of the messages which needs to be shown on the multifunction display (MFD). The bits and the message ID's in the 9th byte have a connection: msg 0: byte 0 bit 1, msg 1: byte 0 bit 2, msg 3: byte 0 bit 3..."
+        "This packet is mainly dedicated to the central display and the instrument cluster. The 9th byte (using zero based indexing) contains the ID of the messages which needs to be shown on the multifunction display (MFD). The bits and the message ID's in the 9th byte have a connection: msg 0: byte 0 bit 1, msg 1: byte 0 bit 2, msg 3: byte 0 bit 3... The message is only displayed if it's bit and the 9th byte is also set"
     ],
     "shortDescription": "Car status 2 - handbrake, left stalk btn, seatbelt warning, door lock, doors open, auto lights/wipers",
     "status": "Partial",
@@ -37,10 +37,10 @@
                         "0x01 = Tyre pressure low", 
                         "0x02 = No door open", 
                         "0x04 = Auto gearbox temperature too high",
-                        "0x08 = Brake system fault",
+                        "0x08 = Brake system fault (and exclamation mark on instrument cluster)",
                         "0x10 = Hydraulic suspension fault",
                         "0x20 = Suspension fault",
-                        "0x40 = Engine oil temperature too high",
+                        "0x40 = Engine oil temperature too high (and oil can on instrument cluster)",
                         "0x80 = Water temperature too high"
                     ]
                 },
@@ -49,12 +49,12 @@
                     "offset": "offset-3",
                     "value": "01",
                     "description": [
-                        "0x01 = Unblock diesel filter", 
+                        "0x01 = Unblock diesel filter (and mil icon on instrument cluster)", 
                         "0x02 = Stop car icon", 
                         "0x04 = Diesel additive too low", 
                         "0x08 = Fuel cap open", 
                         "0x10 = Tyres punctured", 
-                        "0x20 = Coolant level low", 
+                        "0x20 = Coolant level low (and icon on instrument cluster)", 
                         "0x40 = Oil pressure too low", 
                         "0x80 = Oil level too low"]
                 },
@@ -67,7 +67,7 @@
                         "0x02 = Brake pads worn", 
                         "0x04 = Diagnosis ok", 
                         "0x08 = Auto gearbox faulty", 
-                        "0x10 = ESP", 
+                        "0x10 = ESP (and icon on instrument cluster)", 
                         "0x20 = ABS", 
                         "0x40 = Suspension or steering fault", 
                         "0x80 = Braking system faulty"]
@@ -84,7 +84,7 @@
                         "0x10 = Fault: Load shedding in progress (RT3 mono)", 
                         "0x20 = Ambient brightness sensor fault", 
                         "0x40 = Rain sensor fault", 
-                        "0x80 = Water in diesel fuel filter"]
+                        "0x80 = Water in diesel fuel filter (and icon on instrument cluster)"]
                 },
                 {
                     "showInPopup": true,
@@ -96,9 +96,9 @@
                         "0x04 = Right rear sliding door faulty", 
                         "0x08 = No broken lamp (RT3 mono)", 
                         "0x10 = Battery low", 
-                        "0x20 = Battery charge fault", 
+                        "0x20 = Battery charge fault (and battery icon on instrument cluster)", 
                         "0x40 = Diesel particle filter faulty", 
-                        "0x80 = Catalytic converter fault"]
+                        "0x80 = Catalytic converter fault (mil icon flashing on instrument cluster)"]
                 },
                 {
                     "showInPopup": true,
@@ -107,7 +107,7 @@
                     "description": [
                         "0x01 = Handbrake on", 
                         "0x02 = Seatbelt warning", 
-                        "0x04 = Passenger airbag deactivated", 
+                        "0x04 = Passenger airbag deactivated (and icon on instrument cluster)", 
                         "0x08 = Screen washer liquid level too low", 
                         "0x10 = Current speed too high", 
                         "0x20 = Ignition key left in", 
