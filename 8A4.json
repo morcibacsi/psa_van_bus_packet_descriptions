@@ -104,29 +104,19 @@
                     "description": ["Accessories on (drops out while starting car)"]
                 },
                 {
-                    "offset": "offset-8",
+                    "offset": "offset-5",
                     "value": "3C",
                     "description": ["Water temperature 0x3C = (60-39) = 21 degrees", "FF until key set to Ignition"]
                 },
                 {
-                    "offset": "offset-6",
-                    "value": "1A",
-                    "description": ["Oil level"]
-                },
-                {
-                    "offset": "offset-5",
-                    "value": "6E",
-                    "description": [""]
-                },
-                {
                     "offset": "offset-3",
-                    "value": "90",
-                    "description": ["Oil temp 0x90=144/2=72 degrees?", "this value takes at least one bit from the previous byte."]
+                    "value": "27 C8 7D",
+                    "description": ["Odometer mileage in meters","0x27C87D = 260722.9 meters"]
                 },
                 {
                     "offset": "offset-2",
                     "value": "7D",
-                    "description": ["Outside temp 0x7D-0x50=45/2=22.5 degrees"]
+                    "description": ["Outside temperature 0x7D-0x50=45/2=22.5 degrees"]
                 },
                 {
                     "offset": "offset-1",
