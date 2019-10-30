@@ -2,20 +2,21 @@
     "id": "4EC",
     "displayedId": "4EC",
     "network": "VAN-INFO",
-    "source": "CD Changer info",
-    "destination": "",
+    "source": "Display",
+    "destination": "CD changer",
     "type": "Read",
     "requireAck": "A",
     "notes": [
-        "Engine not running", "Not seen in my car - no HU installed"
     ],
     "examples": [
-        "4EC"
+        "4EC 81 00 C1 16 01 22 17 01 21 00 3F 81"
     ],
     "msgDescription": [
-        "I can't begin to decode this until I put the headunit back in the car."
+        "This message contains the status of the CD changer. The values are in BCD.",
+        "When the CD changer is activated in the display it queries the changer periodically (as this is a read message). If we would like to emulate the changer we need to answer the query with an immediate reply type message.",
+        "Can be tested on bench with the head unit and a display which has the changer activated"
     ],
-    "shortDescription": "CD Changer - I've not seen this (but I have no CDC connected - see 4D4)",
+    "shortDescription": "CD Changer status",
     "status": "Partial",
     "margin": "15",
     "structures":
