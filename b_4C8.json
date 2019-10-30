@@ -1,0 +1,48 @@
+{
+    "id": "4C8",
+    "displayedId": "4C8",
+    "network": "VAN BODY",
+    "source": "",
+    "destination": "",
+    "type": "Read",
+    "requireAck": "A",
+    "notes": [
+        "", ""
+    ],
+    "examples": [
+        "4C8 RA0 E1 96 ?"
+    ],
+    "msgDescription": [
+        ""
+    ],
+    "shortDescription": "",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-4",
+                    "value": "RA0",
+                    "description": ["Read & Req ACK"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "?",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "E1 96",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

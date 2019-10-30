@@ -1,0 +1,73 @@
+{
+    "id": "539",
+    "displayedId": "539",
+    "network": "VAN BODY",
+    "source": "",
+    "destination": "",
+    "type": "Write",
+    "length": 1,
+    "requireAck": "A",
+    "notes": [
+        "", ""
+    ],
+    "examples": [
+        "539 WA0 00 FF 00 00 67 00 8E EC A",
+        "539 WA0 00 FF 00 02 67 00 59 60 A"
+    ],
+    "msgDescription": [
+        ""
+    ],
+    "shortDescription": "",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "WA0",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [
+                        "0x01 = Low beam on",
+                        "0x02 = High beam on"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-2",
+                    "value": "02",
+                    "description": [
+                        "0x00 and 0x02 are sent, when fog light is off",
+                        "0x04 and 0x06 are sent, when fog light is on"
+                    ]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "67",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "0BD6",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

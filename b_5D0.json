@@ -1,0 +1,111 @@
+{
+    "id": "5D0",
+    "displayedId": "5D0",
+    "network": "VAN BODY",
+    "source": "",
+    "destination": "",
+    "type": "Write",
+    "length": 13,
+    "requireAck": "N",
+    "notes": [
+        "", ""
+    ],
+    "examples": [
+        "5D0 WA0 87 18 80 40 00 00 00 00 00 00 00 00 87 3B 20 N"
+    ],
+    "msgDescription": [
+        ""
+    ],
+    "shortDescription": "",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "WA0",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "87",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "18",
+                    "description": [
+                    ]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "80",
+                    "description": [
+                    ]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "40",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "87",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "3B20",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "N",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

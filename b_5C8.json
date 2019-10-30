@@ -1,0 +1,85 @@
+{
+    "id": "5C8",
+    "displayedId": "5C8",
+    "network": "VAN BODY",
+    "source": "",
+    "destination": "",
+    "type": "Write",
+    "length": 8,
+    "requireAck": "A",
+    "notes": [
+        "", ""
+    ],
+    "examples": [
+        "5C8 WA0 05 00 02 03 00 00 FF FF 57 C4 A"
+    ],
+    "msgDescription": [
+        ""
+    ],
+    "shortDescription": "",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "WA0",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-2",
+                    "value": "05",
+                    "description": [
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [
+                    ]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "03",
+                    "description": [
+                        "0x03 when ignition is on"
+                    ]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "FF",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "FF",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "57C4",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

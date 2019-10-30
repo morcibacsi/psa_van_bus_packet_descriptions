@@ -1,0 +1,139 @@
+{
+    "id": "4D0",
+    "displayedId": "4D0",
+    "network": "VAN BODY",
+    "source": "",
+    "destination": "",
+    "type": "Write",
+    "length": 19,
+    "requireAck": "A",
+    "notes": [
+        "", ""
+    ],
+    "examples": [
+        "4D0 W00 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 80 86 DE A"
+    ],
+    "msgDescription": [
+        ""
+    ],
+    "shortDescription": "",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-4",
+                    "value": "WA0",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "80",
+                    "description": ["Header"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "80",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "86DE",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "N",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

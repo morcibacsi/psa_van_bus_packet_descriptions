@@ -1,0 +1,48 @@
+{
+    "id": "448",
+    "displayedId": "448",
+    "network": "VAN BODY",
+    "source": "",
+    "destination": "",
+    "type": "Read",
+    "requireAck": "A",
+    "notes": [
+        "", ""
+    ],
+    "examples": [
+        "448 RA0 57 B8 ?"
+    ],
+    "msgDescription": [
+        ""
+    ],
+    "shortDescription": "",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-4",
+                    "value": "RA0",
+                    "description": ["Read & Req ACK"]
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "?",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "57B8",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

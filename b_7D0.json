@@ -1,0 +1,136 @@
+{
+    "id": "7D0",
+    "displayedId": "7D0",
+    "network": "VAN BODY",
+    "source": "",
+    "destination": "",
+    "type": "Write",
+    "length": 18,
+    "requireAck": "A",
+    "notes": [
+        "", ""
+    ],
+    "examples": [
+        "7D0 WA0 8B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0A 5A 3C 78 A"
+    ],
+    "msgDescription": [
+        ""
+    ],
+    "shortDescription": "",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "WA0",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "8B",
+                    "description": ["Increments with every message"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [
+                    ]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [
+                    ]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "0A",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "5A",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "3C78",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

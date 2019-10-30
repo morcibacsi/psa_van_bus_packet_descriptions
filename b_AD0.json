@@ -1,0 +1,86 @@
+{
+    "id": "AD0",
+    "displayedId": "AD0",
+    "network": "VAN BODY",
+    "source": "",
+    "destination": "",
+    "type": "Write",
+    "length": 8,
+    "requireAck": "A",
+    "notes": [
+        "", ""
+    ],
+    "examples": [
+        "AD0 WA0 80 61 83 04 00 7E C0 80 F5 6E A"
+    ],
+    "msgDescription": [
+        ""
+    ],
+    "shortDescription": "",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-3",
+                    "value": "WA0",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "80",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "61",
+                    "description": [
+                    ]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "83",
+                    "description": [
+                    ]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "04",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "7E",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "C0",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "80",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "F56E",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

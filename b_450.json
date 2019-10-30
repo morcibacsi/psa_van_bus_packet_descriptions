@@ -1,0 +1,134 @@
+{
+    "id": "450",
+    "displayedId": "450",
+    "network": "VAN BODY",
+    "source": "BSI",
+    "destination": "COM2000",
+    "type": "Read",
+    "requireAck": "A",
+    "length": 10,
+    "notes": [
+    ],
+    "examples": [
+        "450 87 20 00 00 00 00 80 00 00 87 61 7A A"
+    ],
+    "msgDescription": [
+    ],
+    "shortDescription": "BSI reads the status of the COM2000",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-2",
+                    "value": "RA0",
+                    "description": ["Read & Req ACK"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "87",
+                    "description": ["Header"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "20",
+                    "description": [
+                        "Lights switch status",
+                        "0x01 = Auto light button pressed",
+                        "0x02 = Fog light switch turned forward",
+                        "0x04 = Fog light switch turned backward",
+                        "0x08 = Main beam handle gently on (only while pulled, returns to 0 when released)",
+                        "0x10 = Main beam handle fully on (only while pulled, returns to 0 when released)",
+                        "0x20 = Default state (Everything switched off)",
+                        "0x40 = Sidelights on",
+                        "0x80 = Low beam on"
+                        ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": [
+                        "Right stalk switch status",
+                        "0x01 = Trip computer button pressed",
+                        "0x02 = Read wiper switched turned to screen wash position",
+                        "0x04 = Read wiper switched turned to position 1",
+                        "0x10 = Screen wash",
+                        "0x10 = Single screen wipe",
+                        "0x20 = Screen wipe speed 1",
+                        "0x40 = Screen wipe speed 2",
+                        "0x80 = Screen wipe speed 3"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": [
+                        "Turn signal indicator",
+                        "0x40 = Left signal on",
+                        "0x80 = Right signal on"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": [
+                        "Radio stalk status",
+                        "0x02 = SRC button pressed",
+                        "0x04 = Volume down button pressed",
+                        "0x08 = Volume up button pressed",
+                        "0x40 = Seek backward button pressed",
+                        "0x80 = Seek forward button pressed"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "80",
+                    "description": [
+                        "Radio stalk scroll wheel position",
+                        "0x80 - 0x7F (in PP2000: 0x80: -128 0x7F: 127)"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "87",
+                    "description": ["Footer"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "617A",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}
