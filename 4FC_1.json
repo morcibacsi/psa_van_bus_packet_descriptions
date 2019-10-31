@@ -101,10 +101,12 @@
                 {
                     "showInPopup": true,
                     "offset": "offset-1",
-                    "value": "FF",
+                    "value": "7B",
                     "description": [
                         "Byte 6",
-                        "Oil temperature"
+                        "Oil temperature",
+                        "7B equals to 123 in decimal we substract 40 = 83 Celsius",
+                        "7B = 123 - 40 = 83 Celsius"
                     ]
                 },
                 {
