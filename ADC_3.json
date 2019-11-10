@@ -1,0 +1,166 @@
+{
+    "id": "ADC_2",
+    "displayedId": "ADC",
+    "network": "VAN-COMFORT",
+    "source": "AirCon",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "22",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "ADC E 86 61 C0 01 07 01 07 00 00 00 00 00 71 00 00 00 00 00 00 1B 00 86 D8 3E"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command: 0E A5 CC 21 C0 06 72",
+        "Air conditioner sensor status"
+    ],
+    "shortDescription": "Air conditioner sensor status",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "86",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "C0",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "01 07",
+                    "description": [
+                        "Cabin temperature",
+                        "0x0107 = 263 => 263/10-40 = -13.7"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "01 07",
+                    "description": [
+                        "Coolant temperature",
+                        "0x0107 = 263 => 263/10-40 = -13.7"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "71",
+                    "description": [
+                        "+VAN suppy voltage",
+                        "0x71 = 113 => 113/10 = 11.3 volts"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "1B",
+                    "description": [
+                        "Value blower",
+                        "0x1B = 27 => 27/10 = 2.7 volts"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "86",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "D8 3E",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}

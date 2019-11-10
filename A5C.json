@@ -1,0 +1,110 @@
+{
+    "id": "A5C",
+    "displayedId": "A5C",
+    "network": "VAN-COMFORT",
+    "source": "DIAG",
+    "destination": "AirCon",
+    "type": "Write",
+    "length": "2 | 3 | 4",
+    "requireAck": "A",
+    "notes": [
+        "This is a variable length message"
+    ],
+    "examples": [
+        "A5C C 21 80 95 54",
+        "A5C C 21 A0 53 5A",
+        "A5C C 21 C0 06 72",
+        "A5C C 21 C1 19 48",
+        "A5C C 21 C2 38 06",
+        "A5C C 21 C4 7A 9A",
+        "A5C C 14 FF 00 B2 30",
+        "A5C C 30 89 20 01 C1 CA",
+        "A5C C 30 89 20 00 DE F0",
+        "A5C C 30 89 01 00 4A D0"
+    ],
+    "msgDescription": [
+        "Air conditioning diagnostic commands.",
+        "The answers for these commands are returned in the packets with the ADC idens"
+    ],
+    "shortDescription": "Air conditioning diagnostic commands",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-2",
+                    "value": "C",
+                    "description": "Write & Req ACK"
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "21 80",
+                    "description": [
+                        "See table below"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-0",
+                    "value": "95 54",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ],
+    "table":
+    {
+        "title": "Manufacturer id",
+        "rows":
+        [
+            {
+                "key": "21 80",
+                "value": "Enter diag mode / get manufacturer info"
+            },
+            {
+                "key": "21 A0",
+                "value": "Get A/C settings"
+            },
+            {
+                "key": "21 C0",
+                "value": "A/C parameters (live data, internal temperature)"
+            },
+            {
+                "key": "21 C1",
+                "value": "A/C actuator state (mixing, air distribution, recirculation status)"
+            },
+            {
+                "key": "21 C2",
+                "value": "A/C button states"
+            },
+            {
+                "key": "21 C3",
+                "value": "Returns unknown data"
+            },
+            {
+                "key": "21 C4",
+                "value": "Read fault codes"
+            },
+            {
+                "key": "14 FF 00",
+                "value": "Clear fault codes"
+            },
+            {
+                "key": "30 89 20 01",
+                "value": "Display test, turn everything on"
+            },
+            {
+                "key": "30 89 20 00",
+                "value": "Display test, turn everything off"
+            },
+            {
+                "key": "30 89 01 00",
+                "value": "Unknown command"
+            }
+        ]
+    }
+
+}

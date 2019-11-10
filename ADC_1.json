@@ -1,0 +1,276 @@
+{
+    "id": "ADC_1",
+    "displayedId": "ADC",
+    "network": "VAN-COMFORT",
+    "source": "AirCon",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "26",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "ADC E 81 61 80 96 46 61 24 80 00 19 96 46 61 24 80 04 00 05 00 00 00 00 00 00 00 81 39 F6"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command: 0E A5 CC 21 80 95 54",
+        "Air conditioner manufacturer identification data"
+    ],
+    "shortDescription": "Air conditioner manufacturer identification data",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "81",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "61",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "80",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "96 46 61 24 80",
+                    "description": ["PSA reference number"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00 19",
+                    "description": [
+                        "Manufacturer id",
+                        "See table below"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "96 46 61 24 80",
+                    "description": ["Seems like PSA reference number, however it is not displayed in diag"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "04 00",
+                    "description": ["Software version"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "05",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": ["Diagnostic version"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "81",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "39 F6",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ],
+    "table":
+    {
+        "title": "Manufacturer id",
+        "rows":
+        [
+            {
+                "key": "00 01",
+                "value": "PSA"
+            },
+            {
+                "key": "00 02",
+                "value": "MAGNETTI MARELLI"
+            },
+            {
+                "key": "00 03",
+                "value": "BOSCH"
+            },
+            {
+                "key": "00 04",
+                "value": "SIEMENS"
+            },
+            {
+                "key": "00 05",
+                "value": "SAGEM"
+            },
+            {
+                "key": "00 06",
+                "value": "VALEO"
+            },
+            {
+                "key": "00 07",
+                "value": "Z.F."
+            },
+            {
+                "key": "00 08",
+                "value": "BENDIX"
+            },
+            {
+                "key": "00 09",
+                "value": "TEVES"
+            },
+            {
+                "key": "00 0A",
+                "value": "LUCAS"
+            },
+            {
+                "key": "00 0B",
+                "value": "HELLA"
+            },
+            {
+                "key": "00 0C",
+                "value": "BITRON"
+            },
+            {
+                "key": "00 0D",
+                "value": "VDO"
+            },
+            {
+                "key": "00 0E",
+                "value": "AUTOLIV"
+            },
+            {
+                "key": "00 0F",
+                "value": "TRW"
+            },
+            {
+                "key": "00 10",
+                "value": "TEMIC"
+            },
+            {
+                "key": "00 13",
+                "value": "DELPHI"
+            },
+            {
+                "key": "00 14",
+                "value": "PHILIPS"
+            },
+            {
+                "key": "00 15",
+                "value": "CLARION"
+            },
+            {
+                "key": "00 16",
+                "value": "WEBASTO"
+            },
+            {
+                "key": "00 17",
+                "value": "EBERSPACHER"
+            },
+            {
+                "key": "00 18",
+                "value": "ITT"
+            },
+            {
+                "key": "00 19",
+                "value": "BEHR"
+            },
+            {
+                "key": "00 1A",
+                "value": "DAV"
+            },
+            {
+                "key": "00 1B",
+                "value": "BRC"
+            },
+            {
+                "key": "00 1C",
+                "value": "HPI"
+            },
+            {
+                "key": "00 1D",
+                "value": "EATON"
+            },
+            {
+                "key": "00 1E",
+                "value": "SC2N"
+            },
+            {
+                "key": "00 1F",
+                "value": "MARWAL"
+            },
+            {
+                "key": "00 20",
+                "value": "INALFA"
+            },
+            {
+                "key": "00 2F",
+                "value": "STABILUS"
+            }
+        ]
+    }
+}

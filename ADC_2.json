@@ -1,0 +1,171 @@
+{
+    "id": "ADC_2",
+    "displayedId": "ADC",
+    "network": "VAN-COMFORT",
+    "source": "AirCon",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "21",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "ADC E 82 61 A0 45 00 0A 00 02 00 00 10 00 00 00 00 00 00 00 00 00 82 1B 3A"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command: 0E A5 CC 21 A0 53 5A",
+        "Air conditioner configuration data"
+    ],
+    "shortDescription": "Air conditioner configuration data",
+    "status": "Partial",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "82",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "61",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "A0",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "45",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "0A",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "02",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "10",
+                    "description": [
+                        "0x01: Right hand drive",
+                        "0x10: HDI engines: yes",
+                        "0x20: Cold climate engines: yes",
+                        "0x40: With alternator: yes"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "82",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "1B 3A",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}

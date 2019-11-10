@@ -1,0 +1,170 @@
+{
+    "id": "ADC_4",
+    "displayedId": "ADC",
+    "network": "VAN-COMFORT",
+    "source": "AirCon",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "14",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "ADC E 82 61 C4 00 00 00 00 00 00 00 00 00 00 82 88 CC"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command 0E A5 CC 21 C4 7A 9A",
+        "Air conditioner fault codes"
+    ],
+    "shortDescription": "Air conditioner fault codes",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "82",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "61",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "C4",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Error codes (bitwise info)",
+                        "0x10: Permanent fault. Air conditioning panel control button."
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Error codes (bitwise info)",
+                        "0x01: Remote perm. fault. Evaporator temp. sensor. Incorrect value received.",
+                        "0x02: Remote perm. fault. No communication between the BSI and the air conditioning ECU",
+                        "0x10: Remote perm. fault. Vehicle speed information. Incorrect value received.",
+                        "0x20: Remote perm. fault. Air conditioning circuit pressure information. Incorrect value received.",
+                        "0x40: Remote perm. fault. The outside temperature sensor. Incorrect value received.",
+                        "0x80: Remote perm. fault. Coolant temperature sensor (VAN network). Incorrect value received."
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Error codes (bitwise info)",
+                        "0x40: Permanent fault. Coolant temperature sensor(heater matrix). Short circuit or open circuit.",
+                        "0x80: Permanent fault. Passenger compartment temperature sensor. Short circuit or open circuit."
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Error codes (bitwise info)",
+                        "0x20: Permanent fault. Mixer motor. Short Open circuit.",
+                        "0x40: Permanent fault. Distribution motor. Open circuit.",
+                        "0x80: Permanent fault. Recycling engine. Open circuit."
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Error codes (bitwise info)",
+                        "0x08: Permanent fault. Passenger compartment temperature sensor rotor jammed."
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Error codes (bitwise info)",
+                        "0x10: Intermittent fault. Air conditioner panel control button."
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Error codes (bitwise info)",
+                        "0x01: Remote intermittent fault. Evaporator temperature sensor. Incorrect value received.",
+                        "0x02: Remote intermittent fault. No communication between the BSI and the air conditioning ECU.",
+                        "0x10: Remote intermittent fault. Vehicle speed information. Incorrect value received.",
+                        "0x20: Remote intermittent fault. Air conditioning circuit pressure information. Incorrect value received.",
+                        "0x40: Remote intermittent fault. The outside temperature sensor. Incorrect value received.",
+                        "0x80: Remote intermittent fault. Coolant temperature sensor (VAN network). Incorrect value received."
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Error codes (bitwise info)",
+                        "0x40: Intermittent fault. Coolant temperature sensor (heater matrix). Short circuit or open circuit.",
+                        "0x80: Intermittent fault. Passenger compartment temperature sensor. Short circuit or open circuit."
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Error codes (bitwise info)",
+                        "0x20: Intermittent fault. Mixer motor. Open circuit.",
+                        "0x40: Intermittent fault. Distribution motor. Open circuit.",
+                        "0x80: Intermittent fault. Recycling engine. Open circuit."
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Error codes (bitwise info)",
+                        "0x08: Intermittent fault. Passenger compartment temperature sensor rotor jammed."
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "82",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "88 CC",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}
