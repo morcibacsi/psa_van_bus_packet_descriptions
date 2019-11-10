@@ -193,11 +193,11 @@
                     },
                     {
                         "key": "21 40",
-                        "value": "Volume knob has been turned"
+                        "value": "Radio sends this regularly (like a heartbeat that hey I'm here)"
                     },
                     {
                         "key": "24 40",
-                        "value": "Either RDS or TA button has been pressed and released"
+                        "value": "Radio switched on"
                     },
                     {
                         "key": "",
