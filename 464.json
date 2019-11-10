@@ -5,6 +5,7 @@
     "source": "AirCon",
     "destination": "",
     "type": "Write",
+    "length": "5",
     "requireAck": "A",
     "notes": [
         "Engine not running"

@@ -5,6 +5,7 @@
     "source": "COM2000",
     "destination": "Broadcast",
     "type": "Write",
+    "length": "2",
     "requireAck": "A",
     "notes": [
         "Radio remote control"

@@ -5,6 +5,7 @@
     "source": "",
     "destination": "",
     "type": "Read",
+    "length": "?",
     "requireAck": "A",
     "notes": [
         "", ""

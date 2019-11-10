@@ -5,6 +5,7 @@
     "source": "",
     "destination": "",
     "type": "Write",
+    "length": "15",
     "requireAck": "N",
     "notes": [
         "Not a clue", "Engine not running"

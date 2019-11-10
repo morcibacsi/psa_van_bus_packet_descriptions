@@ -5,6 +5,7 @@
     "source": "BSI",
     "destination": "Dashboard/Broadcast",
     "type": "Write",
+    "length": "7",
     "requireAck": "N",
     "notes": [
         "Dashboard Gauges", "Engine not running"

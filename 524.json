@@ -5,6 +5,7 @@
     "source": "COM2000",
     "destination": "Dashboard",
     "type": "Write",
+    "length": "14",
     "requireAck": "N",
     "notes": [
         "Car Status 2"

@@ -5,6 +5,7 @@
     "source": "BSI",
     "destination": "Display",
     "type": "Read",
+    "length": "27",
     "requireAck": "A",
     "notes": [
         "Engine not running", "Car Status"

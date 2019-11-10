@@ -5,6 +5,7 @@
     "source": "",
     "destination": "",
     "type": "Read",
+    "length": "5",
     "requireAck": "A",
     "notes": [
         "Odometer reading", "Engine start"

@@ -224,13 +224,14 @@
                     {{/messages}}
                 </tbody>
             </table>
-            
-            
+
+
             {{#messages}}
             <div class="message" id="{{id}}">
                 <div class="network">Network: {{network}}</div>
                 <div class="source">Source: <span class="label label-primary">{{source}}</span></div>
-                <div class="dest">Dest: <span class="label label-success">{{destination}}</span></div>
+                <div class="dest">Destination: <span class="label label-success">{{destination}}</span></div>
+                <div class="length">Length: {{length}}</div>
                 <div>Note: </div>
                 {{#notes}}
                     <div class="note"><span class="label label-success">{{.}}</span></div>

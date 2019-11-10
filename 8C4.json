@@ -5,6 +5,7 @@
     "source": "Radio",
     "destination": "Display",
     "type": "Write",
+    "length": "3",
     "requireAck": "A",
     "notes": [
         "Radio Buttons", "Not seen in my car - no HU installed"

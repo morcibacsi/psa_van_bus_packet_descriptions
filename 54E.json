@@ -5,6 +5,7 @@
     "source": "SatNav Stuff",
     "destination": "",
     "type": "Read",
+    "length": "6",
     "requireAck": "A",
     "notes": [
         "Engine not running", "Satnav accessed"

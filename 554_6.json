@@ -5,6 +5,7 @@
     "source": "Radio",
     "destination": "Display",
     "type": "Read",
+    "length": "10",
     "requireAck": "A",
     "notes": [
         "Radio Info (sort of mostly)", "Not seen in my car - no HU installed"

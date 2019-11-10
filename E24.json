@@ -6,6 +6,7 @@
     "source": "BSI",
     "destination": "Radio/Broadcast",
     "type": "Write",
+    "length": "17",
     "requireAck": "N",
     "notes": [
         "VIN", "Engine not running"

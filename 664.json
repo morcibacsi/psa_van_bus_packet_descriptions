@@ -5,6 +5,7 @@
     "source": "Dashboard",
     "destination": "BSI",
     "type": "Write",
+    "length": "11",
     "requireAck": "A",
     "notes": [
         "Engine not running", "Car Status"

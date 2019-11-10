@@ -5,6 +5,7 @@
     "source": "Display",
     "destination": "CD changer",
     "type": "Read",
+    "length": "12",
     "requireAck": "A",
     "notes": [
     ],

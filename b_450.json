@@ -5,8 +5,8 @@
     "source": "BSI",
     "destination": "COM2000",
     "type": "Read",
+    "length": "10",
     "requireAck": "A",
-    "length": 10,
     "notes": [
     ],
     "examples": [

@@ -5,6 +5,7 @@
     "source": "Display",
     "destination": "Radio",
     "type": "Write",
+    "length": "?",
     "requireAck": "A",
     "notes": [
         "Radio control"

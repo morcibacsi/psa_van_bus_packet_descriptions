@@ -5,6 +5,7 @@
     "source": "Display",
     "destination": "",
     "type": "Write",
+    "length": "2",
     "requireAck": "A",
     "notes": [
         "Display Settings?", "Engine not running"

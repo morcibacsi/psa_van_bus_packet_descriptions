@@ -5,6 +5,7 @@
     "source": "Head unit",
     "destination": "CDC",
     "type": "Write",
+    "length": "2",
     "requireAck": "A",
     "notes": [
         "CDC COMMAND"

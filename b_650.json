@@ -5,7 +5,7 @@
     "source": "",
     "destination": "",
     "type": "Write",
-    "length": 12,
+    "length": "12",
     "requireAck": "A",
     "notes": [
         "", ""
