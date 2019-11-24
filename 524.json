@@ -5,9 +5,10 @@
     "source": "COM2000",
     "destination": "Dashboard",
     "type": "Write",
-    "length": "14",
+    "length": "14 | 16",
     "requireAck": "N",
     "notes": [
+        "The length of this message depends on which year the car was manufactured. In cars made until 2002 it is 14 bytes long, however in a car made in 2004 it is 16 bytes long",
         "Car Status 2"
     ],
     "examples": [
