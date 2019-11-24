@@ -1,0 +1,107 @@
+{
+    "id": "ADC_5",
+    "displayedId": "ADC",
+    "network": "VAN-COMFORT",
+    "source": "AirCon",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "8",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "ADC E 83 61 C2 00 00 00 00 83 C8 38"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command 0E A5 CC 21 C2 38 06",
+        "Air conditioner button status"
+    ],
+    "shortDescription": "Air conditioner button status",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "82",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "61",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "C2",
+                    "description": "Diag function id"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Byte3:",
+                        "Bitwise info",
+                        "0x01: temperature+",
+                        "0x02: recirculation request",
+                        "0x04: de-icing rear screen",
+                        "0x08: AC",
+                        "0x10: de-icing/visibility",
+                        "0x20: ventilation request minus",
+                        "0x40: auto",
+                        "0x80: ventilation request plus"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Byte4:",
+                        "Bitwise info",
+                        "0x10: off",
+                        "0x20: temperature-",
+                        "0x40: distribution request"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "82",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "C8 38",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}

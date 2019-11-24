@@ -1,0 +1,144 @@
+{
+    "id": "ADC_6",
+    "displayedId": "ADC",
+    "network": "VAN-COMFORT",
+    "source": "AirCon",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "12",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "ADC E 82 61 C1 09 64 00 00 00 00 00 00 82 5E 0C"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command 0E A5 CC 21 C1 19 48",
+        "Air conditioner actuator status"
+    ],
+    "shortDescription": "Air conditioner actuator status",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "82",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "61",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "C1",
+                    "description": [
+                        "Byte2:",
+                        "Diag function id"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Byte3:",
+                        "Recirculation status, intervals",
+                        "0x00-0x03: recirculation",
+                        "0x04-0x60: intermediate",
+                        "0x61-0x64: exterior air"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Byte4:",
+                        "Distribution status, intervals",
+                        "0x00-0x03: de-icing",
+                        "0x04-0x1D: intermediate",
+                        "0x1E-0x24: feet/demisting",
+                        "0x25-0x2E: intermediate",
+                        "0x2F-0x35: feet",
+                        "0x36-0x3E: intermediate",
+                        "0x3F-0x45: footwells/face",
+                        "0x46-0x60: intermediate",
+                        "0x61-0x64: aeration"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Byte5:",
+                        "Mixing status, intervals",
+                        "0x00-0x03: fully cold",
+                        "0x04-0x60: intermediate",
+                        "0x61-0x64: fully hot"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "82",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "5E 0C",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}
