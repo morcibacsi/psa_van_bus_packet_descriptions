@@ -5,10 +5,11 @@
     "source": "Dashboard",
     "destination": "BSI",
     "type": "Write",
-    "length": "11",
+    "length": "11 | 12",
     "requireAck": "A",
     "notes": [
-        "Engine not running", "Car Status"
+        "The length of this message depends on which year the car was manufactured. In cars made until 2002 it is 11 bytes long, however in a car made in 2004 it is 12 bytes long",
+        "Button statuses (door lock, esp, hazard warning)"
     ],
     "examples": [
         "664 WA0 00 00 0F 04 24 2C 00 FF 00 FF 00 9ED8 A"
