@@ -6,7 +6,7 @@ It is based on Graham Auld's findings and the VAN_Frames.txt which was originate
 
 ## Project structure
 
-The project is basically a web page and the **packet descriptions are inside files with .json extension**. Every iden has its own file. Some packets can have different lenghts based on some conditions (year of manufacture, meaning of the packet). In these cases I separated the descriptors into different files.
+The project is basically a web page and the **packet descriptions are inside files with .json extension**. Every iden has its own file inside the data folder. Some packets can have different lengths based on some conditions (year of manufacture, meaning of the packet). In these cases I separated the descriptors into different files.
 
 The **html file** contains **only the design** of the page. When opened it loads the json files with an ajax request and displays their contents. It uses bootstrap, jquery, and the [mustache.js][mustache_js] library to parse the json files.
 
