@@ -65,7 +65,7 @@
                     "showInPopup": true,
                     "offset": "offset-1",
                     "value": "96 46 61 24 80",
-                    "description": ["Seems like PSA reference number, however it is not displayed in diag"]
+                    "description": ["Additional number"]
                 },
                 {
                     "showInPopup": true,
