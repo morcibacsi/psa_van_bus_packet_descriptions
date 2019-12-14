@@ -14,7 +14,7 @@
         "8FC RA0 81 03 0D 40 81 ???? A"
     ],
     "msgDescription": [
-        "This is probably the dash reading mileage from the BSI at startup. The value is in kilometres even in UK vehicles configured for miles"
+        "This is probably the BSI reading the mileage from the dash at startup. The value is in kilometres even in UK vehicles configured for miles"
     ],
     "shortDescription": "Odometer - Odometer reading with header an footer in km only read at engine start",
     "status": "100%",
