@@ -31,6 +31,7 @@
                 {
                     "offset": "offset-2",
                     "value": "10 FF 01 00 00 00 00 00 01",
+                    "color": "red",
                     "description": ["?"]
                 },
                 {

@@ -34,6 +34,7 @@
                     "showInPopup": true,
                     "offset": "offset-1",
                     "value": "01",
+                    "color": "blue",
                     "description": [
                         "Byte 0",
                         "Bitwise info",
@@ -50,6 +51,7 @@
                     "showInPopup": true,
                     "offset": "offset-1",
                     "value": "00",
+                    "color": "red",
                     "description": ["0X01 = led door car open"]
                 },
                 {
@@ -62,6 +64,7 @@
                     "showInPopup": true,
                     "offset": "offset-1",
                     "value": "01",
+                    "color": "blue",
                     "description": [
                         "Byte 4",
                         "Automatic gearbox",
@@ -84,6 +87,7 @@
                     "showInPopup": true,
                     "offset": "offset-1",
                     "value": "01",
+                    "color": "blue",
                     "description": [
                         "Byte 5",
                         "Bitwise info: Light indicators", 
@@ -136,6 +140,7 @@
                     "showInPopup": true,
                     "offset": "offset-1",
                     "value": "FF",
+                    "color": "red",
                     "description": ["?"]
                 },
                 {
@@ -186,6 +191,7 @@
                     "showInPopup": true,
                     "offset": "offset-1",
                     "value": "FF",
+                    "color": "red",
                     "description": ["?"]
                 },
                 {

@@ -37,6 +37,7 @@
                 {
                     "offset": "offset-2",
                     "value": "FF AE AC 58 0A FD 9F 7E 4D C5 5D E4 00 00 00",
+                    "color": "red",
                     "description": ["?"]
                 },
                 {

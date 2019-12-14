@@ -31,16 +31,19 @@
                 {
                     "offset": "offset-4",
                     "value": "80",
+                    "color": "blue",
                     "description": ["Header?"]
                 },
                 {
                     "offset": "",
                     "value": "05 01",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "offset-2",
                     "value": "80",
+                    "color": "blue",
                     "description": ["Footer?"]
                 },
                 {

@@ -33,11 +33,13 @@
                 {
                     "offset": "offset-4",
                     "value": "00 01",
+                    "color": "blue",
                     "description": ["Uptime battery (days)"]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {

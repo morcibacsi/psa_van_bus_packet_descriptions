@@ -166,6 +166,7 @@
                     "showInPopup": true,
                     "offset": "offset-3",
                     "value": "01",
+                    "color": "blue",
                     "description": [
                         "0x01 = unknown", 
                         "0x02 = unknown", 
@@ -180,6 +181,7 @@
                     "showInPopup": true,
                     "offset": "offset-3",
                     "value": "01",
+                    "color": "blue",
                     "description": [
                         "0x01 = ADIN fault", 
                         "0x02 = User stop & start", 
@@ -194,6 +196,7 @@
                     "showInPopup": true,
                     "offset": "offset-3",
                     "value": "01",
+                    "color": "blue",
                     "description": [
                         "0x01 = unknown", 
                         "0x02 = unknown", 

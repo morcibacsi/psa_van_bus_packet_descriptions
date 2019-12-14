@@ -266,7 +266,7 @@
                 <div class="id">{{displayedId}}</div>
                 <div class="structure clearfix margin-{{margin}}">
                     {{#bytes}}
-                        <div class="bits">{{value}}{{^isBit}}&nbsp;{{/isBit}}
+                        <div class="bits" {{#color}}style="color: {{color}}"{{/color}}>{{value}}{{^isBit}}&nbsp;{{/isBit}}
                             <div class="info {{offset}} {{#showInPopup}}showInPopup{{/showInPopup}}">{{#description}}{{.}}<br/>{{/description}}</div>
                         </div>
                     {{/bytes}}

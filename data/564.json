@@ -36,60 +36,71 @@
                 },
                 {
                     "value": "6",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "5",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "4",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "3",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-20",
                     "value": "210",
+                    "color": "blue",
                     "description": ["Sequence number (constantly incrementing probably used to indicate changed data or new packet)"]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
@@ -125,12 +136,14 @@
                 {
                     "offset": "",
                     "value": "2",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "1",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
@@ -142,52 +155,61 @@
                 {
                     "offset": "",
                     "value": "FF",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "7",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "6",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "5",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "4",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "3",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "2",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "1",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
@@ -209,6 +231,7 @@
                 {
                     "offset": "",
                     "value": "1D",
+                    "color": "red",
                     "description": [""]
                 },
                 {

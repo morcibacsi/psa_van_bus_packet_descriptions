@@ -77,6 +77,7 @@
                     "showInPopup": true,
                     "offset": "offset-3",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
@@ -105,12 +106,14 @@
                     "showInPopup": true,
                     "offset": "offset-3",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {

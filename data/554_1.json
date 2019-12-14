@@ -42,6 +42,7 @@
                     "offset": "",
                     "value": "7",
                     "description": "",
+                    "color": "red",
                     "isBit": "true"
                 },
                 {
@@ -64,6 +65,7 @@
                 {
                     "offset": "",
                     "value": "56",
+                    "color": "red",
                     "description": "",
                     "isBit": "true"
                 },
@@ -82,6 +84,7 @@
                 {
                     "offset": "",
                     "value": "210",
+                    "color": "red",
                     "description": [""]
                 },
                 {
@@ -92,11 +95,13 @@
                 {
                     "offset": "",
                     "value": "F0",
+                    "color": "red",
                     "description": ""
                 },
                 {
                     "offset": "",
                     "value": "7",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
@@ -115,18 +120,21 @@
                 {
                     "offset": "",
                     "value": "4",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "3",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "2",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
@@ -144,26 +152,31 @@
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": ""
                 },
                 {
                     "offset": "",
                     "value": "65",
+                    "color": "red",
                     "description": ""
                 },
                 {
                     "offset": "",
                     "value": "F2",
+                    "color": "red",
                     "description": ""
                 },
                 {
                     "offset": "",
                     "value": "14",
+                    "color": "red",
                     "description": ""
                 },
                 {
                     "offset": "",
                     "value": "A1",
+                    "color": "red",
                     "description": [""]
                 },
                 {

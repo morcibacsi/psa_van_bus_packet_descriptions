@@ -50,24 +50,28 @@
                     "offset": "offset-15",
                     "value": "4",
                     "description": ["?"],
+                    "color": "red",
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-14",
                     "value": "3",
                     "description": ["?"],
+                    "color": "red",
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-13",
                     "value": "2",
                     "description": ["?"],
+                    "color": "red",
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-12",
                     "value": "1",
                     "description": ["?"],
+                    "color": "red",
                     "isBit": "true"
                 },
                 {
@@ -93,11 +97,13 @@
                 {
                     "offset": "offset-4",
                     "value": "FF",
+                    "color": "red",
                     "description": ["?"]
                 },
                 {
                     "offset": "offset-3",
                     "value": "FF",
+                    "color": "red",
                     "description": ["?"]
                 },
                 {

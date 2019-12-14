@@ -43,6 +43,7 @@
                 {
                     "offset": "offset-8",
                     "value": "5",
+                    "color": "red",
                     "description": ["?"],
                     "isBit": "true"
                 },
@@ -73,6 +74,7 @@
                 {
                     "offset": "offset-3",
                     "value": "0",
+                    "color": "red",
                     "description": ["?"]
                 },
                 {

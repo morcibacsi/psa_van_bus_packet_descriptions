@@ -41,16 +41,19 @@
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "offset-8",
                     "value": "03",
+                    "color": "blue",
                     "description": ["0x13 for first packet after changed track"]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {

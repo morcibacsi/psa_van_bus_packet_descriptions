@@ -18,89 +18,97 @@
     ],
     "shortDescription": "Dashboard - hbeat, brightness, contact? engine?, economy(mode?) temp oil, water & ext oil+fuel",
     "status": "Partial",
-    "margin": "23",
+    "margin": "22",
     "structures":
     [
         {
             "bytes": [
                 {
-                    "offset": "offset-23",
+                    "offset": "offset-22",
                     "value": "W00",
                     "description": ["Write"]
                 },
                 {
-                    "offset": "offset-22",
-                    "value": "7",
-                    "description": ["?"],
-                    "isBit": "true"
-                },
-                {
                     "offset": "offset-21",
-                    "value": "6",
+                    "value": "7",
+                    "color": "red",
                     "description": ["?"],
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-20",
-                    "value": "5",
+                    "value": "6",
+                    "color": "red",
                     "description": ["?"],
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-19",
-                    "value": "4",
-                    "description": ["Heartbeat"],
+                    "value": "5",
+                    "color": "red",
+                    "description": ["?"],
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-18",
+                    "value": "4",
+                    "color": "blue",
+                    "description": ["Heartbeat"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-17",
                     "value": "3210",
                     "description": ["Dial brightness (When the whole byte equals 0x8F it means the dashboard lighting is off)"]
                 },
                 {
-                    "offset": "offset-17",
-                    "value": "7",
-                    "description": ["?"],
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-16",
-                    "value": "6",
-                    "description": ["?"],
-                    "isBit": "true"
-                },
-                {
                     "offset": "offset-15",
-                    "value": "5",
+                    "value": "7",
+                    "color": "red",
                     "description": ["?"],
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-14",
+                    "value": "6",
+                    "color": "red",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-13",
+                    "value": "5",
+                    "color": "red",
+                    "description": ["?"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-12",
                     "value": "4",
                     "description": ["Economy mode active"],
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-13",
+                    "offset": "offset-11",
                     "value": "3",
+                    "color": "blue",
                     "description": ["Door open warning light?(don't think so now)"],
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-12",
+                    "offset": "offset-10",
                     "value": "2",
                     "description": ["Engine running"],
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-11",
+                    "offset": "offset-9",
                     "value": "1",
                     "description": ["Ignition on"],
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-10",
+                    "offset": "offset-8",
                     "value": "0",
                     "description": ["Accessories on (drops out while starting car)"]
                 },

@@ -41,18 +41,21 @@
                 {
                     "offset": "offset-9",
                     "value": "7",
+                    "color": "blue",
                     "description": ["This is a preset? (seems always set)"],
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-8",
                     "value": "6",
+                    "color": "blue",
                     "description": ["(some reports of this rather than bit 4 indicating RDS or frequency)"],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "5",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },

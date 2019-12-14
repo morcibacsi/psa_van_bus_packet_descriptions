@@ -31,6 +31,7 @@
                 {
                     "offset": "offset-5",
                     "value": "20FF",
+                    "color": "blue",
                     "description": [
                         "Byte 0 - I've seen it change from 20 to 00 in a capture where key was removed and capture left running",
                         "reference 524 Databyte 4 with my key in guess???",

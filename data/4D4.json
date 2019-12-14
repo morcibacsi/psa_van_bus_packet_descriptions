@@ -36,6 +36,7 @@
                 {
                     "offset": "offset-19",
                     "value": "76",
+                    "color": "red",
                     "description": [
                         "?"
                     ]
@@ -56,6 +57,7 @@
                     "offset": "offset-16",
                     "value": "3",
                     "description": ["?"],
+                    "color": "red",
                     "isBit": "true"
                 },
                 {
@@ -67,6 +69,7 @@
                 {
                     "offset": "offset-14",
                     "value": "10",
+                    "color": "red",
                     "description": [
                         "?"
                     ]
@@ -80,6 +83,7 @@
                 {
                     "offset": "offset-10",
                     "value": "6543210",
+                    "color": "red",
                     "description": [
                         "?"
                     ]
@@ -87,6 +91,7 @@
                 {
                     "offset": "",
                     "value": "01",
+                    "color": "red",
                     "description": ["?"]
                 },
                 {

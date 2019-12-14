@@ -31,16 +31,19 @@
                 {
                     "offset": "offset-7",
                     "value": "8A",
+                    "color": "red",
                     "description": ["?"]
                 },
                 {
                     "offset": "offset-6",
                     "value": "44",
+                    "color": "red",
                     "description": ["?"]
                 },
                 {
                     "offset": "offset-5",
                     "value": "7",
+                    "color": "red",
                     "description": ["?"],
                     "isBit": "true"
                 },
@@ -53,6 +56,7 @@
                 {
                     "offset": "offset-3",
                     "value": "5",
+                    "color": "red",
                     "description": ["?"],
                     "isBit": "true"
                 },

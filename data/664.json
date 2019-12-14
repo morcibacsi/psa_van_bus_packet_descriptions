@@ -32,35 +32,41 @@
                 {
                     "offset": "",
                     "value": "7",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "value": "6",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "5",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "4",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "3",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "2",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
@@ -73,16 +79,19 @@
                 {
                     "offset": "",
                     "value": "0",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "7",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
@@ -95,58 +104,69 @@
                 {
                     "offset": "",
                     "value": "5",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "",
                     "value": "4",
+                    "color": "red",
                     "description": [""],
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-3",
                     "value": "3210",
+                    "color": "blue",
                     "description": ["F = brightness (perhaps this cycles between levels?)"]
                 },
                 {
                     "offset": "",
                     "value": "04",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "24",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "2C",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "FF",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "FF",
+                    "color": "red",
                     "description": [""]
                 },
                 {
                     "offset": "",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {

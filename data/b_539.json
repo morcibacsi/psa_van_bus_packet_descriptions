@@ -25,7 +25,7 @@
         {
             "bytes": [
                 {
-                    "offset": "offset-3",
+                    "offset": "offset-4",
                     "value": "WA0",
                     "description": ["Write & Req ACK"]
                 },
@@ -48,13 +48,15 @@
                     ]
                 },
                 {
-                    "offset": "offset-2",
+                    "offset": "offset-1",
                     "value": "67",
+                    "color": "red",
                     "description": [""]
                 },
                 {
-                    "offset": "offset-2",
+                    "offset": "offset-1",
                     "value": "00",
+                    "color": "red",
                     "description": [""]
                 },
                 {
