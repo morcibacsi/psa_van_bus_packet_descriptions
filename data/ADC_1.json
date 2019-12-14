@@ -44,7 +44,7 @@
                     "showInPopup": true,
                     "offset": "offset-1",
                     "value": "80",
-                    "description": "?"
+                    "description": "Diag function id"
                 },
                 {
                     "showInPopup": true,
