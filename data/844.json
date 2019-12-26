@@ -1,0 +1,50 @@
+{
+    "id": "844",
+    "displayedId": "844",
+    "network": "VAN COMFORT",
+    "source": "",
+    "destination": "",
+    "type": "Write",
+    "length": "9",
+    "requireAck": "A",
+    "notes": [
+        "", ""
+    ],
+    "examples": [
+        "844 C 01 15 41 29 57 FE 00 00 00 0D 32"
+    ],
+    "msgDescription": [
+        "Appeared after enabling navigation in BSI (but without navigation installed)"
+    ],
+    "shortDescription": "Appeared after enabling navigation in BSI (but without navigation installed)",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-4",
+                    "value": "C",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-3",
+                    "color": "red",
+                    "value": "01 15 41 29 57 FE 00 00 00",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "0D32",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}

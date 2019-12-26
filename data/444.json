@@ -1,0 +1,50 @@
+{
+    "id": "444",
+    "displayedId": "444",
+    "network": "VAN COMFORT",
+    "source": "",
+    "destination": "",
+    "type": "Write",
+    "length": "9",
+    "requireAck": "A",
+    "notes": [
+        "", ""
+    ],
+    "examples": [
+        "444 C 80 FF FF 30 8E"
+    ],
+    "msgDescription": [
+        "Appeared after enabling navigation in BSI (but without navigation installed), did not change while driving"
+    ],
+    "shortDescription": "Appeared after enabling navigation in BSI (but without navigation installed)",
+    "status": "0%",
+    "margin": "5",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "offset": "offset-4",
+                    "value": "C",
+                    "description": ["Write & Req ACK"]
+                },
+                {
+                    "offset": "offset-3",
+                    "color": "red",
+                    "value": "80 FF FF",
+                    "description": ["?"]
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "308E",
+                    "description": ["Checksum"]
+                },
+                {
+                    "offset": "offset-0",
+                    "value": "A",
+                    "description": ["ACK"]
+                }
+            ]
+        }
+    ]
+}
