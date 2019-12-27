@@ -2,41 +2,74 @@
     "id": "744",
     "displayedId": "744",
     "network": "VAN COMFORT",
-    "source": "",
-    "destination": "",
+    "source": "BSI",
+    "destination": "Navigation system",
     "type": "Write",
     "length": "12",
     "requireAck": "A",
+    "period": "~45 ms",
     "notes": [
         "", ""
     ],
     "examples": [
-        "744 C 00 BF 00 A3 04 69 04 00 FF FF FF 00 E1 B8"
+        "744 C 1B 6C 1B 77 76 D3 77 37 FF FF FF 00 CF F6"
     ],
     "msgDescription": [
-        "Appeared after enabling navigation in BSI (but without navigation installed)"
+        "Wheel speed. Does not appear if the navigation is disabled in BSI. (navigation does not need to be installed)"
     ],
-    "shortDescription": "Appeared after enabling navigation in BSI (but without navigation installed)",
-    "status": "0%",
-    "margin": "5",
+    "shortDescription": "Wheel speed. Does not appear if the navigation is disabled in BSI. (navigation does not need to be installed)",
+    "status": "66%",
+    "margin": "6",
     "structures":
     [
         {
             "bytes": [
                 {
-                    "offset": "offset-4",
+                    "offset": "offset-11",
                     "value": "C",
                     "description": ["Write & Req ACK"]
                 },
                 {
+                    "offset": "offset-9",
+                    "value": "1B 6C",
+                    "description": [
+                        "Rear right wheel speed (x100)",
+                        "0x1B6C => 7020 / 100 = 70.2 km/h"
+                     ]
+                },
+                {
+                    "offset": "offset-7",
+                    "value": "1B 77",
+                    "description": [
+                        "Rear left wheel speed (x100)", 
+                        "0x1B77 => 7031 / 100 = 70.31 km/h"
+                    ]
+                },
+                {
+                    "offset": "offset-5",
+                    "value": "76 D3",
+                    "description": [
+                        "Start with 0x0000 at ignition",
+                        "Increments as the rear right wheel turns"
+                    ]
+                },
+                {
                     "offset": "offset-3",
+                    "value": "77 37",
+                    "description": [
+                        "Start with 0x0000 at ignition",
+                        "Increments as the rear left wheel turns"
+                    ]
+                },
+                {
+                    "offset": "offset-1",
                     "color": "red",
-                    "value": "00 BF 00 A3 04 69 04 00 FF FF FF 00",
+                    "value": "FF FF FF 00",
                     "description": ["?"]
                 },
                 {
                     "offset": "offset-1",
-                    "value": "E1B8",
+                    "value": "CFF6",
                     "description": ["Checksum"]
                 },
                 {
