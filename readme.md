@@ -1,6 +1,6 @@
 # PSA VAN Bus packet descriptions
 
-This repository contains the descriptions of the VAN bus packets.
+This repository contains the descriptions of the VAN bus packets. Most of these packets were reverse engineered on a Peugeot 307 but they can be applied to other types (Peugeot 206, 406) and Citroen (C2, C5, Xsara...) vehicles as well.
 
 It is based on Graham Auld's findings and the VAN_Frames.txt which was originated from the rt3wiki page which ceased to exists. Most of the packets were verified and reviewed and additional findings have been added.
 
