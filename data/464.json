@@ -45,8 +45,8 @@
                 {
                     "offset": "offset-16",
                     "value": "5",
-                    "color": "red",
-                    "description": ["?"],
+                    "color": "blue",
+                    "description": ["Set to 1 when A/C enabled (on desk, need to check in car)"],
                     "isBit": "true"
                 },
                 {
@@ -58,8 +58,8 @@
                 {
                     "offset": "offset-14",
                     "value": "3",
-                    "color": "red",
-                    "description": ["?"],
+                    "color": "blue",
+                    "description": ["3: When set together with the 1st bit then windscreen demist is on"],
                     "isBit": "true"
                 },
                 {
@@ -71,8 +71,8 @@
                 {
                     "offset": "offset-12",
                     "value": "1",
-                    "color": "red",
-                    "description": ["?"],
+                    "color": "blue",
+                    "description": ["1: When set together with the 3rd bit then windscreen demist is on"],
                     "isBit": "true"
                 },
                 {
