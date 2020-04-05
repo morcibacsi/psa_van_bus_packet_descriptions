@@ -71,15 +71,15 @@
                 {
                     "offset": "offset-14",
                     "value": "6",
-                    "color": "red",
-                    "description": ["?"],
+                    "color": "blue",
+                    "description": ["Trailer present (need to check in real car, but the parking ECU says so in diag mode)"],
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-13",
                     "value": "5",
-                    "color": "red",
-                    "description": ["?"],
+                    "color": "blue",
+                    "description": ["Reverse engaged (need to check in car)"],
                     "isBit": "true"
                 },
                 {
