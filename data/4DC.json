@@ -87,6 +87,7 @@
                 {
                     "offset": "offset-7",
                     "value": "16",
+                    "color": "blue",
                     "description": ["internal temperature /2?", "0x16 = 22", "22/2 = 11 degrees"]
                 },
                 {
