@@ -133,7 +133,7 @@
                 <h1>PSA VAN bus</h1>
                 <p>All data related to Peugeot 206 307 406 S2, Citroen C3 2004</p>
             </div>
-            <div align="center">
+            <div id="spinner" align="center">
                 <div class="loader"></div>
             </div>
             <script>
@@ -222,6 +222,7 @@
                     Mustache.parse(template);
                     var rendered = Mustache.render(template, vanData);
                     $('#target').html(rendered);
+                    $('#spinner').hide();
                 }).fail(function(){
                     console.log(arguments);
                 });
