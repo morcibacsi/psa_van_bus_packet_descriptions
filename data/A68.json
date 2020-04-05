@@ -1,0 +1,104 @@
+{
+    "id": "A68",
+    "displayedId": "A68",
+    "network": "VAN-COMFORT",
+    "source": "DIAG",
+    "destination": "Parking aid",
+    "type": "Write",
+    "length": "1 | 2 | 3",
+    "requireAck": "A",
+    "notes": [
+        "This is a variable length message"
+    ],
+    "examples": [
+        "A68 C 21 80 93 30",
+        "A68 C 3E FC 0C",
+        "A68 C 21 83 B2 7E",
+        "A68 C 14 FF 00 94 AC",
+        "A68 C 21 C5 63 C4",
+        "A68 C 21 A0 55 3E",
+        "A68 C 21 C0 00 16",
+        "A68 C 30 80 20 B2 DA"
+    ],
+    "msgDescription": [
+        "Parking aid diagnostic commands.",
+        "The answers for these commands are returned in the packets with the AE8 idens"
+    ],
+    "shortDescription": "Parking aid diagnostic commands",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-2",
+                    "value": "C",
+                    "description": "Write & Req ACK"
+                },
+                {
+                    "offset": "offset-1",
+                    "value": "21 80",
+                    "description": [
+                        "See table below"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-0",
+                    "value": "95 54",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ],
+    "table":
+    {
+        "title": "Manufacturer id",
+        "rows":
+        [
+            {
+                "key": "21 80",
+                "value": "Enter diag mode / get manufacturer info"
+            },
+            {
+                "key": "3E",
+                "value": "Keep alive"
+            },
+            {
+                "key": "21 A0",
+                "value": "Parameter measurements: distance"
+            },
+            {
+                "key": "21 C0",
+                "value": "Parameter measurements: configuration"
+            },
+            {
+                "key": "21 C5",
+                "value": "Parameter measurements: state of inputs"
+            },
+            {
+                "key": "21 83",
+                "value": "Read fault codes"
+            },
+            {
+                "key": "14 FF 00",
+                "value": "Clear fault codes"
+            },
+            {
+                "key": "30 80 20",
+                "value": "Activate buzzer 1"
+            },
+            {
+                "key": "30 80 01",
+                "value": "Activate buzzer 2"
+            },
+            {
+                "key": "30 80 11",
+                "value": "Activate buzzer 3"
+            }
+        ]
+    }
+
+}

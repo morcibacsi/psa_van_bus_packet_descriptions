@@ -1,0 +1,129 @@
+{
+    "id": "AE8_7",
+    "displayedId": "AE8",
+    "network": "VAN-COMFORT",
+    "source": "Parking aid",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "23",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "AE8 E 84 61 C0 0A C9 32 2B 00 00 00 00 96 3C 00 1E 00 1E 32 00 00 00 00 84 B3 08"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command: 0E A6 8C 21 C0 00 16",
+        "Parking aid configuration data (sensor count, max detection distance, speaker control, disarming switch)"
+    ],
+    "shortDescription": "Parking aid configuration data",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "84",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "61",
+                    "color": "red",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "C0",
+                    "description": "Diag function id"
+                },
+                {
+                    "showInPopup": true,
+                    "isBit": "true",
+                    "offset": "offset-4",
+                    "value": "8",
+                    "description": ["Presence of disarming switch"]
+                },
+                {
+                    "showInPopup": true,
+                    "isBit": "true",
+                    "color": "red",
+                    "offset": "offset-4",
+                    "value": "765",
+                    "description": ["?"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-4",
+                    "value": "4321",
+                    "description": [
+                        "Sensor count:",
+                        "1: 2 sensors",
+                        "2: 2 sensors",
+                        "3: 2 rear + 2 front sensors",
+                        "4: 4 rear + 4 front sensors"
+                        ]
+                },
+                {
+                    "showInPopup": true,
+                    "color": "blue",
+                    "offset": "offset-3",
+                    "value": "C9",
+                    "description": [
+                        "Bitwise info:",
+                        "0x02: control of the speakers 0: local, 1: VAN network",
+                        "other bits are unknown"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "color": "red",
+                    "offset": "offset-2",
+                    "value": "32 2B 00 00 00 00",
+                    "description": ["?"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "96",
+                    "description": ["rear interior sensors maximum detection distance (0x96 => 150 cm)"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "3C",
+                    "description": ["rear exterior sensors maximum detection distance (0x3C => 60 cm)"]
+                },
+                {
+                    "showInPopup": true,
+                    "color": "red",
+                    "offset": "offset-0",
+                    "value": "00 1E 00 1E 32 00 00 00 00",
+                    "description": ["?"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "84",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "B3 08",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "id": "AE8_8",
+    "displayedId": "AE8",
+    "network": "VAN-COMFORT",
+    "source": "Parking aid",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "5",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "AE8 E 80 70 80 01 80 AE CE",
+        "AE8 E 85 70 80 11 85 94 6C"
+        
+    ],
+    "msgDescription": [
+        "This comes as an answer for the commands:",
+        "0E A6 8C 30 80 20 B2 DA - Activate 1",
+        "0E A6 8C 30 80 01 6B EE - Activate 2",
+        "0E A6 8C 30 80 11 87 74 - Activate 3",
+        "Parking aid answer to 'Activate buzzer' command"
+    ],
+    "shortDescription": "Parking aid answer to 'Activate buzzer' command",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "80",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "30 80",
+                    "color": "red",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "10",
+                    "color": "blue",
+                    "description": [
+                        "01: if command is Activate 1",
+                        "01: if command is Activate 2",
+                        "11: if command is Activate 3"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "80",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "AE CE",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}

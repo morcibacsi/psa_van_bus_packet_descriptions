@@ -1,0 +1,59 @@
+{
+    "id": "AE8_2",
+    "displayedId": "AE8",
+    "network": "VAN-COMFORT",
+    "source": "Parking aid",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "3",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "AE8 E 84 7E 84 6A 10"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command: 0E A6 8C 3E FC 0C",
+        "Parking aid answer for keep alive command"
+    ],
+    "shortDescription": "Parking aid answer for keep alive command",
+    "status": "100%",
+    "margin": "3",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "84",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "7E",
+                    "color": "blue",
+                    "description": ["Answer byte"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "84",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "FC 0C",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "id": "AE8_1",
+    "displayedId": "AE8",
+    "network": "VAN-COMFORT",
+    "source": "Parking aid",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "26",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "AE8 E 80 61 80 96 29 82 50 80 00 06 96 29 82 54 80 00 10 00 50 10 0C 00 00 00 00 80 1F 8A"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command: 0E A6 8C 21 80 93 30",
+        "Parking aid manufacturer identification data"
+    ],
+    "shortDescription": "Parking aid manufacturer identification data",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "80",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "61",
+                    "color": "red",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "80",
+                    "description": "Diag function id"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "96 29 82 50 80",
+                    "description": ["PSA reference number"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00 06",
+                    "description": [
+                        "Manufacturer id",
+                        "See table at air conditioner"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "96 29 82 54 80",
+                    "description": ["Additional number"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00 10",
+                    "description": ["Software version"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00 50",
+                    "color": "red",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "10",
+                    "description": ["Diagnostic version"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "0C 00 00 00 00",
+                    "color": "red",
+                    "description": [""]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "80",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "1F 8A",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}

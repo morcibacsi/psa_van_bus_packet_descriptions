@@ -1,0 +1,75 @@
+{
+    "id": "AE8_5",
+    "displayedId": "AE8",
+    "network": "VAN-COMFORT",
+    "source": "Parking aid",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "5",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "AE8 E 81 61 C5 00 81 B3 C4"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command: 0E A6 8C 21 C5 63 C4",
+        "Parking aid manufacturer identification data"
+    ],
+    "shortDescription": "Parking aid manufacturer identification data",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "81",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "61",
+                    "color": "red",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "C5",
+                    "description": "Diag function id"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "00",
+                    "description": [
+                        "Bitwise info:",
+                        "0x01: System active",
+                        "0x08: Trailer present"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "81",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "B3 C4",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "id": "AE8_4",
+    "displayedId": "AE8",
+    "network": "VAN-COMFORT",
+    "source": "Parking aid",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "5",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "AE8 E 87 54 FF 00 87 5B 86"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command: 0E A6 8C 14 FF 00 94 AC",
+        "Parking aid answer for the fault clearing command"
+    ],
+    "shortDescription": "Parking aid answer for the fault clearing command",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "87",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "54 FF 00",
+                    "color": "red",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "87",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "5B 86",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}

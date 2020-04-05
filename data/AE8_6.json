@@ -1,0 +1,106 @@
+{
+    "id": "AE8_6",
+    "displayedId": "AE8",
+    "network": "VAN-COMFORT",
+    "source": "Parking aid",
+    "destination": "DIAG",
+    "type": "Read",
+    "length": "24",
+    "requireAck": "A",
+    "notes": [],
+    "examples": [
+        "AE8 E 81 61 A0 FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF 81 37 68"
+    ],
+    "msgDescription": [
+        "This comes as an answer for the command: 0E A6 8C 21 A0 55 3E",
+        "Parking aid distance data"
+    ],
+    "shortDescription": "Parking aid distance data",
+    "status": "Partial",
+    "margin": "4",
+    "structures":
+    [
+        {
+            "bytes": [
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "E",
+                    "description": "Read & Req ACK"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "81",
+                    "description": "Header"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "61",
+                    "color": "red",
+                    "description": "?"
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "A0",
+                    "description": "Diag function id"
+                },
+                {
+                    "showInPopup": false,
+                    "offset": "offset-4",
+                    "value": "FF",
+                    "description": [
+                        "obstacle detected by exterior rear left sensor 0xFF: no, otherwise distance (0-254 cm)"
+                    ]
+                },
+                {
+                    "showInPopup": false,
+                    "offset": "offset-3",
+                    "value": "FF",
+                    "description": [
+                        "obstacle detected by exterior rear right sensor 0xFF: no, otherwise distance (0-254 cm)"
+                    ]
+                },
+                {
+                    "showInPopup": false,
+                    "offset": "offset-2",
+                    "value": "FF",
+                    "description": [
+                        "obstacle detected by interior rear left sensor 0xFF: no, otherwise distance (0-254 cm)"
+                    ]
+                },
+                {
+                    "showInPopup": false,
+                    "offset": "offset-1",
+                    "value": "FF",
+                    "description": [
+                        "obstacle detected by interior rear right sensor 0xFF: no, otherwise distance (0-254 cm)"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "color": "red",
+                    "offset": "offset-0",
+                    "value": "FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF",
+                    "description": [
+                        "? most probably some of these contain data for parking aid with front sensors installed"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "81",
+                    "description": ["Footer"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-1",
+                    "value": "37 68",
+                    "description": ["Checksum"]
+                }
+            ]
+        }
+    ]
+}
