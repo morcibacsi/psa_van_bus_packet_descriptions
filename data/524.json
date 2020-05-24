@@ -2,14 +2,14 @@
     "id": "524",
     "displayedId": "524",
     "network": "VAN-INFO",
-    "source": "COM2000",
-    "destination": "Dashboard",
+    "source": "BSI",
+    "destination": "Multifunction display",
     "type": "Write",
     "length": "14 | 16",
     "requireAck": "N",
     "notes": [
         "The length of this message depends on which year the car was manufactured. In cars made until 2002 it is 14 bytes long, however in a car made in 2004 it is 16 bytes long",
-        "Car Status 2"
+        "Display message"
     ],
     "examples": [
         "524 W00 00 00 01 00 20 01 00 01 00 FF 00 00 00 00 E28A N"
@@ -17,10 +17,13 @@
     "msgDescription": [
         "HOVER YOUR MOUSE OVER THE BYTES TO SEE FURTHER INFO ON THEM",
         "",
-        "This packet is mainly dedicated to the central display and the instrument cluster. The 9th byte (using zero based indexing) contains the ID of the messages which needs to be shown on the multifunction display (MFD). The bits and the message ID's in the 9th byte have a connection: msg 0: byte 0 bit 1, msg 1: byte 0 bit 2, msg 3: byte 0 bit 3... The message is only displayed if it's bit and the 9th byte is also set"
+        "This packet is mainly dedicated to the central display.",
+        "The 9th byte (using zero based indexing) contains the ID of the messages which needs to be shown on the multifunction display (MFD).",
+        "The bits and the message ID's in the 9th byte have a connection: msg 0: byte 0 bit 1, msg 1: byte 0 bit 2, msg 3: byte 0 bit 3...",
+        "The message is only displayed if it's bit and the 9th byte is also set"
     ],
-    "shortDescription": "Car status 2 - handbrake, left stalk btn, seatbelt warning, door lock, doors open, auto lights/wipers",
-    "status": "Partial",
+    "shortDescription": "Message to be shown on the multifunction display",
+    "status": "80%",
     "margin": "10",
     "structures":
     [
@@ -36,6 +39,7 @@
                     "offset": "offset-3",
                     "value": "00",
                     "description": [
+                        "Byte 0",
                         "0x01 = Tyre pressure low", 
                         "0x02 = No door open", 
                         "0x04 = Auto gearbox temperature too high",
@@ -51,6 +55,7 @@
                     "offset": "offset-3",
                     "value": "01",
                     "description": [
+                        "Byte 1",
                         "0x01 = Unblock diesel filter (and mil icon on instrument cluster)", 
                         "0x02 = Stop car icon", 
                         "0x04 = Diesel additive too low", 
@@ -63,8 +68,9 @@
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "01",
+                    "value": "02",
                     "description": [
+                        "Byte 2",
                         "0x01 = MIL", 
                         "0x02 = Brake pads worn", 
                         "0x04 = Diagnosis ok", 
@@ -77,8 +83,9 @@
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "01",
+                    "value": "03",
                     "description": [
+                        "Byte 3",
                         "0x01 = Side airbag faulty", 
                         "0x02 = Airbags faulty", 
                         "0x04 = Cruise control faulty", 
@@ -91,8 +98,9 @@
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "01",
+                    "value": "04",
                     "description": [
+                        "Byte 4",
                         "0x01 = Left rear sliding door faulty", 
                         "0x02 = Headlight corrector fault", 
                         "0x04 = Right rear sliding door faulty", 
@@ -105,8 +113,9 @@
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "01",
+                    "value": "05",
                     "description": [
+                        "Byte 5",
                         "0x01 = Handbrake on", 
                         "0x02 = Seatbelt warning", 
                         "0x04 = Passenger airbag deactivated (and icon on instrument cluster)", 
@@ -119,8 +128,9 @@
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "01",
+                    "value": "06",
                     "description": [
+                        "Byte 6",
                         "0x01 = Shock sensor faulty", 
                         "0x02 = Seatbelt warning (not sure, there is no message with 0x31 so could not check)", 
                         "0x04 = Check and re-init tyre pressure", 
@@ -133,8 +143,9 @@
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "01",
+                    "value": "07",
                     "description": [
+                        "Byte 7",
                         "0x01 = Automatic headlamp lighting deactivated",
                         "0x02 = Rear LH passenger seatbelt not fastened",
                         "0x04 = Rear RH passenger seatbelt not fastened",
@@ -146,8 +157,9 @@
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "01",
+                    "value": "08",
                     "description": [
+                        "Byte 8",
                         "0x01 = Doors locked", 
                         "0x02 = ESP/ASR deactivated", 
                         "0x04 = Child safety activated", 
@@ -155,19 +167,24 @@
                         "0x10 = Automatic lighting active", 
                         "0x20 = Automatic wiping active", 
                         "0x40 = Engine immobiliser fault", 
-                        "0x80 = Sport suspension mode active"]
+                        "0x80 = Sport suspension mode active"
+                    ]
                 },
                 {
-                    "offset": "offset-2",
-                    "value": "FF",
-                    "description": ["See table below"]
+                    "offset": "offset-1",
+                    "value": "09",
+                    "description": [
+                        "Byte 9",
+                        "See table below"
+                    ]
                 },
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "01",
+                    "value": "10",
                     "color": "blue",
                     "description": [
+                        "Byte 10",
                         "0x01 = unknown", 
                         "0x02 = unknown", 
                         "0x04 = unknown", 
@@ -175,29 +192,32 @@
                         "0x10 = LPG fuel refused", 
                         "0x20 = LPG system faulty", 
                         "0x40 = LPG in use", 
-                        "0x80 = Min level LPG"]
+                        "0x80 = Min level LPG"
+                    ]
                 },
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "01",
-                    "color": "blue",
+                    "value": "11",
                     "description": [
+                        "Byte 11",
                         "0x01 = ADIN fault", 
                         "0x02 = User stop & start", 
                         "0x04 = Stop & start available", 
                         "0x08 = Stop & start activated", 
                         "0x10 = Stop & start deactivated", 
                         "0x20 = Stop & start deferred", 
-                        "0x40 = unknown", 
-                        "0x80 = unknown"]
+                        "0x40 = XSARA DYNALTO", 
+                        "0x80 = 307 DYNALTO"
+                    ]
                 },
                 {
                     "showInPopup": true,
                     "offset": "offset-3",
-                    "value": "01",
+                    "value": "12",
                     "color": "blue",
                     "description": [
+                        "Byte 12",
                         "0x01 = unknown", 
                         "0x02 = unknown", 
                         "0x04 = unknown", 
@@ -205,7 +225,58 @@
                         "0x10 = unknown", 
                         "0x20 = unknown", 
                         "0x40 = unknown", 
-                        "0x80 = change to neutral"]
+                        "0x80 = change to neutral"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "13",
+                    "color": "red",
+                    "description": [
+                        "Byte 13",
+                        "0x01 = unknown", 
+                        "0x02 = unknown", 
+                        "0x04 = unknown", 
+                        "0x08 = unknown", 
+                        "0x10 = unknown", 
+                        "0x20 = unknown", 
+                        "0x40 = unknown", 
+                        "0x80 = unknown"
+                    ]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "14",
+                    "description": [
+                        "Byte 14",
+                        "On cars made after 2004",
+                        "0x01 = Roof operation complete",
+                        "0x02 = Operation impossible screen not in place",
+                        "0x04 = Roof mechanism not locked!", 
+                        "0x08 = Operation impossible boot open", 
+                        "0x10 = Operation impossible speed too high", 
+                        "0x20 = Operation impossible ext temp too low", 
+                        "0x40 = Roof mechanism faulty", 
+                        "0x80 = Boot mechanism not locked!"]
+                },
+                {
+                    "showInPopup": true,
+                    "offset": "offset-3",
+                    "value": "15",
+                    "color": "blue",
+                    "description": [
+                        "Byte 15",
+                        "On cars made after 2004",
+                        "0x01 = unknown", 
+                        "0x02 = unknown", 
+                        "0x04 = unknown", 
+                        "0x08 = unknown", 
+                        "0x10 = Bow fault", 
+                        "0x20 = Operation impossible roof not unlocked", 
+                        "0x40 = unknown", 
+                        "0x80 = Roof operation incomplete"]
                 },
                 {
                     "offset": "offset-1",
@@ -513,23 +584,23 @@
                     },
                     {
                         "key": "0x56",
-                        "value": "LPG IN USE)"
+                        "value": "LPG IN USE"
                     },
                     {
                         "key": "0x57",
-                        "value": "MIN LEVEL LPG)"
+                        "value": "MIN LEVEL LPG"
                     },
                     {
                         "key": "0x58",
-                        "value": "ADIN FAULT)"
+                        "value": "ADIN FAULT"
                     },
                     {
                         "key": "0x59",
-                        "value": "USE STOP AND START)"
+                        "value": "USE STOP AND START"
                     },
                     {
                         "key": "0x5A",
-                        "value": "STOP AND START AVAILABLE)"
+                        "value": "STOP AND START AVAILABLE"
                     },
                     {
                         "key": "0x5B",
@@ -554,6 +625,50 @@
                     {
                         "key": "0x67",
                         "value": "PLACE LEVER IN NEUTRAL"
+                    },
+                    {
+                        "key": "0x70",
+                        "value": "ROOF OPERATION COMPLETE"
+                    },
+                    {
+                        "key": "0x71",
+                        "value": "OPERATION IMPOSSIBLE SCREEN NOT IN PLACE"
+                    },
+                    {
+                        "key": "0x72",
+                        "value": "ROOF MECHANISM NOT LOCKED!"
+                    },
+                    {
+                        "key": "0x73",
+                        "value": "OPERATION IMPOSSIBLE BOOT OPEN"
+                    },
+                    {
+                        "key": "0x74",
+                        "value": "OPERATION IMPOSSIBLE SPEED TOO HIGH"
+                    },
+                    {
+                        "key": "0x75",
+                        "value": "OPERATION IMPOSSIBLE EXT TEMP TOO LOW"
+                    },
+                    {
+                        "key": "0x76",
+                        "value": "ROOF MECHANISM FAULTY"
+                    },
+                    {
+                        "key": "0x77",
+                        "value": "BOOT MECHANICS NOT LOCKED"
+                    },
+                    {
+                        "key": "0x7C",
+                        "value": "BOW FAULT"
+                    },
+                    {
+                        "key": "0x7D",
+                        "value": "OPERATION IMPOSSIBLE ROOF NOT UNLOCKED"
+                    },
+                    {
+                        "key": "0x7F",
+                        "value": "ROOF OPERATION INCOMPLETE"
                     }
                 ]
             }
