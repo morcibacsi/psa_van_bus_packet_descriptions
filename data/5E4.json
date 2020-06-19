@@ -37,6 +37,7 @@
                         "reference 524 Databyte 4 with my key in guess???",
                         "00 01 - Sent by display during power up before it's ready to display anything",
                         "20 1E - Display is ready",
+                        "A0 1E - Sent when the trip computer button is held for a few seconds (resets the trip data)",
                         "20 1F - ?",
                         "20 FF - ?"
                     ]
