@@ -24,15 +24,14 @@
         {
             "bytes": [
                 {
-                    "offset": "offset-22",
+                    "offset": "offset-23",
                     "value": "W00",
                     "description": ["Write"]
                 },
                 {
                     "offset": "offset-21",
                     "value": "7",
-                    "color": "red",
-                    "description": ["?"],
+                    "description": ["0: when dashboard lighting is enabled", "1: when dashboard lighting is disabled"],
                     "isBit": "true"
                 },
                 {
@@ -59,7 +58,7 @@
                 {
                     "offset": "offset-17",
                     "value": "3210",
-                    "description": ["Dial brightness (When the whole byte equals 0x8F it means the dashboard lighting is off)"]
+                    "description": ["Dial brightness (0-15)"]
                 },
                 {
                     "offset": "offset-15",
