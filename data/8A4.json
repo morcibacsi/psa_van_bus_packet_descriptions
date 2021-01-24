@@ -3,56 +3,55 @@
     "displayedId": "8A4",
     "network": "VAN-INFO",
     "source": "BSI",
-    "destination": "Dashboard/Broadcast",
+    "destination": ["AAS","CDC","CLIM","CMB","EMF","RT3","RAD"],
     "type": "Write",
     "length": "7",
     "requireAck": "N",
-    "notes": [
-        "Dashboard Gauges", "Engine not running"
-    ],
+    "period": "500 ms",
+    "notes": [ ],
     "examples": [
         "8A4 W00 8F 03 3C 1A 6E 90 7D 4EB8 N"
     ],
     "msgDescription": [
         "I guess this must come out of the ECU via the BSI"
     ],
-    "shortDescription": "Dashboard - hbeat, brightness, contact? engine?, economy(mode?) temp oil, water & ext oil+fuel",
-    "status": "Partial",
+    "shortDescription": "Dasboard brightness, mileage, wiper status, contact, engine running, economy mode, coolant & external temperature",
+    "status": "~90%",
     "margin": "22",
     "structures":
     [
         {
             "bytes": [
                 {
-                    "offset": "offset-23",
+                    "offset": "offset-24",
                     "value": "W00",
                     "description": ["Write"]
                 },
                 {
-                    "offset": "offset-21",
+                    "offset": "offset-22",
                     "value": "7",
                     "description": ["0: when dashboard lighting is enabled", "1: when dashboard lighting is disabled"],
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-20",
+                    "offset": "offset-21",
                     "value": "6",
                     "color": "red",
-                    "description": ["?"],
+                    "description": ["LUM_BLACK_PANEL"],
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-19",
+                    "offset": "offset-20",
                     "value": "5",
                     "color": "red",
-                    "description": ["?"],
+                    "description": ["RESERVE_78K0VAN"],
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-18",
                     "value": "4",
                     "color": "blue",
-                    "description": ["Heartbeat"],
+                    "description": ["0: when front wiping disabled", "1: when front wiping enabled"],
                     "isBit": "true"
                 },
                 {
@@ -64,7 +63,7 @@
                     "offset": "offset-15",
                     "value": "7",
                     "color": "red",
-                    "description": ["?"],
+                    "description": ["ALARME"],
                     "isBit": "true"
                 },
                 {
@@ -77,8 +76,7 @@
                 {
                     "offset": "offset-13",
                     "value": "5",
-                    "color": "blue",
-                    "description": ["Reverse engaged (need to check in car)"],
+                    "description": ["Reverse engaged"],
                     "isBit": "true"
                 },
                 {
@@ -90,8 +88,8 @@
                 {
                     "offset": "offset-11",
                     "value": "3",
-                    "color": "blue",
-                    "description": ["Door open warning light?(don't think so now)"],
+                    "color": "red",
+                    "description": ["ALIM_MISE_EN_VEILLE - Standby(?)"],
                     "isBit": "true"
                 },
                 {
@@ -101,20 +99,15 @@
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-9",
-                    "value": "1",
-                    "description": ["Ignition on"],
-                    "isBit": "true"
-                },
-                {
                     "offset": "offset-8",
-                    "value": "0",
-                    "description": ["Accessories on (drops out while starting car)"]
+                    "value": "10",
+                    "color": "blue",
+                    "description": ["0x10: Ignition on", "0x01: Accessories on (drops out while starting car)"]
                 },
                 {
                     "offset": "offset-5",
                     "value": "3C",
-                    "description": ["Water temperature 0x3C = (60-39) = 21 degrees", "FF until key set to Ignition"]
+                    "description": ["Coolant temperature 0x3C = (60-39) = 21 degrees", "FF until key set to Ignition"]
                 },
                 {
                     "offset": "offset-3",
