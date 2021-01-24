@@ -2,93 +2,121 @@
     "id": "4DC",
     "displayedId": "4DC",
     "network": "VAN-INFO",
-    "source": "AirCon",
-    "destination": "",
+    "source": "BSI",
+    "destination": "CLIM",
     "type": "Write",
     "length": "7",
     "requireAck": "A",
-    "notes": [
-        "Engine not running"
-    ],
+    "period": "400 ms",
+    "notes": [ ],
     "examples": [
         "4DC WA0 80 00 16 12 3E FF FF C8E4 A"
     ],
     "msgDescription": [
         "Lots of guessing here"
     ],
-    "shortDescription": "AC/Auto/Demist cabin temp...",
-    "status": "0%",
+    "shortDescription": "Air conditioner related info, still a lot to check",
+    "status": "35%",
     "margin": "20",
     "structures":
     [
         {
             "bytes": [
                 {
-                    "offset": "offset-19",
+                    "offset": "offset-20",
                     "value": "WA0",
                     "description": "Write & Req ACK"
                 },
                 {
-                    "offset": "offset-18",
+                    "offset": "offset-19",
                     "value": "7",
                     "description": ["Power On"],
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-17",
+                    "offset": "offset-18",
                     "value": "6",
                     "description": ["A/C Enabled"],
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-16",
+                    "offset": "offset-17",
                     "value": "5",
                     "description": ["Rear window heating on"],
                     "isBit": "true"
                 },
                 {
-                    "offset": "offset-15",
+                    "offset": "offset-16",
                     "value": "4",
-                    "description": ["?"],
+                    "description": ["Cutoff the clim because of low electrical power available, level 1"],
+                    "color": "red",
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-15",
+                    "value": "3",
+                    "description": ["Cutoff the clim because of low electrical power available, level 2"],
                     "color": "red",
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-14",
-                    "value": "3",
-                    "description": ["?"],
+                    "value": "2",
+                    "description": ["Cutoff the clim because of low electrical power available, level 3"],
                     "color": "red",
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-13",
-                    "value": "2",
-                    "description": ["?"],
+                    "value": "1",
+                    "description": ["BRUL_ETAT_INF_CLIM (Burner?)"],
                     "color": "red",
                     "isBit": "true"
                 },
                 {
                     "offset": "offset-12",
-                    "value": "1",
-                    "description": ["?"],
-                    "color": "red",
-                    "isBit": "true"
-                },
-                {
-                    "offset": "offset-11",
                     "value": "0",
                     "description": ["A/C compressor running"]
                 },
                 {
+                    "offset": "offset-11",
+                    "value": "765",
+                    "color": "red",
+                    "isBit": "true",
+                    "description": ["CHAUF_ETAT_INF_CLIM (Heater?)"]
+                },
+                {
                     "offset": "offset-10",
-                    "value": "00",
-                    "description": ["0x1C on AUX or OFF / 0x00 on contact"]
+                    "value": "43",
+                    "color": "red",
+                    "isBit": "true",
+                    "description": ["ETAT_GES_INF_CLIM"]
+                },
+                {
+                    "offset": "offset-9",
+                    "value": "2",
+                    "color": "red",
+                    "isBit": "true",
+                    "description": ["SECURITE_INF_CLIM (Safety?)"]
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "1",
+                    "color": "red",
+                    "isBit": "true",
+                    "description": ["Retractable roof condition air conditioning info"]
                 },
                 {
                     "offset": "offset-7",
+                    "value": "0",
+                    "color": "red",
+                    "description": ["STOP_GO_ETAT_CLIM"]
+                },
+                {
+                    "offset": "offset-6",
                     "value": "16",
-                    "color": "blue",
-                    "description": ["internal temperature /2?", "0x16 = 22", "22/2 = 11 degrees"]
+                    "color": "red",
+                    "description": ["PRES_BC_CLIM (Pressure?)"]
                 },
                 {
                     "offset": "offset-5",
@@ -99,13 +127,13 @@
                     "offset": "offset-4",
                     "value": "FF",
                     "color": "red",
-                    "description": ["?"]
+                    "description": ["MES_LUM - Ambient luminosity value"]
                 },
                 {
                     "offset": "offset-3",
                     "value": "FF",
                     "color": "red",
-                    "description": ["?"]
+                    "description": ["MES_LUM - Ambient luminosity value"]
                 },
                 {
                     "offset": "offset-2",
