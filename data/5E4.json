@@ -2,45 +2,79 @@
     "id": "5E4",
     "displayedId": "5E4",
     "network": "VAN-INFO",
-    "source": "Display",
-    "destination": "",
+    "source": "EMF",
+    "destination": "BSI",
     "type": "Write",
     "length": "2",
+    "period": "500ms + event based",
     "requireAck": "A",
     "notes": [
-        "Display Settings?", "Engine not running"
+        "Contains request for trip reset"
     ],
     "examples": [
-        "5E4 WA0 20FF F934 A"
+        "5E 4C 20 FF F9 34",
+        "5E 4C 20 1E 8A 50"
     ],
     "msgDescription": [
-        "Display writes these apparently - quite regularly"
+        ""
     ],
-    "shortDescription": "Display settings? - On the bus regularly without engine running",
-    "status": "0%",
-    "margin": "12",
+    "shortDescription": "VAN network keep alive and trip reset",
+    "status": "100%",
+    "margin": "7",
     "structures":
     [
         {
             "bytes": [
                 {
-                    "offset": "offset-12",
+                    "offset": "offset-10",
                     "value": "WA0",
                     "description": ["Write & Req ACK"]
                 },
                 {
+                    "offset": "offset-9",
+                    "value": "7",
+                    "description": ["Requests to reset course totals"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-8",
+                    "value": "6",
+                    "description": ["Trip cumulative reset request"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-7",
+                    "value": "5",
+                    "description": ["Request for keep alive of + VAN comfort"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-6",
+                    "value": "4",
+                    "description": ["Active overspeed alerts"],
+                    "isBit": "true"
+                },
+                {
                     "offset": "offset-5",
-                    "value": "20FF",
-                    "color": "blue",
-                    "description": [
-                        "Byte 0 - I've seen it change from 20 to 00 in a capture where key was removed and capture left running",
-                        "reference 524 Databyte 4 with my key in guess???",
-                        "00 01 - Sent by display during power up before it's ready to display anything",
-                        "20 1E - Display is ready",
-                        "A0 1E - Sent when the trip computer button is held for a few seconds (resets the trip data)",
-                        "20 1F - ?",
-                        "20 FF - ?"
-                    ]
+                    "value": "3",
+                    "description": ["Overspeed memorization requested"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-4",
+                    "value": "2",
+                    "description": ["Alert reminder request"],
+                    "isBit": "true"
+                },
+                {
+                    "offset": "offset-3",
+                    "value": "10",
+                    "description": ["Unused"]
+                },
+                {
+                    "offset": "offset-2",
+                    "value": "FF",
+                    "description": ["Overspeed alert threshold entered by the customer"]
                 },
                 {
                     "offset": "offset-1",
